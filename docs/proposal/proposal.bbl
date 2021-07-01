@@ -1,0 +1,84 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Hie284}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2218b6e69c35a7ab5d3c0ebfbe634d92}{%
+           family={Hie},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=00ed87e00fb7f3134992bdf1963537b4}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Ellen\bibnamedelima D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0993c86ae6cfb70879c8ca025603d0a3}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Bonnie},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6927778b737afa11f2ecb859f9b328cc}{%
+           family={Bryson},
+           familyi={B\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{fullhash}{7178f69b82932079996658689f305443}
+      \strng{bibnamehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{authorbibnamehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{authornamehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{authorfullhash}{7178f69b82932079996658689f305443}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Viral mutations that evade neutralizing antibodies, an occurrence known as viral escape, can occur and may impede the development of vaccines. To predict which mutations may lead to viral escape, Hie et al. used a machine learning technique for natural language processing with two components: grammar (or syntax) and meaning (or semantics) (see the Perspective by Kim and Przytycka). Three different unsupervised language models were constructed for influenza A hemagglutinin, HIV-1 envelope glycoprotein, and severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) spike glycoprotein. Semantic landscapes for these viruses predicted viral escape mutations that produce sequences that are syntactically and/or grammatically correct but effectively different in semantics and thus able to evade the immune system.Science, this issue p. 284; see also p. 233The ability for viruses to mutate and evade the human immune system and cause infection, called viral escape, remains an obstacle to antiviral and vaccine development. Understanding the complex rules that govern escape could inform therapeutic design. We modeled viral escape with machine learning algorithms originally developed for human natural language. We identified escape mutations as those that preserve viral infectivity but cause a virus to look different to the immune system, akin to word changes that preserve a sentence’s grammaticality but change its meaning. With this approach, language models of influenza hemagglutinin, HIV-1 envelope glycoprotein (HIV Env), and severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) Spike viral proteins can accurately predict structural escape patterns using sequence data alone. Our study represents a promising conceptual bridge between natural language and viral evolution.}
+      \field{issn}{0036-8075}
+      \field{journaltitle}{Science}
+      \field{number}{6526}
+      \field{title}{Learning the Language of Viral Evolution and Escape}
+      \field{volume}{371}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{284\bibrangedash 288}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1126/science.abd7331
+      \endverb
+      \verb{eprint}
+      \verb https://science.sciencemag.org/content/371/6526/284.full.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/371/6526/284
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/371/6526/284
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
