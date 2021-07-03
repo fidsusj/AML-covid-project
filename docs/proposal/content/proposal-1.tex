@@ -1,5 +1,52 @@
-\section{Proposal 1: TODO}
+\section{Proposal 1: Machine Learning based prediction of the next SARS-CoV-2 variants and simulation of vaccine effectiveness}
 
-Testcite: \cite{Hie284}
+%1. Which scientific questions do you want to answer, and why are they interesting?
+\textbf{1. Idea and research question}
+
+There is hope for an end of the pandemic due to the vaccines. All vaccines are developed against the wild type of the virus. Through the mutation processes the danger, that a variant occurs, against which the vaccines  are no longer effective, arises. This process is known as viral escape. This proposal aims to detect this development faster to enable a faster and better response to new variants.
+
+So there are two scientific questions (which can also be separated):
+\begin{enumerate}
+	\item Can the next possible SARS-CoV-2 variants be predicted by a Machine Learning model?
+	\item Based on the  predicted possible next variants can the effectiveness of the vaccines be simulated?
+\end{enumerate}
+
+%2. Which relevant papers did you find (either in the spreadsheet or by your own search)? What are their pros and cons? Which among these papers do you propose to build upon, and why?
+\textbf{2. Related work}
+
+Already some works exist in the area of predicting virus mutations using Machine Learning techniques. Hie et al. \cite{Hie284} applied methods developed for NLP (Natural Language Processing).  According to their work escape mutations look different to the immune system, but have the same viral infectivity. The analogy from the NLP area are word changes, which change the meaning of a sentence, but the grammaticality remains. Through their work, they have managed to generate a connection between natural language and viral evolution.
+
+Even before the SARS-CoV-2 pandemic research was done in this area, e.g. from Salama et al. \cite{salamaPredictionVirusMutation2016}. TODO: approach
+
+
+GANs (Generative Adversarial Networks) achieve great results in image generation. Berman et al. applied a GAN in \cite{berman2020mutagan} to generate DNA sequences.
+
+DNA2vec \cite{ng2017dna2vec}
+
+
+%3. What methods will you try, and why do you consider them promising to answer the questions?
+\textbf{3. Approach}
+
+DNA2vec und dann in NN (GAN)?
+vaccines effectivness unsupervised wie in paper learning the language?
+
+%4. What will your data sources be? How large are the data sets and how high do you think the quality is? Can you use simulated data when real data is scarce?
+\textbf{4. Data sources}
+For predicting the next possible SARS-CoV-2 variants the SARS-CoV-2 genome development from the past can be used as data source (genomic time series data). There are numerous 
+
+The Nextstrain project has visualized TODO
+
+TODO: data sources GSAID?
+
+In terms of data quality, when working with genomic data one should always have in mind, that genotyping errors are possible.
+
+
+%5. What computational resources do you need (e.g. GPUs)? How will you get access to these? How much time will the computations need?
+\textbf{5. Computational resources}
+
+%6. What difficulties do you anticipate in the project?
+\textbf{6. Probable difficulties}
+
+TODO: ca. 30000 Basen besitzt das coronavirus -> sehr groß
 
 \newpage

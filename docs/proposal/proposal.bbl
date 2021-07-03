@@ -19,6 +19,48 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{berman2020mutagan}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=3f7dc66639560114ec4755c84abe8ef7}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9c2b03ce24e85198d4d291f0f62b4b3f}{%
+           family={Howser},
+           familyi={H\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f2c09d95e42192290f74b24e4a96c518}{%
+           family={Mehoke},
+           familyi={M\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9dcb9a3a515720c0aea9d74a33100f87}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Jared\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{fullhash}{fd4fe129b519938a2802385525566814}
+      \strng{bibnamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authorbibnamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authornamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authorfullhash}{fd4fe129b519938a2802385525566814}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{q-bio.QM}
+      \field{eprinttype}{arxiv}
+      \field{title}{{{MutaGAN}}: {{A}} Seq2seq {{GAN}} Framework to Predict Mutations of Evolving Protein Populations}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 2008.11790
+      \endverb
+    \endentry
     \entry{Hie284}{article}{}
       \name{author}{4}{}{%
         {{hash=2218b6e69c35a7ab5d3c0ebfbe634d92}{%
@@ -76,6 +118,71 @@
       \endverb
       \verb{url}
       \verb https://science.sciencemag.org/content/371/6526/284
+      \endverb
+    \endentry
+    \entry{ng2017dna2vec}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=92b8722c985e64dc12301682946c882b}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{92b8722c985e64dc12301682946c882b}
+      \strng{fullhash}{92b8722c985e64dc12301682946c882b}
+      \strng{bibnamehash}{92b8722c985e64dc12301682946c882b}
+      \strng{authorbibnamehash}{92b8722c985e64dc12301682946c882b}
+      \strng{authornamehash}{92b8722c985e64dc12301682946c882b}
+      \strng{authorfullhash}{92b8722c985e64dc12301682946c882b}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{q-bio.QM}
+      \field{eprinttype}{arxiv}
+      \field{title}{Dna2vec: {{Consistent}} Vector Representations of Variable-Length k-Mers}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 1701.06279
+      \endverb
+    \endentry
+    \entry{salamaPredictionVirusMutation2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=71493582b51e5a80f53e8a66b97800d1}{%
+           family={Salama},
+           familyi={S\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=31264f56eaa77c0e956e16889e3d450f}{%
+           family={Hassanien},
+           familyi={H\bibinitperiod},
+           given={Aboul\bibnamedelima Ella},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=589af1c3f1193b0b46c0a8cf856fc3f0}{%
+           family={Mostafa},
+           familyi={M\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{fullhash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{bibnamehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{authorbibnamehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{authornamehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{authorfullhash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
+      \field{month}{12}
+      \field{title}{The Prediction of Virus Mutation Using Neural Networks and Rough Set Techniques}
+      \field{volume}{2016}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1186/s13637-016-0042-0
       \endverb
     \endentry
   \enddatalist
