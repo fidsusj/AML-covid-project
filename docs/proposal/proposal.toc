@@ -1,8 +1,4 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}{section.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Proposal 1: Machine Learning based prediction of the next SARS-CoV-2 variants and simulation of vaccine effectiveness}{3}{section.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Conclusion}{5}{section.10}%
+\contentsline {section}{\numberline {1}Proposal 1: Machine Learning based prediction of the next SARS-CoV-2 variants and simulation of vaccine effectiveness}{2}{section.3}%
