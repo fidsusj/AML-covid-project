@@ -14,39 +14,35 @@ So there are two scientific questions (which can also be separated):
 %2. Which relevant papers did you find (either in the spreadsheet or by your own search)? What are their pros and cons? Which among these papers do you propose to build upon, and why?
 \textbf{2. Related work}
 
-Already some works exist in the area of predicting virus mutations using Machine Learning techniques. Hie et al. \cite{Hie284} applied methods developed for NLP (Natural Language Processing).  According to their work escape mutations look different to the immune system, but have the same viral infectivity. The analogy from the NLP area are word changes, which change the meaning of a sentence, but the grammaticality remains. Through their work, they have managed to generate a connection between natural language and viral evolution.
+Already some works exist in the area of predicting virus mutations using Machine Learning techniques. Hie et al. \cite{Hie284} applied methods developed for \ac{NLP}.  According to their work escape mutations look different to the immune system, but have the same viral infectivity. The analogy from the \ac{NLP} area are word changes, which change the meaning of a sentence, but the grammaticality remains. Through their work, they have managed to generate a connection between natural language and viral evolution.
 
-Even before the SARS-CoV-2 pandemic research was done in this area, e.g. from Salama et al. \cite{salamaPredictionVirusMutation2016}. TODO: approach
+Even before the SARS-CoV-2 pandemic, research was done in this area, e.g. from Salama et al. \cite{salamaPredictionVirusMutation2016}. They used neural networks for predicting new mutations and rough set techniques for detecting patterns in mutations. Furthermore they validated their approach for the Newcastle virus and achieved an accuracy of 75\%.
 
-
-GANs (Generative Adversarial Networks) achieve great results in image generation. Berman et al. applied a GAN in \cite{berman2020mutagan} to generate DNA sequences.
-
-DNA2vec \cite{ng2017dna2vec}
+\ac{GAN} achieve great results in image generation. Berman et al. applied a \ac{GAN} in \cite{berman2020mutagan} to generate \ac{DNA} sequences.
 
 
 %3. What methods will you try, and why do you consider them promising to answer the questions?
 \textbf{3. Approach}
 
-DNA2vec und dann in NN (GAN)?
-vaccines effectivness unsupervised wie in paper learning the language?
+After preprocessing the raw SARS-CoV-2 genomes we would like to train a Machine Learning model for predicting the probable next mutations. The Machine Learning model could be a standard neural network (as in  \cite{salamaPredictionVirusMutation2016}), a GAN (as in \cite{berman2020mutagan}) or a neural network language model (as in \cite{Hie284}). Due to a lack of time we haven't decided yet for one Machine Learning model.
 
 %4. What will your data sources be? How large are the data sets and how high do you think the quality is? Can you use simulated data when real data is scarce?
 \textbf{4. Data sources}
-For predicting the next possible SARS-CoV-2 variants the SARS-CoV-2 genome development from the past can be used as data source (genomic time series data). There are numerous 
 
-The Nextstrain project has visualized TODO
+For predicting the next possible SARS-CoV-2 variants the SARS-CoV-2 genome development from the past can be used as data source (genomic time series data). Data sources are available through the GISAID initiative \cite{gisaideditorGISAIDMission}. In April 2021 over one million SARS-CoV-2 genomes are available via GISAID \cite{maxmenOneMillionCoronavirus2021}. Based on this data the Nextstrain project provides a visualization how the SARS-CoV-2 genome evolves: \href{https://nextstrain.org/ncov/global?label=clade:19A}{Nextstrain}
 
-TODO: data sources GSAID?
-
-In terms of data quality, when working with genomic data one should always have in mind, that genotyping errors are possible.
+%In terms of data quality, when working with genomic data one should always have in mind, that genotyping errors are possible.
 
 
 %5. What computational resources do you need (e.g. GPUs)? How will you get access to these? How much time will the computations need?
 \textbf{5. Computational resources}
 
+The needed computational resources and time depends on the concrete chosen Machine Learning approach. As described above due to a lack of time we haven't decided yet for one Machine Learning approach. For further research and the decision for one Machine Learning approach we keep this in mind.
+
+
 %6. What difficulties do you anticipate in the project?
 \textbf{6. Probable difficulties}
 
-TODO: ca. 30000 Basen besitzt das coronavirus -> sehr groß
+Challenges could arise due to the amount of data (one SARS-CoV-2 genome consists of about 30.000 bases => TS size = data instances * 30.000). This can be encountered with less data instances or a compression of SARS-CoV-2 genome e.g. through DNA2vec \cite{ng2017dna2vec} (represents pieces of \ac{DNA} as vector).
 
 \newpage

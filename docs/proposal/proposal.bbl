@@ -19,6 +19,42 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{gisaideditorGISAIDMission}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfae96e1d0349eab172c1f715c70d26d}{%
+           family={(editor)},
+           familyi={(\bibinitperiod},
+           given={GISAID},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GISAID mission}%
+      }
+      \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{fullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{bibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorbibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{GISAID}} - {{Mission}}}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/QL66KXY2/mission.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.gisaid.org/about-us/mission/
+      \endverb
+      \verb{url}
+      \verb https://www.gisaid.org/about-us/mission/
+      \endverb
+    \endentry
     \entry{berman2020mutagan}{misc}{}
       \name{author}{4}{}{%
         {{hash=3f7dc66639560114ec4755c84abe8ef7}{%
@@ -118,6 +154,59 @@
       \endverb
       \verb{url}
       \verb https://science.sciencemag.org/content/371/6526/284
+      \endverb
+    \endentry
+    \entry{maxmenOneMillionCoronavirus2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=521d305fa0c3f0aff81b120ded8adf20}{%
+           family={Maxmen},
+           familyi={M\bibinitperiod},
+           given={Amy},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{521d305fa0c3f0aff81b120ded8adf20}
+      \strng{fullhash}{521d305fa0c3f0aff81b120ded8adf20}
+      \strng{bibnamehash}{521d305fa0c3f0aff81b120ded8adf20}
+      \strng{authorbibnamehash}{521d305fa0c3f0aff81b120ded8adf20}
+      \strng{authornamehash}{521d305fa0c3f0aff81b120ded8adf20}
+      \strng{authorfullhash}{521d305fa0c3f0aff81b120ded8adf20}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Popular genome site GISAID’s impressive effort to understand the spread of COVID-19 has seen scientists upload sequences from most nations on Earth.}
+      \field{annotation}{Bandiera\_abtest: a Cg\_type: News Subject\_term: SARS-CoV-2, Databases, Epidemiology}
+      \field{day}{23}
+      \field{issue}{7857}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{7857}
+      \field{shorttitle}{One Million Coronavirus Sequences}
+      \field{title}{One Million Coronavirus Sequences: Popular Genome Site Hits Mega Milestone}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{volume}{593}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{21\bibrangedash 21}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/d41586-021-01069-w
+      \endverb
+      \verb{file}
+      \verb /home/st/Zotero/storage/NP5YHHCD/Maxmen - 2021 - One million coronavirus sequences popular genome .pdf;/home/st/Zotero/storage/39E5ASME/d41586-021-01069-w.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/d41586-021-01069-w
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/d41586-021-01069-w
       \endverb
     \endentry
     \entry{ng2017dna2vec}{misc}{}
