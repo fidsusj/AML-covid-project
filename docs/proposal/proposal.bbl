@@ -19,16 +19,13 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{gisaideditorGISAIDMission}{online}{}
+    \entry{Gisaid2021}{online}{}
       \name{author}{1}{}{%
         {{hash=cfae96e1d0349eab172c1f715c70d26d}{%
            family={(editor)},
            familyi={(\bibinitperiod},
-           given={GISAID},
+           given={{GISAID}},
            giveni={G\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {GISAID mission}%
       }
       \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
       \strng{fullhash}{cfae96e1d0349eab172c1f715c70d26d}
@@ -37,16 +34,19 @@
       \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
       \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
       \field{sortinit}{e}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{{GISAID}} - {{Mission}}}
+      \field{title}{{GISAID} - Mission}
+      \field{titleaddon}{{GISAID} mission}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
-      \verb /home/st/Zotero/storage/QL66KXY2/mission.html
+      \verb GISAID - Mission:C\:\\Users\\D070497\\Zotero\\storage\\QL66KXY2\\mission.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://www.gisaid.org/about-us/mission/
@@ -55,7 +55,7 @@
       \verb https://www.gisaid.org/about-us/mission/
       \endverb
     \endentry
-    \entry{berman2020mutagan}{misc}{}
+    \entry{Berman2020}{article}{}
       \name{author}{4}{}{%
         {{hash=3f7dc66639560114ec4755c84abe8ef7}{%
            family={Berman},
@@ -85,19 +85,25 @@
       \strng{authornamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
       \strng{authorfullhash}{fd4fe129b519938a2802385525566814}
       \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{q-bio.QM}
-      \field{eprinttype}{arxiv}
-      \field{title}{{{MutaGAN}}: {{A}} Seq2seq {{GAN}} Framework to Predict Mutations of Evolving Protein Populations}
+      \field{journaltitle}{{arXiv}}
+      \field{title}{{MutaGAN}: A Seq2seq {GAN} Framework to Predict Mutations of Evolving Protein Populations}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
       \field{year}{2020}
       \field{dateera}{ce}
-      \verb{eprint}
-      \verb 2008.11790
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2008.11790
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2008.11790
       \endverb
     \endentry
-    \entry{Hie284}{article}{}
+    \entry{Hie2021}{article}{}
       \name{author}{4}{}{%
         {{hash=2218b6e69c35a7ab5d3c0ebfbe634d92}{%
            family={Hie},
@@ -120,9 +126,6 @@
            given={Bryan},
            giveni={B\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {American Association for the Advancement of Science}%
-      }
       \strng{namehash}{211c183ca82cf29ca2d563c628decc4f}
       \strng{fullhash}{7178f69b82932079996658689f305443}
       \strng{bibnamehash}{211c183ca82cf29ca2d563c628decc4f}
@@ -130,24 +133,25 @@
       \strng{authornamehash}{211c183ca82cf29ca2d563c628decc4f}
       \strng{authorfullhash}{7178f69b82932079996658689f305443}
       \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Viral mutations that evade neutralizing antibodies, an occurrence known as viral escape, can occur and may impede the development of vaccines. To predict which mutations may lead to viral escape, Hie et al. used a machine learning technique for natural language processing with two components: grammar (or syntax) and meaning (or semantics) (see the Perspective by Kim and Przytycka). Three different unsupervised language models were constructed for influenza A hemagglutinin, HIV-1 envelope glycoprotein, and severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) spike glycoprotein. Semantic landscapes for these viruses predicted viral escape mutations that produce sequences that are syntactically and/or grammatically correct but effectively different in semantics and thus able to evade the immune system.Science, this issue p. 284; see also p. 233The ability for viruses to mutate and evade the human immune system and cause infection, called viral escape, remains an obstacle to antiviral and vaccine development. Understanding the complex rules that govern escape could inform therapeutic design. We modeled viral escape with machine learning algorithms originally developed for human natural language. We identified escape mutations as those that preserve viral infectivity but cause a virus to look different to the immune system, akin to word changes that preserve a sentence’s grammaticality but change its meaning. With this approach, language models of influenza hemagglutinin, HIV-1 envelope glycoprotein (HIV Env), and severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) Spike viral proteins can accurately predict structural escape patterns using sequence data alone. Our study represents a promising conceptual bridge between natural language and viral evolution.}
       \field{issn}{0036-8075}
       \field{journaltitle}{Science}
+      \field{note}{Publisher: American Association for the Advancement of Science}
       \field{number}{6526}
-      \field{title}{Learning the Language of Viral Evolution and Escape}
+      \field{title}{Learning the language of viral evolution and escape}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
       \field{volume}{371}
       \field{year}{2021}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \field{pages}{284\bibrangedash 288}
       \range{pages}{5}
       \verb{doi}
       \verb 10.1126/science.abd7331
-      \endverb
-      \verb{eprint}
-      \verb https://science.sciencemag.org/content/371/6526/284.full.pdf
       \endverb
       \verb{urlraw}
       \verb https://science.sciencemag.org/content/371/6526/284
@@ -156,16 +160,105 @@
       \verb https://science.sciencemag.org/content/371/6526/284
       \endverb
     \endentry
-    \entry{maxmenOneMillionCoronavirus2021}{article}{}
+    \entry{Imran2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=3a7da0ac3840af0126c5384556513a58}{%
+           family={Imran},
+           familyi={I\bibinitperiod},
+           given={Sheikh\bibnamedelima Asif},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=96f017fd885a2cee5145be94529c2f10}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={Md.\bibnamedelimi Tariqul},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=eaa7bcc9dcc4555a73e0da9d487b8969}{%
+           family={Shahnaz},
+           familyi={S\bibinitperiod},
+           given={Celia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a4f0f36956639f6c3a75ddb8ec607e47}{%
+           family={Islam},
+           familyi={I\bibinitperiod},
+           given={Md.\bibnamedelimi Tafhimul},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=503d278e1ccec89ce92d5031bb901ffc}{%
+           family={Imam},
+           familyi={I\bibinitperiod},
+           given={Omar\bibnamedelima Tawhid},
+           giveni={O\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=7bfbeceb8b516a1ddf631e222c4fac31}{%
+           family={Haque},
+           familyi={H\bibinitperiod},
+           given={Moinul},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{119fba48de7d6a82e9e028f65a14ff81}
+      \strng{fullhash}{0416ccbb195b91b12e65a1073646cd72}
+      \strng{bibnamehash}{119fba48de7d6a82e9e028f65a14ff81}
+      \strng{authorbibnamehash}{119fba48de7d6a82e9e028f65a14ff81}
+      \strng{authornamehash}{119fba48de7d6a82e9e028f65a14ff81}
+      \strng{authorfullhash}{0416ccbb195b91b12e65a1073646cd72}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE}}
+      \field{title}{{COVID}-19 {mRNA} Vaccine Degradation Prediction using Regularized {LSTM} Model}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/WIECON-ECE52138.2020.9398044
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9398044
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9398044
+      \endverb
+    \endentry
+    \entry{Kaggle2020}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8fec9765921cfa63cb331e42a924c27c}{%
+           family={Kaggle},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{fullhash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{bibnamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorbibnamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authornamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorfullhash}{8fec9765921cfa63cb331e42a924c27c}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{OpenVaccine}: {COVID}-19 {mRNA} Vaccine Degradation Prediction}
+      \field{titleaddon}{{OpenVaccine}: {COVID}-19 {mRNA} Vaccine Degradation Prediction}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kaggle.com/c/stanford-covid-vaccine/discussion/182652
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/c/stanford-covid-vaccine/discussion/182652
+      \endverb
+    \endentry
+    \entry{Maxmen2021}{article}{}
       \name{author}{1}{}{%
         {{hash=521d305fa0c3f0aff81b120ded8adf20}{%
            family={Maxmen},
            familyi={M\bibinitperiod},
            given={Amy},
            giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Nature Publishing Group}%
       }
       \strng{namehash}{521d305fa0c3f0aff81b120ded8adf20}
       \strng{fullhash}{521d305fa0c3f0aff81b120ded8adf20}
@@ -174,19 +267,16 @@
       \strng{authornamehash}{521d305fa0c3f0aff81b120ded8adf20}
       \strng{authorfullhash}{521d305fa0c3f0aff81b120ded8adf20}
       \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Popular genome site GISAID’s impressive effort to understand the spread of COVID-19 has seen scientists upload sequences from most nations on Earth.}
-      \field{annotation}{Bandiera\_abtest: a Cg\_type: News Subject\_term: SARS-CoV-2, Databases, Epidemiology}
-      \field{day}{23}
-      \field{issue}{7857}
+      \field{abstract}{Popular genome site {GISAID}’s impressive effort to understand the spread of {COVID}-19 has seen scientists upload sequences from most nations on Earth.}
       \field{journaltitle}{Nature}
       \field{langid}{english}
-      \field{month}{4}
+      \field{note}{Bandiera\_abtest: a Cg\_type: News Number: 7857 Publisher: Nature Publishing Group Subject\_term: {SARS}-{CoV}-2, Databases, Epidemiology}
       \field{number}{7857}
-      \field{shorttitle}{One Million Coronavirus Sequences}
-      \field{title}{One Million Coronavirus Sequences: Popular Genome Site Hits Mega Milestone}
+      \field{shorttitle}{One million coronavirus sequences}
+      \field{title}{One million coronavirus sequences: popular genome site hits mega milestone}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
@@ -200,7 +290,7 @@
       \verb 10.1038/d41586-021-01069-w
       \endverb
       \verb{file}
-      \verb /home/st/Zotero/storage/NP5YHHCD/Maxmen - 2021 - One million coronavirus sequences popular genome .pdf;/home/st/Zotero/storage/39E5ASME/d41586-021-01069-w.html
+      \verb Snapshot:C\:\\Users\\D070497\\Zotero\\storage\\39E5ASME\\d41586-021-01069-w.html:text/html;Full Text PDF:C\:\\Users\\D070497\\Zotero\\storage\\NP5YHHCD\\Maxmen - 2021 - One million coronavirus sequences popular genome .pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.nature.com/articles/d41586-021-01069-w
@@ -209,7 +299,7 @@
       \verb https://www.nature.com/articles/d41586-021-01069-w
       \endverb
     \endentry
-    \entry{ng2017dna2vec}{misc}{}
+    \entry{Ng2017}{article}{}
       \name{author}{1}{}{%
         {{hash=92b8722c985e64dc12301682946c882b}{%
            family={Ng},
@@ -224,19 +314,78 @@
       \strng{authornamehash}{92b8722c985e64dc12301682946c882b}
       \strng{authorfullhash}{92b8722c985e64dc12301682946c882b}
       \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{q-bio.QM}
-      \field{eprinttype}{arxiv}
-      \field{title}{Dna2vec: {{Consistent}} Vector Representations of Variable-Length k-Mers}
+      \field{journaltitle}{{arXiv}}
+      \field{title}{dna2vec: Consistent vector representations of variable-length k-mers}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
       \field{year}{2017}
       \field{dateera}{ce}
-      \verb{eprint}
-      \verb 1701.06279
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1701.06279
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1701.06279
       \endverb
     \endentry
-    \entry{salamaPredictionVirusMutation2016}{article}{}
+    \entry{Qaid2021}{article}{}
+      \name{author}{5}{}{%
+        {{hash=80789f7754aac9833a6854b680c4f4f2}{%
+           family={Qaid},
+           familyi={Q\bibinitperiod},
+           given={Talal\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=a0ede5aa6747b14f4df732cd5c0e8f6c}{%
+           family={Mazaar},
+           familyi={M\bibinitperiod},
+           given={Hussein},
+           giveni={H\bibinitperiod}}}%
+        {{hash=cde2df162a851364afb33c5b972a112f}{%
+           family={Alqahtani},
+           familyi={A\bibinitperiod},
+           given={Mohammed\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f5cfeebfb256c76492b5a8d5cb262856}{%
+           family={Raweh},
+           familyi={R\bibinitperiod},
+           given={Abeer\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=49f92d389eed37644911b498b4f6972c}{%
+           family={Alakwaa},
+           familyi={A\bibinitperiod},
+           given={Wafaa},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{82ddcfe7866c138f5661cfbe7e4e6a7b}
+      \strng{fullhash}{b94f1fd2d3db065feca62187e6177379}
+      \strng{bibnamehash}{82ddcfe7866c138f5661cfbe7e4e6a7b}
+      \strng{authorbibnamehash}{82ddcfe7866c138f5661cfbe7e4e6a7b}
+      \strng{authornamehash}{82ddcfe7866c138f5661cfbe7e4e6a7b}
+      \strng{authorfullhash}{b94f1fd2d3db065feca62187e6177379}
+      \field{sortinit}{Q}
+      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{PeerJ} Computer Science}
+      \field{title}{Deep sequence modelling for predicting {COVID}-19 {mRNA} vaccine degradation}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://doi.org/10.7717/peerj-cs.597
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7717/peerj-cs.597
+      \endverb
+    \endentry
+    \entry{Salama2016}{article}{}
       \name{author}{3}{}{%
         {{hash=71493582b51e5a80f53e8a66b97800d1}{%
            family={Salama},
@@ -261,17 +410,53 @@
       \strng{authornamehash}{6d38756640e6ef959432e8f83f1ef2a1}
       \strng{authorfullhash}{6d38756640e6ef959432e8f83f1ef2a1}
       \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
-      \field{month}{12}
-      \field{title}{The Prediction of Virus Mutation Using Neural Networks and Rough Set Techniques}
+      \field{journaltitle}{{EURASIP} Journal on Bioinformatics and Systems Biology}
+      \field{title}{The prediction of virus mutation using neural networks and rough set techniques}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
       \field{volume}{2016}
       \field{year}{2016}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1186/s13637-016-0042-0
+      \endverb
+    \endentry
+    \entry{Singhal2021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bde51fb2bd4c22001c785fd4e4d27426}{%
+           family={Singhal},
+           familyi={S\bibinitperiod},
+           given={Ankit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bde51fb2bd4c22001c785fd4e4d27426}
+      \strng{fullhash}{bde51fb2bd4c22001c785fd4e4d27426}
+      \strng{bibnamehash}{bde51fb2bd4c22001c785fd4e4d27426}
+      \strng{authorbibnamehash}{bde51fb2bd4c22001c785fd4e4d27426}
+      \strng{authornamehash}{bde51fb2bd4c22001c785fd4e4d27426}
+      \strng{authorfullhash}{bde51fb2bd4c22001c785fd4e4d27426}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{arXiv}}
+      \field{title}{Application and Comparison of Deep Learning Methods in the Prediction of {RNA} Sequence Degradation and Stability}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2011.05136
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2011.05136
       \endverb
     \endentry
   \enddatalist
