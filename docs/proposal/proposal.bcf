@@ -2359,10 +2359,12 @@
     <bcf:citekey order="7">Gisaid2021</bcf:citekey>
     <bcf:citekey order="8">Maxmen2021</bcf:citekey>
     <bcf:citekey order="9">Ng2017</bcf:citekey>
-    <bcf:citekey order="10">Imran2021</bcf:citekey>
-    <bcf:citekey order="11">Singhal2021</bcf:citekey>
-    <bcf:citekey order="12">Qaid2021</bcf:citekey>
-    <bcf:citekey order="13">Kaggle2020</bcf:citekey>
+    <bcf:citekey order="10">Kaggle2020</bcf:citekey>
+    <bcf:citekey order="11">Imran2021</bcf:citekey>
+    <bcf:citekey order="12">Singhal2021</bcf:citekey>
+    <bcf:citekey order="13">Qaid2021</bcf:citekey>
+    <bcf:citekey order="14">Vandewiele2020</bcf:citekey>
+    <bcf:citekey order="15">Imran2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

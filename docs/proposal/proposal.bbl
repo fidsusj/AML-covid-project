@@ -459,6 +459,38 @@
       \verb https://arxiv.org/abs/2011.05136
       \endverb
     \endentry
+    \entry{Vandewiele2020}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3c5a678081dbfbac82c5fad7985c4288}{%
+           family={Vandewiele},
+           familyi={V\bibinitperiod},
+           given={Gilles},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c5a678081dbfbac82c5fad7985c4288}
+      \strng{fullhash}{3c5a678081dbfbac82c5fad7985c4288}
+      \strng{bibnamehash}{3c5a678081dbfbac82c5fad7985c4288}
+      \strng{authorbibnamehash}{3c5a678081dbfbac82c5fad7985c4288}
+      \strng{authornamehash}{3c5a678081dbfbac82c5fad7985c4288}
+      \strng{authorfullhash}{3c5a678081dbfbac82c5fad7985c4288}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Predicting {mRNA} Degradation using {GNNs} and {RNNs} in the Search for a {COVID}-19 Vaccine}
+      \field{urlday}{6}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/predicting-mrna-degradation-using-gnns-and-rnns-in-the-search-for-a-covid-19-vaccine-b3070d20b2e5
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/predicting-mrna-degradation-using-gnns-and-rnns-in-the-search-for-a-covid-19-vaccine-b3070d20b2e5
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
