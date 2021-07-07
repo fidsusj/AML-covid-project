@@ -1,15 +1,15 @@
-[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
-[1] Config.pm:315> INFO - Logfile is 'proposal.blg'
-[284] biber-MSWIN64:330> INFO - === 
-[355] Biber.pm:415> INFO - Reading 'proposal.bcf'
-[916] Biber.pm:952> INFO - Found 11 citekeys in bib section 0
-[1036] Biber.pm:4334> INFO - Processing section 0
-[1101] Biber.pm:4523> INFO - Looking for bibtex format file 'references.bib' for section 0
-[1133] bibtex.pm:1682> INFO - LaTeX decoding ...
-[1178] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[1432] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1433] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1433] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[1433] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
-[1479] bbl.pm:651> INFO - Writing 'proposal.bbl' with encoding 'UTF-8'
-[1494] bbl.pm:754> INFO - Output to proposal.bbl
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'proposal.blg'
+[63] biber:340> INFO - === Mi Jul  7, 2021, 11:51:15
+[77] Biber.pm:415> INFO - Reading 'proposal.bcf'
+[138] Biber.pm:952> INFO - Found 11 citekeys in bib section 0
+[150] Biber.pm:4340> INFO - Processing section 0
+[158] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[159] bibtex.pm:1689> INFO - LaTeX decoding ...
+[171] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[268] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[268] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[268] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[268] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[280] bbl.pm:654> INFO - Writing 'proposal.bbl' with encoding 'UTF-8'
+[286] bbl.pm:757> INFO - Output to proposal.bbl

@@ -34,7 +34,7 @@
       \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
       \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
       \field{sortinit}{e}
-      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{GISAID} - Mission}
@@ -85,7 +85,7 @@
       \strng{authornamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
       \strng{authorfullhash}{fd4fe129b519938a2802385525566814}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{arXiv}}
@@ -133,7 +133,7 @@
       \strng{authornamehash}{211c183ca82cf29ca2d563c628decc4f}
       \strng{authorfullhash}{7178f69b82932079996658689f305443}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0036-8075}
@@ -200,7 +200,7 @@
       \strng{authornamehash}{119fba48de7d6a82e9e028f65a14ff81}
       \strng{authorfullhash}{0416ccbb195b91b12e65a1073646cd72}
       \field{sortinit}{I}
-      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE}}
@@ -234,7 +234,7 @@
       \strng{authornamehash}{8fec9765921cfa63cb331e42a924c27c}
       \strng{authorfullhash}{8fec9765921cfa63cb331e42a924c27c}
       \field{sortinit}{K}
-      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{OpenVaccine}: {COVID}-19 {mRNA} Vaccine Degradation Prediction}
@@ -267,7 +267,7 @@
       \strng{authornamehash}{521d305fa0c3f0aff81b120ded8adf20}
       \strng{authorfullhash}{521d305fa0c3f0aff81b120ded8adf20}
       \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Popular genome site {GISAID}’s impressive effort to understand the spread of {COVID}-19 has seen scientists upload sequences from most nations on Earth.}
@@ -314,7 +314,7 @@
       \strng{authornamehash}{92b8722c985e64dc12301682946c882b}
       \strng{authorfullhash}{92b8722c985e64dc12301682946c882b}
       \field{sortinit}{N}
-      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{arXiv}}
@@ -367,7 +367,7 @@
       \strng{authornamehash}{82ddcfe7866c138f5661cfbe7e4e6a7b}
       \strng{authorfullhash}{b94f1fd2d3db065feca62187e6177379}
       \field{sortinit}{Q}
-      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{PeerJ} Computer Science}
@@ -410,7 +410,7 @@
       \strng{authornamehash}{6d38756640e6ef959432e8f83f1ef2a1}
       \strng{authorfullhash}{6d38756640e6ef959432e8f83f1ef2a1}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{EURASIP} Journal on Bioinformatics and Systems Biology}
@@ -441,7 +441,7 @@
       \strng{authornamehash}{bde51fb2bd4c22001c785fd4e4d27426}
       \strng{authorfullhash}{bde51fb2bd4c22001c785fd4e4d27426}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{arXiv}}
@@ -474,7 +474,7 @@
       \strng{authornamehash}{3c5a678081dbfbac82c5fad7985c4288}
       \strng{authorfullhash}{3c5a678081dbfbac82c5fad7985c4288}
       \field{sortinit}{V}
-      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Predicting {mRNA} Degradation using {GNNs} and {RNNs} in the Search for a {COVID}-19 Vaccine}
