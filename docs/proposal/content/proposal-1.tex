@@ -1,6 +1,6 @@
 \section{Machine Learning based prediction of the next SARS-CoV-2 variants and simulation of vaccine effectiveness} \label{proposal1}
 
-\textbf{1. Idea and research question}
+\subsection{Idea and research question}
 
 There is hope for an end of the pandemic due to the vaccines. All vaccines are developed against the wild type of the virus. Through the mutation processes the danger, that a variant occurs, against which the vaccines  are no longer effective, arises (viral escape). This proposal aims to detect this development faster to enable a faster and better response to new variants. So there are two scientific questions (which can also be separated):
 
@@ -13,29 +13,29 @@ There is hope for an end of the pandemic due to the vaccines. All vaccines are d
 It is more realistic to focus on one of the questions above. For the first the data access is easier.
 \color{black}
 
-\textbf{2. Related work}
+\subsection{Related work}
 
 Already some works exist in the area of predicting virus mutations using \ac{ML} techniques. Hie et al. \cite{Hie2021} applied methods developed for \ac{NLP}.  According to their work escape mutations look different to the immune system, but have the same viral infectivity. The analogy from the \ac{NLP} area are word changes, which change the meaning of a sentence, but the grammaticality remains. %Through their work, they have managed to generate a connection between natural language and viral evolution. 
 Even before the SARS-CoV-2 pandemic, research was done in this area, e.g. from Salama et al. \cite{Salama2016}. They used neural networks for predicting new mutations and rough set techniques for detecting patterns in mutations. Furthermore they validated their approach for the Newcastle virus and achieved an accuracy of 75\%. \ac{GAN} achieve great results in image generation. Berman et al. applied a \ac{GAN} in \cite{Berman2020} to generate \ac{DNA} sequences.
 
-\textbf{3. Approach}
+\subsection{Approach}
 
 After preprocessing the raw SARS-CoV-2 genomes we would like to train a \ac{ML} model for predicting the probable next mutations. The \ac{ML} model could be a standard neural network (as in  \cite{Salama2016}), a GAN (as in \cite{Berman2020}) or a neural network language model (as in \cite{Hie2021}). Due to a lack of time we haven't decided yet for one \ac{ML} model.
 \color{green}
 Is clarified after a decision for one proposal.
 \color{black}
 
-\textbf{4. Data sources}
+\subsection{Data sources}
 
 For predicting the next possible SARS-CoV-2 variants the SARS-CoV-2 genome develop\-ment from the past can be used as data source (genomic time series data). Data sources are available through the GISAID initiative \cite{Gisaid2021}. In April 2021 over one million SARS-CoV-2 genomes are available via GISAID \cite{Maxmen2021}. Based on this data the Nextstrain\footnote{https://nextstrain.org/ncov/global?label=clade:19A} project provides a visualization how the SARS-CoV-2 genome evolves.
 
 %In terms of data quality, when working with genomic data one should always have in mind, that genotyping errors are possible.
 
-\textbf{5. Computational resources}
+\subsection{Computational resources}
 
 The needed computational resources and time depends on the concrete chosen \ac{ML} approach. As described above due to a lack of time we haven't decided yet for one \ac{ML} approach. For further research and the decision for one \ac{ML} approach we keep this in mind.
 
-\textbf{6. Probable difficulties}
+\subsection{Probable difficulties}
 
 Challenges could arise due to the amount of data (one SARS-CoV-2 genome consists of about 30.000 bases => TS size = data instances * 30.000). This can be encountered with less data instances or a compression of SARS-CoV-2 genome e.g. through DNA2vec \cite{Ng2017} (represents pieces of \ac{DNA} as vector).
 

@@ -1,11 +1,27 @@
 \section{OpenVaccine - COVID-19 mRNA Vaccine Degradation Prediction} \label{proposal2}
 
+\subsection{Idea and research question}
+
 mRNA vaccines have the severe problem to degrade quickly as being unstable without intense refrigeration. This makes the preparation and shippment of such vaccines difficult and leads to high losses. Only little is known about which parts of the mRNA backbones are most likely to degrade. Thus we want to predict the degradation rate at each base of a possibly stable RNA molecule. 
 
 The Stanford University hosted a Kaggle challenge exactly for this problem \cite{Kaggle2020} and provided parts of a high-quality EteRNA\footnote{crowdsourcing platform for RNA design: https://eternagame.org/} data set consisting of over 3000 RNA molecules and their degradation rates at each base.
 
-With over 1.600 teams having participated in this challenge many promising approaches were evaluated. For sequence modeling especially \ac{RNN} approaches are most promising. \cite{Imran2021} made use of a regularized LSTM model to predict the degradation rates of each base outperforming traditional tree-based algorithms. Besides \ac{LSTM}s \cite{Singhal2021} also made use of \ac{GRU}s and \ac{GCN}s to solve the challenge, whereas the \ac{GRU} approach performed best with an accuracy of 76\%. Similar approaches are given in \cite{Qaid2021} and \cite{Vandewiele2020}. We want to reconstruct an own simplified solution for this challenge inspired by such \ac{RNN} approaches and might add other components like an \ac{AE} for better denoised feature extraction. By dealing with such high-performance models and building an own simplified model one can better evaluate the pros and cons of the current best solutions for this problem. 
+\subsection{Related work}
+
+With over 1.600 teams having participated in this challenge many promising approaches were evaluated. For sequence modeling especially \ac{RNN} approaches are most promising. \cite{Imran2021} made use of a regularized \ac{LSTM} model to predict the degradation rates of each base outperforming traditional tree-based algorithms. Besides an \ac{LSTM} \cite{Singhal2021} also made use of a \ac{GRU} and a \ac{GCN}sto solve the challenge, whereas the \ac{GRU} approach performed best with an accuracy of 76\%. Similar approaches are given in \cite{Qaid2021} and \cite{Vandewiele2020}. 
+
+\subsection{Approach}
+
+We want to reconstruct an own simplified solution for this challenge inspired by such \ac{RNN} approaches and might add other components like an \ac{AE} for better denoised feature extraction. By dealing with such high-performance models and building an own simplified model one can better evaluate the pros and cons of the current best solutions for this problem. 
+
+\subsection{Computational resources}
 
 The LSTM of \cite{Imran2021} stated training durations of around 300 epochs which took about 84 minutes on an NVIDIA TESLA P100 GPU. Having a NVIDIA GTX 1080 available locally helps to achieve similar training times, also with the free NVIDIA K80 GPU on Google Colab one should not need to wait ages until training has finished. 
 
+\subsection{Probable difficulties}
+
 The difficulty of this project is therefore to learn and deal with the mostly unknown RNN architectures and to achieve fair results given a simplified model as an outcome of this project. Also the comparison of different approaches and why one works best should not be neglected. 
+
+\color{green}
+Nothing has changed in this proposal.
+\color{black}
