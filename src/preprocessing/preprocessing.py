@@ -8,17 +8,32 @@ def run_preprocessing(run_from_scratch, df_dataset):
     """ Custom dataset preprocessing if run_from_scratch=True """
     if run_from_scratch:
         print("\nPreprocessing dataset ...")
-
-        # TODO: select suitable subpart of sequence (< 100 nucleotides?)
-
-        df_dataset_numeric = sequence_to_numeric(df_dataset)
-
+        df_selected = select_subpart_of_genome(df_dataset)
+        df_dataset_numeric = sequence_to_numeric(df_selected)
         return df_dataset_numeric
     else:
-        df_dataset = pd.read_csv(
-            str(get_project_root()) + "/data/preprocessed/preprocessed.csv", index_col=0
-        )
-        return df_dataset
+        df_preprocessed = pd.read_csv(
+            str(get_project_root()) + "/data/preprocessed/preprocessed.csv")
+        df_preprocessed["parent"] = df_preprocessed["parent"].apply(eval)
+        df_preprocessed["child"] = df_preprocessed["child"].apply(eval)
+        return df_preprocessed
+
+
+def select_subpart_of_genome(df_dataset):
+    """ Select subpart of each genome sequence """
+    # TODO: adapt (which section to select?)
+    start = 0
+    end = 99
+    df_selected = df_dataset.apply(
+        lambda x: [select_subpart(x.parent, start, end), select_subpart(x.child, start, end)], axis=1,
+        result_type='expand')
+    df_selected.columns = ["parent", "child"]
+    return df_selected
+
+
+def select_subpart(sequence, beginning, end):
+    """ Select subpart of sequence """
+    return sequence[beginning:end]
 
 
 def sequence_to_numeric(df_dataset):
