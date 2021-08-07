@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# data
+src/data/*
+
+# external ncov repo
+src/create_dataset/ncov/*
+src/create_dataset/ncov/
+
+# IntelliJ
+.idea/*
