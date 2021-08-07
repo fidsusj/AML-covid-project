@@ -1,0 +1,169 @@
+% This template was initially provided by Dulip Withanage.
+% Modifications for the database systems research group
+% were made by Conny Junghans,  Jannik Strötgen and Michael Gertz
+
+\documentclass[
+     12pt,         % font size
+     a4paper,      % paper format
+     BCOR10mm,     % binding correction
+     DIV14,        % stripe size for margin calculation
+     ]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PACKAGES:
+
+% Use German
+\usepackage[english]{babel}
+% Input and font encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Index-generation
+\usepackage{makeidx}
+% Embedding of URLs
+\usepackage{url}
+% Special \LaTex symbols (e.g. \BibTeX)
+%\usepackage{doc}
+% Include Graphic-files
+\usepackage{graphicx}
+% Include doc++ generated tex-files
+%\usepackage{docxx}
+% Fuer anderthalbzeiligen Textsatz
+\usepackage{setspace}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{hhline}
+\usepackage{highlight}
+
+\usepackage{biblatex}
+\bibliography{references.bib}
+
+% hyperrefs in the documents
+\PassOptionsToPackage{hyphens}{url}\usepackage[bookmarks=true,colorlinks,pdfpagelabels,pdfstartview = FitH,bookmarksopen = true,bookmarksnumbered = true,linkcolor = black,plainpages = false,hypertexnames = false,citecolor = black,urlcolor=black]{hyperref}
+%\usepackage{hyperref}
+
+
+% CUSTOM:
+
+% For Quotes:
+\usepackage{csquotes}
+
+% For Definitions:                   						
+\usepackage{amsthm}
+\usepackage[framemethod=tikz]{mdframed}
+
+\newtheoremstyle{defi}
+{\topsep}         % Abstand oben
+{\topsep}         % Abstand unten
+{\normalfont}     % Schrift des Bodys
+{0pt}             % Einschub der ersten Zeile
+{\bfseries}       % Darstellung von der Schrift in der �berschrift
+{:}               % Trennzeichen zwischen �berschrift und Body
+{.5em}            % Abstand nach dem Trennzeichen zum Body Text
+{\thmname{#3}}    % Name in eckigen Klammern
+\theoremstyle{defi}
+
+\newmdtheoremenv[
+hidealllines = true,       % Rahmen komplett ausblenden
+leftline = true,           % Linie links einschalten
+innertopmargin = 0pt,      % Abstand oben
+innerbottommargin = 4pt,   % Abstand unten
+innerrightmargin = 0pt,    % Abstand rechts
+linewidth = 3pt,           % Linienbreite
+linecolor = gray!40,       % Linienfarbe
+]{defStrich}{Definition}     % Name der des formats "defStrich"
+
+% For Abbreviations:
+\usepackage{acronym}
+
+%For Mathematical LaTeX Macros
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% For subfigures
+\usepackage{caption}
+\usepackage{subcaption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% OTHER SETTINGS:
+
+% Choose language
+\newcommand{\setlang}[1]{\selectlanguage{#1}\nonfrenchspacing}
+
+
+\begin{document}
+
+% TITLE:
+\pagenumbering{roman} 
+\begin{titlepage}
+
+\vspace*{1cm}
+\begin{center}
+\textbf{ 
+\Large Heidelberg University\\
+\smallskip
+\Large Institute of Computer Science\\
+\smallskip
+}
+
+\vspace{3cm}
+
+\textbf{\large Project report for the lecture Advanced Machine Learning}
+
+\vspace{0.5\baselineskip}
+{\huge
+\textbf{Prediction of the next SARS-CoV-2 variants}
+}
+\vspace{0.5cm}
+
+\url{https://github.com/nilskre/AML-covid-project}
+
+\end{center}
+
+\vfill 
+
+{\large
+\begin{tabular}[l]{ll}
+Team Member: & Felix Hausberger, 3661293,\\
+  & Applied Computer Science\\
+  & eb260@stud.uni-heidelberg.de\\
+  & \\
+Team Member: & Nils Krehl, 3664130,\\
+  & Applied Computer Science\\
+  & pu268@stud.uni-heidelberg.de\\
+  
+\end{tabular}
+}
+
+\end{titlepage}
+
+% \input{content/abstract.tex}
+\input{content/anti-plagiarism-statement.tex}
+\input{content/member-contribution.tex}
+
+\newpage
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+\include{content/abbreviations.tex}
+\input{content/setup.tex}
+\input{content/introduction.tex}
+\input{content/related-work.tex}
+\input{content/approach.tex}
+\input{content/experimental-results.tex}
+\input{content/conclusion.tex}
+
+\clearpage
+\pagenumbering{Roman}
+% \appendix
+% \input{content/appendix.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\printbibliography
+
+\end{document}

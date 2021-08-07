@@ -1,0 +1,57 @@
+% Siavoosh Payandeh Azad Jan. 2019
+\ProvidesPackage{highlight}[Cell background highlighting based on user data]
+\RequirePackage{etoolbox}
+\RequirePackage{pgf} % for calculating the values for gradient
+\RequirePackage{xcolor} % enables the use of cellcolor make sure you have [table] option in the document class 
+% Color set related!
+\definecolor{high}{HTML}{0e802d}  % the color for the highest number in your data set
+\definecolor{low}{HTML}{daf5e1}  % the color for the lowest number in your data set
+\newcommand*{\opacity}{90}% here you can change the opacity of the background color!
+%======================================
+% Data set related!
+\newcommand*{\minval}{0.7}% define the minimum value on your data set
+\newcommand*{\maxval}{1.0}% define the maximum value in your data set!
+%======================================
+% gradient function!
+\newcommand{\gradient}[1]{
+    % The values are calculated linearly between \minval and \maxval
+    \ifdimcomp{#1pt}{>}{\maxval pt}{#1}{
+    \ifdimcomp{#1pt}{<}{\minval pt}{#1}{
+         \pgfmathparse{int(round(100*(#1/(\maxval-\minval))-(\minval*(100/(\maxval-\minval)))))}
+        \xdef\tempa{\pgfmathresult}
+        \cellcolor{high!\tempa!low!\opacity} #1
+    }}
+ }
+%======================================
+% gradient function 2!
+\newcommand{\gradientOne}[1]{
+    % The values are calculated linearly between 0 and 0.25
+    \ifdimcomp{#1pt}{>}{0.25pt}{#1}{
+    \ifdimcomp{#1pt}{<}{0pt}{#1}{
+         \pgfmathparse{int(round(100*(#1/(0.25-0))-(0*(100/(0.25-0)))))}
+        \xdef\tempa{\pgfmathresult}
+        \cellcolor{high!\tempa!low!\opacity} #1
+    }}
+ }
+%======================================
+% gradient function 3!
+\newcommand{\gradientTwo}[1]{
+    % The values are calculated linearly between \minval and \maxval
+    \ifdimcomp{#1pt}{>}{2.01pt}{#1}{
+    \ifdimcomp{#1pt}{<}{0pt}{#1}{
+         \pgfmathparse{int(round(100*(#1/(2.01-0))-(0*(100/(2.01-0)))))}
+        \xdef\tempa{\pgfmathresult}
+        \cellcolor{high!\tempa!low!\opacity} #1
+    }}
+ }
+%======================================
+% gradient function single cell! 
+\newcommand{\gradientcell}[6]{
+    % The values are calculated linearly between \minval and \maxval
+    \ifdimcomp{#1pt}{>}{#3 pt}{#1}{
+    \ifdimcomp{#1pt}{<}{#2 pt}{#1}{
+         \pgfmathparse{int(round(100*(#1/(#3-#2))-(\minval*(100/(#3-#2)))))}
+        \xdef\tempa{\pgfmathresult}
+        \cellcolor{#5!\tempa!#4!#6} #1
+    }}
+ }

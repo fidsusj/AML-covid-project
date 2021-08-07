@@ -1,0 +1,32 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {0}Project Setup}{2}{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Fundamentals and Related Work}{3}{section.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Approach}{4}{section.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Dataset creation}{4}{subsection.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.1}tbd}{4}{subsubsection.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.1.2}tbd}{4}{subsubsection.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{4}{subsection.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.1}tbd}{4}{subsubsection.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.2}tbd}{4}{subsubsection.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.3}tbd}{4}{subsubsection.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Model architecture}{4}{subsection.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Training process}{4}{subsection.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Experimental results}{5}{section.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{6}{section.21}%
