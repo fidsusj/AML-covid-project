@@ -1,5 +1,5 @@
 """ Module for creating the dataset """
-
+import glob
 import subprocess
 from time import strptime
 
@@ -14,14 +14,11 @@ from src.path_helper import get_project_root
 def run_create_dataset(run_from_scratch):
     """ Recreate dataset from fasta files if run_from_scratch=True """
     if run_from_scratch:
-        print("\nRecreate dataset ...")
-
+        print("\nRecreate dataset:")
+        combine_separate_input_files(str(get_project_root()) + "/data/raw/separate_input_files")
         construct_phylogenetic_tree()
-
         df_parent_child = calculate_related_sequences_based_on_phylogenetic_tree()
-
         df_dataset = fill_parent_child_combinations_with_genome_data(df_parent_child)
-
         return df_dataset
     else:
         df_dataset = pd.read_csv(
@@ -29,14 +26,31 @@ def run_create_dataset(run_from_scratch):
         return df_dataset
 
 
+def combine_separate_input_files(path_to_data_from_gisaid):
+    print(" - Combine separate input file into one")
+    all_metadata_files = glob.glob(path_to_data_from_gisaid + "/*.tsv")
+    list_df_separate_inputs = []
+    for filename in all_metadata_files:
+        df = pd.read_csv(filename, index_col=None, header=0, sep='\t')
+        list_df_separate_inputs.append(df)
+    df_combined = pd.concat(list_df_separate_inputs, axis=0, ignore_index=True)
+    df_combined.to_csv("./data/raw/example_metadata.tsv", index=False)
+    print("     metadata done")
+    exit_code = subprocess.call(str(get_project_root()) + '/create_dataset/combine_fasta_input_files.sh')
+    assert exit_code == 0
+    print("     fasta done")
+
+
 def construct_phylogenetic_tree():
     """ Data preprocessing (alignment, filtering) with ncov routine and phylogenetic tree generation """
+    print(" - Create phylogenetic tree with ncov")
     exit_code = subprocess.call(str(get_project_root()) + '/create_dataset/run_ncov.sh')
-    print(exit_code)
+    assert exit_code == 0
 
 
 def calculate_related_sequences_based_on_phylogenetic_tree():
     """ Get parent child combinations from phylogenetic tree """
+    print(" - Calculate related sequences")
     tree = Tree.get(path=str(get_project_root()) + "/data/dataset/tree.nwk", schema="newick")
     patristic_distance_matrix = PatristicDistanceMatrix(tree)
     # k nächste finden (k = 1 für den Anfang)
@@ -86,6 +100,7 @@ def calculate_related_sequences_based_on_phylogenetic_tree():
 
 def fill_parent_child_combinations_with_genome_data(df_parent_child):
     """ Insert parent child sequences """
+    print(" - Fill parent child combinations with genome data")
     sequences = {}
     for seq_record in SeqIO.parse(str(get_project_root()) + "/data/dataset/aligned_focal.fasta", "fasta"):
         sequences[seq_record.id] = seq_record.seq + "-"

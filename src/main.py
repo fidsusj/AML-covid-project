@@ -5,7 +5,7 @@ from src.models.model_trainer import train_models
 from src.preprocessing.preprocessing import run_preprocessing
 
 if __name__ == "__main__":
-    RECREATE_DATASET_FROM_FASTA_FILES = False
+    RECREATE_DATASET_FROM_FASTA_FILES = True
     PREPROCESSING = True
     MODEL_TRAINING = False
 

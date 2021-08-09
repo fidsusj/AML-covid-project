@@ -7,7 +7,7 @@ from src.path_helper import get_project_root
 def run_preprocessing(run_from_scratch, df_dataset):
     """ Custom dataset preprocessing if run_from_scratch=True """
     if run_from_scratch:
-        print("\nPreprocessing dataset ...")
+        print("\nPreprocessing dataset:")
         df_selected = select_subpart_of_genome(df_dataset)
         df_dataset_numeric = sequence_to_numeric(df_selected)
         return df_dataset_numeric
@@ -21,9 +21,11 @@ def run_preprocessing(run_from_scratch, df_dataset):
 
 def select_subpart_of_genome(df_dataset):
     """ Select subpart of each genome sequence """
+    print(" - Select subpart of genome")
     # TODO: adapt (which section to select?)
-    start = 0
-    end = 99
+    # don't start at the beginning (sequences are aligned and padded (-))
+    start = 100
+    end = 199
     df_selected = df_dataset.apply(
         lambda x: [select_subpart(x.parent, start, end), select_subpart(x.child, start, end)], axis=1,
         result_type='expand')
@@ -38,6 +40,7 @@ def select_subpart(sequence, beginning, end):
 
 def sequence_to_numeric(df_dataset):
     """ Convert sequences (string) to numeric representation (each triplet = one id) """
+    print(" - Transform to numeric input")
     list_of_chars = ["A", "T", "G", "C", "N", "-"]
     vocab = create_vocab(list_of_chars)
 
