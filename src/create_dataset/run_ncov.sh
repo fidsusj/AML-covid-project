@@ -23,7 +23,6 @@ else
   echo "     -> Worflow repo does not exist: clone workflow repo ${DIR}"
   git clone https://github.com/nextstrain/ncov.git
   cd ncov
-  exit 1
 fi
 
 echo "     -> Copy input data files (sequences, metadata, build.yaml) to ncov/data directory"
@@ -42,5 +41,5 @@ cp -u results/aligned_focal.fasta.xz ../../data/dataset
 cp -u results/sanitized_metadata_focal.tsv.xz ../../data/dataset
 cp -u results/global/tree.nwk ../../data/dataset
 cd ../../data/dataset
-xz --decompress aligned_focal.fasta.xz
-xz --decompress sanitized_metadata_focal.tsv.xz
+xz -f --decompress aligned_focal.fasta.xz
+xz -f --decompress sanitized_metadata_focal.tsv.xz

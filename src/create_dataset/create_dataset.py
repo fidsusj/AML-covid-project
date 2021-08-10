@@ -8,7 +8,7 @@ from Bio import SeqIO
 from dendropy import Tree
 from dendropy.calculate.treemeasure import PatristicDistanceMatrix
 
-from src.path_helper import get_project_root
+from path_helper import get_project_root
 
 
 def run_create_dataset(run_from_scratch):
@@ -34,7 +34,7 @@ def combine_separate_input_files(path_to_data_from_gisaid):
         df = pd.read_csv(filename, index_col=None, header=0, sep='\t')
         list_df_separate_inputs.append(df)
     df_combined = pd.concat(list_df_separate_inputs, axis=0, ignore_index=True)
-    df_combined.to_csv("./data/raw/example_metadata.tsv", index=False)
+    df_combined.to_csv("./data/raw/example_metadata.tsv", sep='\t', index=False)
     print("     metadata done")
     exit_code = subprocess.call(str(get_project_root()) + '/create_dataset/combine_fasta_input_files.sh')
     assert exit_code == 0

@@ -1,7 +1,7 @@
 """ Module for custom dataset preprocessing """
 import pandas as pd
 
-from src.path_helper import get_project_root
+from path_helper import get_project_root
 
 
 def run_preprocessing(run_from_scratch, df_dataset):
