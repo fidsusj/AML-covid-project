@@ -128,6 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+
+### CUSTOM
+
 # data
 src/data/*
 
@@ -137,3 +140,6 @@ src/create_dataset/ncov/
 
 # IntelliJ
 .idea/*
+
+# MacOS specific
+*.DS_Store
