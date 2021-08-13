@@ -15,24 +15,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evolutionary Datasets for Mutation Prediction}{3}{subsection.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Sequence2Sequence Models based on Long Short-Term Memory}{3}{subsection.14}%
+\contentsline {subsection}{\numberline {2.5}Previous work on Mutation Prediction}{3}{subsection.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Applying Generative Adversarial Networks}{3}{subsection.15}%
+\contentsline {subsection}{\numberline {2.6}Sequence2Sequence Models based on Long Short-Term Memory}{4}{subsection.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Transformer and Attention Mechanism}{3}{subsection.16}%
+\contentsline {subsection}{\numberline {2.7}Applying Generative Adversarial Networks}{5}{subsection.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Other Techniques}{3}{subsection.17}%
+\contentsline {subsection}{\numberline {2.8}Transformer and Attention Mechanism}{5}{subsection.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Approach}{4}{section.18}%
+\contentsline {subsection}{\numberline {2.9}Other Techniques}{5}{subsection.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Dataset Creation}{4}{subsection.19}%
+\contentsline {section}{\numberline {3}Approach}{6}{section.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{4}{subsection.20}%
+\contentsline {subsection}{\numberline {3.1}Dataset Creation}{6}{subsection.23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Model Architecture}{4}{subsection.21}%
+\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{6}{subsection.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Training Process}{4}{subsection.22}%
+\contentsline {subsection}{\numberline {3.3}Model Architecture}{6}{subsection.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experimental results}{5}{section.23}%
+\contentsline {subsection}{\numberline {3.4}Training Process}{6}{subsection.26}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{6}{section.24}%
+\contentsline {section}{\numberline {4}Experimental results}{7}{section.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{8}{section.28}%
