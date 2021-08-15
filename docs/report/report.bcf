@@ -2359,7 +2359,11 @@
     <bcf:citekey order="11">Mohamed2021</bcf:citekey>
     <bcf:citekey order="12">Hochreiter1997</bcf:citekey>
     <bcf:citekey order="13">Sundermeyer2012</bcf:citekey>
-    <bcf:citekey order="14">Sutskever2014</bcf:citekey>
+    <bcf:citekey order="14">Gertz2020</bcf:citekey>
+    <bcf:citekey order="15">Gertz2020</bcf:citekey>
+    <bcf:citekey order="16">Gertz2020</bcf:citekey>
+    <bcf:citekey order="17">Sutskever2014</bcf:citekey>
+    <bcf:citekey order="18">Sutskever2014</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

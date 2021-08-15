@@ -12,12 +12,12 @@ with $w_t$ being a word at position (timestamp) $t$ in a sentence of length $n$.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\linewidth]{figures/rnn_architecture.png}
-	\caption{Architecture of a conventional \ac{RNN} model \cite{Gertz2020}}
+	\includegraphics[width=1.0\linewidth]{figures/rnn_architecture.png}
+	\caption{Architecture of a conventional \ac{RNN} \cite{Gertz2020}}
 	\label{rnn_architecture}
 \end{figure}
 
-At each time step $t$ it outputs a probability distribution $P(w_t | w_1, ..., w_{t-1})$ given the words read so far in the current instance (see \autoref{rnn_architecture}). Words are read as a vectorized numerical representation, often so-called word embeddings $x_t$. One then calculates the hidden state $h_t$ by
+At each time step $t$ it outputs a probability distribution $P(w_t | w_1, ..., w_{t-1})$ given the words read so far in the current instance (see \autoref{rnn_architecture}). Words are read as a vectorized numerical representation, often given by pretrained so-called word embeddings $x_t$ which are lower dimensional and more semantically-enriched compared to simple one-hot encodings. One then calculates the hidden state $h_t$ by
 
 \begin{equation}
 	h_t = f(W^{(h)} h_{t-1} + W^{(x)} x_t + b_1)
@@ -54,27 +54,36 @@ Even before the rise of Covid-19 there had been studies trying to predict mutati
 
 \cite{Salama2016} proved that nucleotides in an RNA sequence can change based on their local neighborhood. Neural networks are used to predict new strains of the Newcastle virus and subsequently a rough set theory based algorithm is introduced to extract the according point mutation patterns. 
 
-\cite{Mohamed2021} uses a more modern sequence to sequence  \ac{LSTM} approach to learn nucleotide mutations between time-series species of H1N1 Influenza virus and the Newcastle virus as mutations can also be influenced by long-distance relations of amino acids. Therefore one hot-encoded RNA sequences of a parent generation preprocessed to words is given as an input and the output is the predicted offspring generation evaluated by accuracy to the compared true offspring generation. The achieved accuracy in this paper is questionably high with 98.9\% on the H1N1 Influenza virus and 96.9\% on the Newcastle virus, possibly because of overfitting to the few 4.609 samples for H1N1 Influenza virus and only 83 for the Newcastle virus. Our approach therefore tries to increase the number of samples available for training when building the dataset. 
+\cite{Mohamed2021} uses a more modern sequence to sequence approach based on \acp{LSTM} to learn nucleotide mutations between time-series species of H1N1 Influenza virus and the Newcastle virus as mutations can also be influenced by long-distance relations of amino acids. Therefore one hot-encoded RNA sequences of a parent generation preprocessed to words is given as an input and the output is the predicted offspring generation evaluated by accuracy to the compared true offspring generation. The achieved accuracy in this paper is questionably high with 98.9\% on the H1N1 Influenza virus and 96.9\% on the Newcastle virus, possibly because of overfitting to the few 4.609 samples for H1N1 Influenza virus and only 83 for the Newcastle virus. Our approach therefore tries to increase the number of samples available for training when building the dataset. 
 
 Our approach will neither use any of the just mentioned architectures, but uses a Transformer based architecture coupled with a GAN-style training architecture. Nevertheless a short introduction into sequence to sequence models and the underlying long short-term memory components shall be given to better point out our architectural decisions . 
 
-\subsection{Sequence2Sequence Models based on Long Short-Term Memory} \label{fundamentalsE}
+\subsection{Sequence to Sequence Models based on Long Short-Term Memory} \label{fundamentalsE}
 
-% Figure Seq2Seq/LSTM
+% Figure Seq2Seq
 
-The original \ac{LSTM} unit was introduced in \cite{Hochreiter1997} and can be used for language modeling instead of using plain \acp{RNN} to prevent running into vanishing or exploding gradient problems \cite{Sundermeyer2012}. 
+The original \ac{LSTM} unit was introduced in \cite{Hochreiter1997} and can be used for language modeling instead of using plain \acp{RNN} to prevent running into vanishing or exploding gradient problems \cite{Sundermeyer2012}. The architecture of an \ac{LSTM} is shwon in the following figure:
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/lstm_architecture.png}
+	\caption{Architecture of an \ac{LSTM} \cite{Gertz2020}}
+	\label{lstm_architecture}
+\end{figure}
 
+It consists of a hidden state $h_t$ and an additional cell state $c_t$. The cell state stores long-term information and is used to derive a new hidden state. Information flows through three different gates inside the \ac{LSTM}. The forget gate is used to control which parts of the cell state are potentially carried on to the next time step, the input gate is responsible to decide which parts of the cell state should be updated and the output gate determines what is being passed on as the new hidden state. All three gates and depend on the previous hidden state and the current input. They provide factors limited to the interval [0,1] by the sigmoid function and are multiplied with the cell state, the changes to be added to the cell state and the new hidden state derived from the cell state. Through the cell state an \ac{LSTM} therefore makes it possible to capture long-distance dependencies. \cite{Gertz2020}
 
-\cite{Sutskever2014} introduced sequence to sequence learning by using one \ac{LSTM} as an encoder to learn a large fixed-dimensional vector representation of the input and another \ac{LSTM} as a beam search decoder to map the so-called context vector, the last hidden state after processing the entire input, to a corresponding output sequence whose length does not need to match with the length of the input sequence. The output sequence is therefore given by the equation
+\cite{Sutskever2014} introduced sequence to sequence learning following a multi-layer encoder-decoder style model architecture. One layer consists of one \ac{LSTM} that is used as an encoder to learn a large fixed-dimensional vector representation of a size-unrestricted input sequence called the context vector. This vector consists of the last cell and hidden state of the encoder and incorporates the structure of the input sequence helping the followig decoder \ac{LSTM} to provide qualitative predictions for the output sequence. The second \ac{LSTM} therefore serves as a beam search decoder to map the context vector to a corresponding output sequence whose length does not need to match with the length of the input sequence. The output probabiity distribution is therefore given by the equation
 
 \begin{equation}
 	p(y_1, ..., y_{T'} | x_1, ..., x_{T}) = \Pi_{t=1}^{T'} p(y_t | v, y_1, ..., y_{t-1})
 \end{equation}
 
-with $v$ being the context vector. Using an \ac{LSTM} is prefered over a normal \ac{RNN} as it is used to capture the long range temporal dependencies of the input data, each \ac{LSTM} uses four layers with 1000 cells each. One finding was also that reversing the input sequence introduces many short term dependencies making optimization easier. The sequence to sequence model approach was evaluated for neural machine translation and reached a 34.81 BLEU score with an output vocabulary of 80k words (160k words input vocabulary, 1000 dimensional word embeddings, 8000 real numbers to represent a sentence). 
+with $v$ being the context vector. Using an \ac{LSTM} is prefered over a normal \ac{RNN} as it is used to capture the long range temporal dependencies of the input data. The encoder-decoder architecture uses four layers in total partitioned onto four \acp{GPU}. A corpus of 160k words for the input sequence and another one of 80k words for the target sequence was used to create the word embeddings of dimension 1000. Unknown words were replaced by a \textit{UNK} token. The sequence to sequence model approach was evaluated for neural machine translation and reached a 34.81 BLEU score. One finding during training was that reversing the input sequence introduces many short term dependencies making optimization easier. \cite{Sutskever2014}
 
-% From Hindawi: Each LSTM cell takes information as input from the previous cell, in the form of a hidden state vector and cell state vector (represented in arrows) and combines it with the one-hot encoded vector. The output of the encoder is the concatenation of the hidden and cell-state vectors. In the decoder, each cell receives as input [i] in the one-hot encoded version and the previous word of the next generation generated by the model, as well as the hidden state and cell-state vectors from the previous cell. It not only passes those two vectors after updating them to the next cell but also feeds the hidden state vector to the dense layer (output layer), which outputs a probability distribution over the next generation word at that position. A SoftMax function is applied to obtain probability distribution. To reduce overfitting, early stopping is used to end training when the validation loss did not decrease.
+- testing: start and end token to ytrue, eos
+- teacher forcing, early stopping?
+- gertz loss
 
 \subsection{Applying Generative Adversarial Networks} \label{fundamentalsF}
 
