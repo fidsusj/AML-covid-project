@@ -19,6 +19,54 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Berman2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3f7dc66639560114ec4755c84abe8ef7}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9c2b03ce24e85198d4d291f0f62b4b3f}{%
+           family={Howser},
+           familyi={H\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f2c09d95e42192290f74b24e4a96c518}{%
+           family={Mehoke},
+           familyi={M\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9dcb9a3a515720c0aea9d74a33100f87}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Jared\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{fullhash}{fd4fe129b519938a2802385525566814}
+      \strng{bibnamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authorbibnamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authornamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authorfullhash}{fd4fe129b519938a2802385525566814}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{arXiv}}
+      \field{title}{{MutaGAN}: A Seq2seq {GAN} Framework to Predict Mutations of Evolving Protein Populations}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2008.11790
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2008.11790
+      \endverb
+    \endentry
     \entry{Gertz2020}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=c0d1310e5d4d58ef6c70f697f07a01f1}{%

@@ -8,7 +8,7 @@ A probabilistic language model tries to approximate the probability distribution
 	P(w_1, ..., w_n) = \Pi_{t=1}^{n} P(w_t | w_1, ..., w_{t-1})
 \end{equation}
 
-with $w_t$ being a word at position (timestamp) $t$ in a sentence of length $n$. To build language models \acp{RNN} were used to model such probability distributions. 
+with $w_t$ being a word at position (time step) $t$ in a sentence of length $n$. To build language models \acp{RNN} were used to model such probability distributions. 
 
 \begin{figure}[ht]
 	\centering
@@ -50,11 +50,11 @@ Sequence to sequence models are introduced together with the \ac{LSTM} architect
 
 \subsection{Previous Work on Mutation Prediction} \label{fundamentalsD}
 
-Even before the rise of Covid-19 there had been studies trying to predict mutations of RNA viruses. In the collection of \cite{Wu2007, Yan2007, Wu2008} the authors predict the mutation positions in hemagglutinins from influenza A virus using logistic regression and plain neural networks and then use the resulting amino acid mutating probabilities to derive possible mutated amnio acids. The same approach is further used for H5N1 neuraminidase proteins. 
+Even before the rise of Covid-19 there had been studies trying to predict mutations of \ac{RNA} viruses. In the collection of \cite{Wu2007, Yan2007, Wu2008} the authors predict the mutation positions in hemagglutinins from influenza A virus using logistic regression and plain neural networks and then use the resulting amino acid mutating probabilities to derive possible mutated amnio acids. The same approach is further used for H5N1 neuraminidase proteins. 
 
-\cite{Salama2016} proved that nucleotides in an RNA sequence can change based on their local neighborhood. Neural networks are used to predict new strains of the Newcastle virus and subsequently a rough set theory based algorithm is introduced to extract the according point mutation patterns. 
+\cite{Salama2016} proved that nucleotides in an \ac{RNA} sequence can change based on their local neighborhood. Neural networks are used to predict new strains of the Newcastle virus and subsequently a rough set theory based algorithm is introduced to extract the according point mutation patterns. 
 
-\cite{Mohamed2021} uses a more modern sequence to sequence approach based on \acp{LSTM} to learn nucleotide mutations between time-series species of H1N1 Influenza virus and the Newcastle virus as mutations can also be influenced by long-distance relations of amino acids. Therefore one hot-encoded RNA sequences of a parent generation preprocessed to words is given as an input and the output is the predicted offspring generation evaluated by accuracy to the compared true offspring generation. The achieved accuracy in this paper is questionably high with 98.9\% on the H1N1 Influenza virus and 96.9\% on the Newcastle virus, possibly because of overfitting to the few 4.609 samples for H1N1 Influenza virus and only 83 for the Newcastle virus. Our approach therefore tries to increase the number of samples available for training when building the dataset. 
+\cite{Mohamed2021} uses a more modern sequence to sequence approach based on \acp{LSTM} to learn nucleotide mutations between time-series species of H1N1 Influenza virus and the Newcastle virus as mutations can also be influenced by long-distance relations of amino acids. Therefore one hot-encoded \ac{RNA} sequences of a parent generation preprocessed to words is given as an input and the output is the predicted offspring generation evaluated by accuracy to the compared true offspring generation. The achieved accuracy in this paper is questionably high with 98.9\% on the H1N1 Influenza virus and 96.9\% on the Newcastle virus, possibly because of overfitting to the few 4.609 samples for H1N1 Influenza virus and only 83 for the Newcastle virus. Our approach therefore tries to increase the number of samples available for training when building the dataset. 
 
 Our approach will neither use any of the just mentioned architectures, but uses a Transformer based architecture coupled with a GAN-style training architecture. Nevertheless a short introduction into sequence to sequence models and the underlying long short-term memory components shall be given to better point out our architectural decisions . 
 
@@ -82,6 +82,10 @@ It consists of a hidden state $h_t$ and an additional cell state $c_t$. The cell
 with $v$ being the context vector. Using an \ac{LSTM} is prefered over a normal \ac{RNN} as it is used to capture the long range temporal dependencies of the input data. The encoder-decoder architecture uses four layers in total partitioned onto four \acp{GPU}. A corpus of 160k words for the input sequence and another one of 80k words for the target sequence was used to create the word embeddings of dimension 1000. Unknown words were replaced by a \textit{UNK} token. The sequence to sequence model approach was evaluated for neural machine translation and reached a 34.81 BLEU score. One finding during training was that reversing the input sequence introduces many short term dependencies as the minimal time lag of the problem is reduced making optimization easier. \cite{Sutskever2014}
 
 \subsection{Applying Generative Adversarial Networks} \label{fundamentalsF}
+
+Using a plain sequence to sequence model for mutation prediction does not necessarily guarantee that the generated sequences are evolutionary offsprings of a parent generation, even when using time-series based training data. Comparing it to neural machine translation where a sequence to sequence model generates sequences that preserve the grammar but own a different meaning, \ac{RNA}-based viruses (seen as FASTA text sequences) would change their structure to avoid the detection by the human immune system but preserve their infectivity and evolutionary fitness \cite{Hie2021}. Thus no real offspring is modeled. Thus no real guarantee of evolutionary parent-childhood coherence of the predicted \glqq mutations\grqq is given.
+
+\cite{Berman2020} developed a novel sequence to sequence framework based on the \ac{GAN} idea to predict genetic mutations and future biological polulations. MutaGAN describes a sequence to sequence generator within an adversarial framework that predicts protein sequences of viruses augmented with possible mutations. By using a sequence to sequence generator and a discriminator specialized on separating fake evolutionary mutations from real ones, one can then guarantee to a certain degree that the evolutionary parent-childhood coherence is given. \cite{Berman2020}
 
 \begin{itemize}
 	\item Covid-Paper: \url{https://arxiv.org/pdf/2008.11790.pdf}
