@@ -1,16 +1,56 @@
 \section{Fundamentals and Related Work} \label{fundamentals}
 
-\subsection{From Language Models to modeling Evolution Theory} \label{fundamentalsA}
+\subsection{From Probabilistic Language Models to modeling Evolution Theory} \label{fundamentalsA}
 
-Using such a seq2seq model a connection to the domain of neural machine translation can be drawn that changes the meaning of sentences but preserves a specific grammar (cf. preserve infectivity and evolutionary fitness but avoid the detection by the human immune system).
+A lprobabilistic anguage model tries to approximate the probability distribution 
+
+\begin{equation}
+	P(w_1, ..., w_n) = \Pi_{t=1}^{n} P(w_t | w_1, ..., w_{t-1})
+\end{equation}
+
+with $w_t$ being a word at position (timestamp) $t$ in a sentence of length $n$. To build language models \acp{RNN} were used to model such probability distributions.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/rnn_architecture.png}
+	\caption{Architecture of a conventional \ac{RNN} model \cite{Gertz2020}}
+	\label{rnn_architecture}
+\end{figure}
+
+At each time step $t$ it outputs a probability distribution $P(w_t | w_1, ..., w_{t-1})$ given the words read so far in the current instance (see \autoref{rnn_architecture}). Words are read as a vectorized numerical representation, often so-called word embeddings $x_t$. We then calculate the hidden state $h_t$ by
+
+\begin{equation}
+	h_t = f(W_h h_{t-1} + W_x x_t + b_1)
+\end{equation}
+
+and the corresponding output porbability distribution by 
+
+\begin{equation}
+	\hat{y}_t = softmax(U_h h_t + b_2).
+\end{equation}
+
+The applied weight matrix is always the same for each time step $t$ giving the \ac{RNN} its name. One can therefore simplify the unrolled \ac{RNN} architecture on the left side of \autoref{rnn_architecture} to the one on the right, where the hidden state is continuously passed as an input to the next time step. To achieve a better convergence behavior during training, one can also provide the expected hidden state of time step $t-1$ instead of using the predicted one, which is called teacher forcing. \cite{Gertz2020}
+
+\acp{RNN} are therefore able to process input of arbitrary length and are capable to use information from previous time steps. Unfortunately, they are vulerable to vanishing and exploding gradient problems. The \ac{LSTM} is a special \ac{RNN} architecture that solves such vulnerabilities by owning a separate long-term cell state besides a short-term hidden state and is introduces in \autoref{fundamentalsE}. It is able to preserve information over many time steps. \cite{Gertz2020}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/multi_layer_rnn.png}
+	\caption{Architecture of a multi-layer  \ac{RNN} \cite{Gertz2020}}
+	\label{multi_layer_rnn}
+\end{figure}
+
+One can also use two \acp{RNN}, one passing a sentence from left to right and another one vice versa, with two different weight matrices to model the probability distribution. One therefore simply concatenates the hidden states of each \ac{RNN} before applying the the weight matrix $U$ and the $softmax()$ function. Also multi-layer \acs{RNN} can be utilized to generate higher-order features (hidden states) for the prediction task (see \autoref{multi_layer_rnn}).
+
+The \acp{RNN} architectures used for probabilistic language modeling can be reused in a more complex domain called sequence to sequence modeling for neural machine translation from one lneaguage to another. Here one first tries to learn a fixed-size input representation from an input sequence using an encoder architecture based on an \ac{RNN}. The so-called context vector is then decoded into a new sequence of words preserving the grammar but owning a different meaning. Sequence to sequence models are introduced together with the \ac{LSTM} architecture in \autoref{fundamentalsE}. Here the connection to evolution theory can be drawn. \ac{RNA} sequences made of a concatenation of nucleotides \footnote{We restrict the representation of nucleotides solely to their nucleobases parts consisting of the distinct nucleobases guanine, adenine, cytosine and thymine. We therefore do not look at the phosphate group and the five-carbon sugar part.} can be represented textually using the FASTA format. A sequence to sequence model can also be applied in this domain to model how \ac{RNA}-based viruses change their structure to avoid the detection by the human immune system but still to preserve their infectivity and evolutionary fitness. 
+
+We will also look in-depth into the preferable Transformer architecture over sequence to sequence models (see \autoref{fundamentalsG}). 
 
 \subsection{GISAID EpiFlu} \label{fundamentalsB}
 
 \subsection{Domain-Specific Methodologies to create Evolutionary  Datasets for Mutation Prediction} \label{fundamentalsC}
 
-\subsection{Domain-Specific Methodologies to create Evolutionary  Datasets for Mutation Prediction} \label{fundamentalsD}
-
-\subsection{Previous work on Mutation Prediction} \label{fundamentalsE}
+\subsection{Previous work on Mutation Prediction} \label{fundamentalsD}
 
 % TODO: To be continued with the other papers from the proposal
 
@@ -22,14 +62,14 @@ Even before the rise of Covid-19 there had been studies trying to predict mutati
 
 Our approach will neither use any of the just mentioned architectures, but uses a Transformer based architecture coupled with a GAN-style training architecture. Nevertheless we would like to give a short introduction into sequence to sequence models and the underlying long short-term memory components to better point out our architectural decisions . 
 
-\subsection{Sequence2Sequence Models based on Long Short-Term Memory} \label{fundamentalsF}
+\subsection{Sequence2Sequence Models based on Long Short-Term Memory} \label{fundamentalsE}
 
 % Use Keras for implementation + Tensorflow 2
 % Plot accuracy and loss for training and validation
 
 The original \ac{LSTM} unit was introduced in \cite{Hochreiter1997} and can be used for language modeling instead of using plain \acp{RNN} to prevent running into vanishing gradient problems \cite{Sundermeyer2012}. 
 
-% TODO: LSTM cell architecture video, long range dependencies
+% TODO: LSTM cell architecture video, long range dependencies, take the one from gertz + online article
 
 % Add a figure showing that it is one timestep at the time
 % How does beam search work?
@@ -54,21 +94,21 @@ where each $p(y_t | v, y_1, ..., y_{t-1})$ is given by the softmax over all word
 \end{itemize}
 
 
-\subsection{Applying Generative Adversarial Networks} \label{fundamentalsG}
+\subsection{Applying Generative Adversarial Networks} \label{fundamentalsF}
 
 \begin{itemize}
 	\item Covid-Paper: \url{https://arxiv.org/pdf/2008.11790.pdf}
 \end{itemize}
 
 
-\subsection{Transformer and Attention Mechanism} \label{fundamentalsH}
+\subsection{Transformer and Attention Mechanism} \label{fundamentalsG}
 
 \begin{itemize}
 	\item Improvement: \url{https://arxiv.org/abs/1706.03762}
 \end{itemize}
 
 
-\subsection{Other Techniques} \label{fundamentalsI}
+\subsection{Other Techniques} \label{fundamentalsH}
 
 \begin{itemize}
 	\item NNs/SVMs: \url{https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0}
