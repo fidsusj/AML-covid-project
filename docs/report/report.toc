@@ -9,17 +9,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}From Probabilistic Language Models to modeling Evolution Theory}{3}{subsection.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}GISAID EpiFlu}{5}{subsection.20}%
+\contentsline {subsection}{\numberline {2.2}GISAID EpiFlu Data Platform}{5}{subsection.20}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Domain-Specific Methodologies to create Evolutionary Datasets for Mutation Prediction}{5}{subsection.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Previous work on Mutation Prediction}{5}{subsection.22}%
+\contentsline {subsection}{\numberline {2.4}Previous Work on Mutation Prediction}{5}{subsection.22}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Sequence2Sequence Models based on Long Short-Term Memory}{6}{subsection.23}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6}Applying Generative Adversarial Networks}{6}{subsection.25}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Transformer and Attention Mechanism}{7}{subsection.26}%
+\contentsline {subsection}{\numberline {2.7}Transformer and Attention Mechanism}{6}{subsection.26}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8}Other Techniques}{7}{subsection.27}%
 \defcounter {refsection}{0}\relax 
