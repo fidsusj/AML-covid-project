@@ -12,7 +12,7 @@ with $w_t$ being a word at position (time step) $t$ in a sentence of length $n$.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\linewidth]{figures/rnn_architecture.png}
+	\includegraphics[width=0.8\linewidth]{figures/rnn_architecture.png}
 	\caption{Architecture of a conventional \ac{RNN} \cite{Gertz2020}}
 	\label{rnn_architecture}
 \end{figure}
@@ -60,13 +60,13 @@ Our approach will neither use any of the just mentioned architectures, but uses 
 
 \subsection{Sequence to Sequence Models based on Long Short-Term Memory} \label{fundamentalsE}
 
-% Figure Seq2Seq
+% TODO: Figure Seq2Seq
 
 The original \ac{LSTM} unit was introduced in \cite{Hochreiter1997} and can be used for language modeling instead of using plain \acp{RNN} to prevent running into vanishing or exploding gradient problems \cite{Sundermeyer2012}. The architecture of an \ac{LSTM} is shwon in the following figure:
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\linewidth]{figures/lstm_architecture.png}
+	\includegraphics[width=\linewidth]{figures/lstm_architecture.png}
 	\caption{Architecture of an \ac{LSTM} \cite{Gertz2020}}
 	\label{lstm_architecture}
 \end{figure}
@@ -83,14 +83,18 @@ with $v$ being the context vector. Using an \ac{LSTM} is prefered over a normal 
 
 \subsection{Applying Generative Adversarial Networks} \label{fundamentalsF}
 
-Using a plain sequence to sequence model for mutation prediction does not necessarily guarantee that the generated sequences are evolutionary offsprings of a parent generation, even when using time-series based training data. Comparing it to neural machine translation where a sequence to sequence model generates sequences that preserve the grammar but own a different meaning, \ac{RNA}-based viruses (seen as FASTA text sequences) would change their structure to avoid the detection by the human immune system but preserve their infectivity and evolutionary fitness \cite{Hie2021}. Thus no real offspring is modeled. Thus no real guarantee of evolutionary parent-childhood coherence of the predicted \glqq mutations\grqq is given.
+Using a plain sequence to sequence model for mutation prediction does not necessarily guarantee that the generated sequences are evolutionary offsprings of a parent generation as not being included as is in the ground truth data. The generated sequences might occur realistic and biologically relevant, but a plain sequence to sequence architecture does not inherently check for natural parental descent and therefore does not make sure whether the predicted mutations lead to improved fitness. \cite{Berman2020} developed a novel sequence to sequence framework based on the \ac{GAN} idea to predict genetic mutations and future biological polulations of the influenza virus (see \autoref{mutagan}). MutaGAN describes a sequence to sequence generator within an adversarial framework that predicts protein sequences augmented with possible mutations. By using a sequence to sequence generator and a discriminator specialized on separating fake evolutionary mutations from real ones, one can then guarantee to a certain degree that the evolutionary parent-childhood coherence is given. In MutaGAN a mutation is considered correct if the change in amino acid and location within the \ac{RNA} sequence is equal to the parent's true offspring.  \cite{Berman2020}
 
-\cite{Berman2020} developed a novel sequence to sequence framework based on the \ac{GAN} idea to predict genetic mutations and future biological polulations. MutaGAN describes a sequence to sequence generator within an adversarial framework that predicts protein sequences of viruses augmented with possible mutations. By using a sequence to sequence generator and a discriminator specialized on separating fake evolutionary mutations from real ones, one can then guarantee to a certain degree that the evolutionary parent-childhood coherence is given. \cite{Berman2020}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figures/mutagan.png}
+	\caption{Architecture of MutaGAN \cite{Berman2020}}
+	\label{mutagan}
+\end{figure}
 
-\begin{itemize}
-	\item Covid-Paper: \url{https://arxiv.org/pdf/2008.11790.pdf}
-\end{itemize}
+MutaGAN's generator consists of a sequence to sequence model. The encoder is built from of a bidirectinal \ac{LSTM} and the resulting context vector of dimensionality 512 is combined with noise from a standard normal distribution. The decoder \ac{LSTM} predicts the resulting sequence of amino acids greedily using the $argmax()$ of the $softmax()$ output for every time step. The discriminator is trained on three different parent-child pair configurations to optimally compete against the generator, real parent-child pairs, real parent and generated child pairs and pairs of real sequences that are not parent-child pairs. Two bidirectional \ac{LSTM} encoders sharing the same weight matrix as the encoder of the generator produce a fixed-dimensional encoding of the provided parent-child pair used for classification of evolutionary descent by a plain neural network. The child encoder in the discriminator uses a dense layer having the same weight matrix as the embedding layer of the encoder of the generator. The dense layer is required to directly input the predicted child sequence as its probability distribution rather than the final output after applying the $argmax()$ as it would not enable backpropagation to train the generator. In case of a true child sequence is given a simple one-hot encoding is used. \cite{Berman2020}
 
+Interestingly \cite{Berman2020} states planned improvements by utilizing bigger datasets aquired from the \ac{GISAID} database EpiFlu and by using more length-robust attention-based models to directly work on nucleotide sequences instead of sequences of amino acids. Therefore transformers and the attention mechanism are introduced in the following section.
 
 \subsection{Transformer and Attention Mechanism} \label{fundamentalsG}
 

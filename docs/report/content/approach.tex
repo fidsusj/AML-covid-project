@@ -2,16 +2,21 @@
 
 \subsection{Dataset Creation}  \label{ch:approachA}
 % Choosing latest mutations that are the most spread
+% created three types of sequence pairs: (real, real), (real, generated), (real, unreal)
 
 \subsection{Data Preprocessing}  \label{ch:approachB}
 % TODO: Pipeline image
 % Word size 3 is just a hyperparameter (see discussion of the corresponding paper)!  But maybe biologically valid because auf amino acids.
 % DNA2Vec?
+% Phylogenetic tree with "Fasttree"
+% Biopython packages?
+% Levenshtein distance
 
 \begin{itemize}
 	\item DNA Sequencing
 	\item DNA Sequence Tokenization for Amino Acid Dictionary
-	\item DNA Sequence Padding
+	\item (DNA Sequence Padding not necessary as model can handle input of arbitrary length)
+	\item Phologenetic Tree and final dataset metrics
 \end{itemize}
 
 \subsection{Model Architecture}  \label{ch:approachC}
@@ -29,6 +34,10 @@
 \subsection{Training Process} \label{ch:approachD}
 
 % Loss functions and teacher forcing
-% Categorical cross-entropy loss
+% Categorical cross-entropy loss for seq2seq, Wasserstein loss for GAN
+% Identify changes between sequences using the diff-match package from Google
+% See MutaGAN 6.2 Model training
+% Replay buffer
+% Dealing with the mode collapse problem
 
 \newpage

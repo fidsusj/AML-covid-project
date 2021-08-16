@@ -19,20 +19,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6}Applying Generative Adversarial Networks}{7}{subsection.28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Transformer and Attention Mechanism}{8}{subsection.30}%
+\contentsline {subsection}{\numberline {2.7}Transformer and Attention Mechanism}{9}{subsection.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Other Techniques}{8}{subsection.31}%
+\contentsline {subsection}{\numberline {2.8}Other Techniques}{9}{subsection.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Approach}{9}{section.32}%
+\contentsline {section}{\numberline {3}Approach}{10}{section.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Dataset Creation}{9}{subsection.33}%
+\contentsline {subsection}{\numberline {3.1}Dataset Creation}{10}{subsection.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{9}{subsection.34}%
+\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{10}{subsection.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Model Architecture}{9}{subsection.35}%
+\contentsline {subsection}{\numberline {3.3}Model Architecture}{10}{subsection.37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Training Process}{9}{subsection.36}%
+\contentsline {subsection}{\numberline {3.4}Training Process}{10}{subsection.38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experimental results}{10}{section.37}%
+\contentsline {section}{\numberline {4}Experimental results}{11}{section.39}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{11}{section.38}%
+\contentsline {section}{\numberline {5}Conclusion}{12}{section.40}%
