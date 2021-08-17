@@ -52,13 +52,12 @@
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{arXiv}}
-      \field{title}{{MutaGAN}: A Seq2seq {GAN} Framework to Predict Mutations of Evolving Protein Populations}
+      \field{journaltitle}{arXiv}
+      \field{title}{{MutaGAN}: {A} {Seq2seq} {GAN} {Framework} to {Predict} {Mutations} of {Evolving} {Protein} {Populations}}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
       \field{year}{2020}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/2008.11790
@@ -88,12 +87,11 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Text Analytics - Text Classification}
+      \field{title}{Text {Analytics} - {Text} {Classification}}
       \field{urlday}{15}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2020}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
     \endentry
     \entry{Hie2021}{article}{}
@@ -135,7 +133,6 @@
       \field{urlmonth}{7}
       \field{urlyear}{2021}
       \field{year}{2021}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://science.sciencemag.org/content/371/6526/284
@@ -167,13 +164,12 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{ResearchGate}}
-      \field{title}{Long Short-term Memory}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Long {Short}-term {Memory}}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{1997}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.researchgate.net/publication/13853244_Long_Short-term_Memory
@@ -216,12 +212,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Hindawi}
-      \field{title}{Long Short-Term Memory Neural Networks for {RNA} Viruses Mutations Prediction}
+      \field{title}{Long {Short}-{Term} {Memory} {Neural} {Networks} for {RNA} {Viruses} {Mutations} {Prediction}}
       \field{urlday}{11}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2021}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.hindawi.com/journals/mpe/2021/9980347/
@@ -258,13 +253,12 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{EURASIP} Journal on Bioinformatics and Systems Biology}
+      \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
       \field{title}{The prediction of virus mutation using neural networks and rough set techniques}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
       \field{year}{2016}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
@@ -301,13 +295,12 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{ISCA} Archive}
-      \field{title}{{LSTM} Neural Networks for Language Modeling}
+      \field{journaltitle}{ISCA Archive}
+      \field{title}{{LSTM} {Neural} {Networks} for {Language} {Modeling}}
       \field{urlday}{12}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2012}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.isca-speech.org/archive/archive_papers/interspeech_2012/i12_0194.pdf
@@ -344,19 +337,85 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{arXiv}}
-      \field{title}{Sequence to Sequence Learning with Neural Networks}
+      \field{journaltitle}{arXiv}
+      \field{title}{Sequence to {Sequence} {Learning} with {Neural} {Networks}}
       \field{urlday}{15}
       \field{urlmonth}{5}
       \field{urlyear}{2021}
       \field{year}{2014}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/1409.3215
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/1409.3215
+      \endverb
+    \endentry
+    \entry{Vaswani2017}{article}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=f2bc899b1160163417da7bf510f15d33}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{Attention {Is} {All} {You} {Need}}
+      \field{urlday}{17}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
       \endverb
     \endentry
     \entry{Yan2007}{article}{}
@@ -383,13 +442,12 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{SpringerLink}}
-      \field{title}{Prediction of mutations engineered by randomness in H5N1 hemagglutinins of influenza A virus}
+      \field{journaltitle}{SpringerLink}
+      \field{title}{Prediction of mutations engineered by randomness in {H5N1} hemagglutinins of influenza {A} virus}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2007}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.1007/s00726-007-0602-4
@@ -422,13 +480,12 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{SpringerLink}}
-      \field{title}{Prediction of mutations engineered by randomness in H5N1 neuraminidases from influenza A virus}
+      \field{journaltitle}{SpringerLink}
+      \field{title}{Prediction of mutations engineered by randomness in {H5N1} neuraminidases from influenza {A} virus}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2007}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.1007/s00726-007-0579-z
@@ -461,12 +518,11 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Prediction of mutations in H1 neuraminidases from North America influenza A virus engineered by internal randomness}
+      \field{title}{Prediction of mutations in {H1} neuraminidases from {North} {America} influenza {A} virus engineered by internal randomness}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2008}
-      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.1007/s11030-008-9067-y

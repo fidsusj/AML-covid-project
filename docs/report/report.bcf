@@ -2370,6 +2370,12 @@
     <bcf:citekey order="22">Berman2020</bcf:citekey>
     <bcf:citekey order="23">Berman2020</bcf:citekey>
     <bcf:citekey order="24">Berman2020</bcf:citekey>
+    <bcf:citekey order="25">Vaswani2017</bcf:citekey>
+    <bcf:citekey order="26">Vaswani2017</bcf:citekey>
+    <bcf:citekey order="27">Sutskever2014</bcf:citekey>
+    <bcf:citekey order="28">Vaswani2017</bcf:citekey>
+    <bcf:citekey order="29">Vaswani2017</bcf:citekey>
+    <bcf:citekey order="30">Vaswani2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
