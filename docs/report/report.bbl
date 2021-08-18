@@ -19,6 +19,37 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Alammar2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=071e8b59bcc6de28244fea3bf962a165}{%
+           family={Alammar},
+           familyi={A\bibinitperiod},
+           given={Jay},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{fullhash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{bibnamehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{authorbibnamehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{authornamehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{authorfullhash}{071e8b59bcc6de28244fea3bf962a165}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {Illustrated} {Transformer}}
+      \field{urlday}{18}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://jalammar.github.io/illustrated-transformer/
+      \endverb
+      \verb{url}
+      \verb https://jalammar.github.io/illustrated-transformer/
+      \endverb
+    \endentry
     \entry{Berman2020}{article}{}
       \name{author}{4}{}{%
         {{hash=3f7dc66639560114ec4755c84abe8ef7}{%
