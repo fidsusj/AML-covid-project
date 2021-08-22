@@ -28,6 +28,7 @@ Then create a conda environment and download all necessary dependencies for this
         conda install -c conda-forge cupy
         conda install -c conda-forge tensorboard
         conda install -c pytorch torchtext
+        conda install -c conda-forge scikit-learn
 
 From within the conda terminal from the aml environment (choose run with python) run:
 
@@ -46,6 +47,17 @@ Documentation:
 - Provide Docker image parallel to setup guide
 
 Data:
-- What is your sequence max length?
-- Dictionary for source and target sequences
-- 
+- What is your sequence max length? -> 33
+- Dictionary for source and target sequences for BLEU score
+
+      score = bleu_score([["AGA", "G", "T", "T", "T"], ["AGB", "G", "T", "T", "T"]], [[["AGA", "G", "T", "T", "T"]], [["AGA", "G", "T", "T", "T"]]])
+
+- Can sequences be of different length? -> Add padding_idx parameter to transformer
+- Wie lange sind die sequences ursprünglich? 
+- Warum sind im dictionary auch 'N' und '-' drinnen? => Kann man doch vorher raus nehmen aus den sequencen
+- Logik zur auswahl von parent-child sequences verbessern
+
+- Only choose sequences from [101,200]
+
+- Train, Test, Val Dataset
+- Flaka und Isort
