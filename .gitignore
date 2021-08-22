@@ -133,9 +133,8 @@ dmypy.json
 
 # data
 src/data/*
-src/models/.data/*
-src/models/runs/*
-src/models/my_checkpoint.pth.tar
+src/training/runs/*
+src/training/my_checkpoint.pth.tar
 
 # external ncov repo
 src/create_dataset/ncov/*

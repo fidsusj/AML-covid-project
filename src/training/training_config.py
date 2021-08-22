@@ -1,5 +1,5 @@
 # Training hyperparameters
-num_epochs = 1  # 10000
+num_epochs = 10  # 10000
 learning_rate = 3e-4
 
 # Model hyperparameters

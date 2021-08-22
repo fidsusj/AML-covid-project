@@ -16,10 +16,10 @@ def run_training(model_training_from_scratch=False):
     src_vocab_size = len(train_dataset.parent_vocab)
     trg_vocab_size = len(train_dataset.child_vocab)
     max_len = train_dataset.strain_end - train_dataset.strain_begin
-    src_pad_idx = train_dataset.parent_vocab.vocab.stoi["<pad>"]
+    src_pad_idx = train_dataset.parent_vocab.stoi["<PAD>"]
 
     # Tensorboard to get nice loss plot
-    writer = SummaryWriter("runs/loss_plot")
+    writer = SummaryWriter("training/runs/loss_plot")
     step = 0
 
     # Training objects
@@ -37,19 +37,13 @@ def run_training(model_training_from_scratch=False):
     print("Starting training...")
     model.train()
     for epoch in range(num_epochs):
-        print(f"[Epoch {epoch} / {num_epochs}]")
-
-        checkpoint = {
-            "state_dict": model.state_dict(),
-            "optimizer": optimizer.state_dict(),
-        }
-        save_checkpoint(checkpoint)
+        print(f"[Epoch {epoch+1} / {num_epochs}]")
 
         losses = []
         for batch_idx, batch in enumerate(data_loader):
             # Get input and targets and get to cuda
-            parent_sequence = batch.src.to(device)
-            child_sequence = batch.trg.to(device)
+            parent_sequence = batch[0].to(device)
+            child_sequence = batch[1].to(device)
 
             # Forward prop
             output = model(parent_sequence, child_sequence[:-1, :])
@@ -84,10 +78,16 @@ def run_training(model_training_from_scratch=False):
         mean_loss = sum(losses) / len(losses)
         scheduler.step(mean_loss)
 
+        checkpoint = {
+            "state_dict": model.state_dict(),
+            "optimizer": optimizer.state_dict(),
+        }
+        save_checkpoint(checkpoint)
 
-def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
+
+def save_checkpoint(state, path="training/my_checkpoint.pth.tar"):
     print("=> Saving checkpoint")
-    torch.save(state, filename)
+    torch.save(state, path)
 
 
 def load_checkpoint(checkpoint, model, optimizer):

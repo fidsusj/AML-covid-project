@@ -41,7 +41,7 @@ class Vocabulary:
 class CustomGISAIDDataset(Dataset):
     def __init__(self, dataset_file, train=True, strain_begin=101, strain_end=200):
         self.df_dataset = pd.read_csv(dataset_file)
-        self.df_train, self.df_test = train_test_split(self.df_dataset, test_size=0.2)
+        self.df_train, self.df_test = train_test_split(self.df_dataset, test_size=0.05)
         self.strain_begin = strain_begin
         self.strain_end = strain_end
         self.train = train
@@ -60,8 +60,8 @@ class CustomGISAIDDataset(Dataset):
         self.child_vocab.build_vocabulary(self.child.tolist())
 
     def __getitem__(self, index):
-        parent = self.parent[index]
-        child = self.child[index]
+        parent = self.parent.iloc[index]
+        child = self.child.iloc[index]
 
         numericalized_parent = [self.parent_vocab.stoi["<SOS>"]]
         numericalized_parent += self.parent_vocab.numericalize(parent)
@@ -77,7 +77,7 @@ class CustomGISAIDDataset(Dataset):
         return len(self.df_train) if self.train else len(self.df_test)
 
 
-def get_loader(dataset_file, batch_size=32, train=True, num_workers=8):
+def get_loader(dataset_file, batch_size=32, train=True, num_workers=1):
     print("Loading data...")
     dataset = CustomGISAIDDataset(dataset_file, train)
     return dataset, DataLoader(
