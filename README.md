@@ -60,4 +60,12 @@ Data:
 - Only choose sequences from [101,200]
 
 - Train, Test, Val Dataset
-- Flaka und Isort
+- Flake und Isort
+- We expect sequences to be padded
+
+- Im Datensatz sind nur gleiche genome
+- legacy löschen
+- Numnericalize only onvce
+- Does eval set the dropouts off in our custom module?
+- Training config
+- 

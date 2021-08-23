@@ -3,8 +3,8 @@ import torch.nn as nn
 
 
 class Transformer(nn.Module):
-    def __init__(self, embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout, src_vocab_size, trg_vocab_size, src_pad_idx,
-                 max_sequence_length, device):
+    def __init__(self, embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout,
+                 src_vocab_size, trg_vocab_size, src_pad_idx, max_sequence_length, device):
         super(Transformer, self).__init__()
 
         # Embeddings from input
@@ -16,31 +16,32 @@ class Transformer(nn.Module):
 
         # Transformer
         self.transformer = nn.Transformer(embedding_size, num_heads, num_encoder_layers,
-                                          num_decoder_layers, dim_feed_forward, dropout)
+                                          num_decoder_layers, dim_feed_forward, dropout, batch_first=True)
 
         # Output probability distribution
         self.fc_out = nn.Linear(embedding_size, trg_vocab_size)
-        self.softmax = nn.Softmax(dim=2)
+        self.softmax = nn.Softmax(dim=2)  # softmax over features (out shape: (batch_size, sequence_length, feature_size))
 
         # Other
         self.src_pad_idx = src_pad_idx
         self.device = device
 
     def forward(self, src, trg):
-        src_seq_length, N = src.shape
-        trg_seq_length, N = trg.shape
+        # shape src/trg: (batch_size, sequence_length)
+        batch_size, src_seq_length = src.shape
+        batch_size, trg_seq_length = trg.shape
 
         src_positions = (
             torch.arange(0, src_seq_length)
-                .unsqueeze(1)
-                .expand(src_seq_length, N)
+                .unsqueeze(dim=0)
+                .expand(batch_size, src_seq_length)
                 .to(self.device)
         )
 
         trg_positions = (
             torch.arange(0, trg_seq_length)
-                .unsqueeze(1)
-                .expand(trg_seq_length, N)
+                .unsqueeze(dim=0)
+                .expand(batch_size, trg_seq_length)
                 .to(self.device)
         )
 
@@ -67,7 +68,5 @@ class Transformer(nn.Module):
         return out
 
     def make_src_mask(self, src):
-        src_mask = src.transpose(0, 1) == self.src_pad_idx
-
-        # (N, src_len)
+        src_mask = src == self.src_pad_idx
         return src_mask.to(self.device)
