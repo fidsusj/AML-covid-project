@@ -68,4 +68,6 @@ Data:
 - Numnericalize only onvce
 - Does eval set the dropouts off in our custom module?
 - Training config
+- Moduke kommentare
+- Training
 - 

@@ -40,6 +40,7 @@ def run_training(model_training_from_scratch=False):
     if not model_training_from_scratch:
         epochs_trained = load_checkpoint(model, optimizer)
 
+    # Training loop
     print("Starting training...")
     model.train()  # Set model to training mode
     for epoch in range(epochs_trained, num_epochs):
@@ -90,12 +91,12 @@ def run_training(model_training_from_scratch=False):
 def save_checkpoint(state, epoch_count):
     print("Saving checkpoint...")
     training_timestamp = datetime.now().strftime("%d_%m_%Y_%H_%M")
-    torch.save(state, f"training/checkpoints/{training_timestamp}_{epoch_count}")
+    torch.save(state, f"training/checkpoints/{training_timestamp}_{epoch_count}.pth.tar")
 
 
 def load_checkpoint(model, optimizer):
     print("Loading checkpoint...")
-    checkpoint = torch.load(f"training/checkpoints/{training_model}.pth.tar")
+    checkpoint = torch.load(f"training/checkpoints/{training_model}")
     model.load_state_dict(checkpoint["state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer"])
     return checkpoint["epochs_trained"]

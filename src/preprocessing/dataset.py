@@ -43,24 +43,26 @@ class CustomGISAIDDataset(Dataset):
         # Load the data and restrict to RNA strains
         print("Loading data and cutting to strains...")
         self.df_dataset = pd.read_csv(dataset_file)
-        self.df_train, self.df_test = train_test_split(self.df_dataset, test_size=test_set_size)
+        self.df_dataset["parent"] = self.df_dataset["parent"].str[strain_begin:strain_end]
+        self.df_dataset["child"] = self.df_dataset["child"].str[strain_begin:strain_end]
+
         self.strain_begin = strain_begin
         self.strain_end = strain_end
         self.train = train
 
-        if train:
-            self.parent = self.df_train["parent"].str[self.strain_begin:self.strain_end]
-            self.child = self.df_train["child"].str[self.strain_begin:self.strain_end]
-        else:
-            self.parent = self.df_test["parent"].str[self.strain_begin:self.strain_end]
-            self.child = self.df_test["child"].str[self.strain_begin:self.strain_end]
-
         # Initialize vocabulary and build vocabulary
         print("Building vocabulary...")
         self.parent_vocab = Vocabulary()
-        self.parent_vocab.build_vocabulary(self.parent.tolist())
+        self.parent_vocab.build_vocabulary(self.df_dataset["parent"].tolist())
         self.child_vocab = Vocabulary()
-        self.child_vocab.build_vocabulary(self.child.tolist())
+        self.child_vocab.build_vocabulary(self.df_dataset["child"].tolist())
+
+        # Initialize vocabulary and build vocabulary
+        print("Train test split...")
+        self.df_train, self.df_test = train_test_split(self.df_dataset, test_size=test_set_size)
+        chosen_dataset = self.df_train if train else self.df_test
+        self.parent = chosen_dataset["parent"]
+        self.child = chosen_dataset["child"]
 
         # TODO: When doing long training runs one might consider to numericalize the sequences only once here
 

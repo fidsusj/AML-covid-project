@@ -10,5 +10,5 @@ num_encoder_layers = 3
 num_decoder_layers = 3
 dropout = 0.10
 dim_feed_forward = 512
-training_model = "23_08_2021_22_14_10.pth.tar"
-evaluation_model = "23_08_2021_22_14_10.pth.tar"
+training_model = "23_08_2021_22_53_10.pth.tar"
+evaluation_model = "23_08_2021_22_53_10.pth.tar"
