@@ -1,3 +1,4 @@
+""" Check success of installation """
 import torch
 
 assert torch.rand(5, 3).numel()

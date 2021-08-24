@@ -1,14 +1,19 @@
+""" Module for model training """
 from datetime import datetime
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.utils.tensorboard import SummaryWriter
+
 from models.transformer import Transformer
 from path_helper import get_project_root
 from preprocessing.dataset import get_loader
-from torch.utils.tensorboard import SummaryWriter
-from training.training_config import embedding_size, dim_feed_forward, num_heads, num_encoder_layers, dropout, num_decoder_layers, learning_rate, num_epochs, \
-    training_model, save_model_every
+from training.training_config import (dim_feed_forward, dropout,
+                                      embedding_size, learning_rate,
+                                      num_decoder_layers, num_encoder_layers,
+                                      num_epochs, num_heads, save_model_every,
+                                      training_model)
 
 
 def run_training(model_training_from_scratch=False):

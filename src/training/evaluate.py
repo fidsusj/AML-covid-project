@@ -1,9 +1,14 @@
+""" Module for model evaluation """
 import torch
 from torchtext.data.metrics import bleu_score
+
 from models.transformer import Transformer
 from path_helper import get_project_root
 from preprocessing.dataset import get_loader
-from training.training_config import embedding_size, dim_feed_forward, num_heads, num_encoder_layers, dropout, num_decoder_layers, evaluation_model
+from training.training_config import (dim_feed_forward, dropout,
+                                      embedding_size, evaluation_model,
+                                      num_decoder_layers, num_encoder_layers,
+                                      num_heads)
 
 
 def evaluate():
@@ -36,7 +41,7 @@ def evaluate():
         child_sequence = instance[1].to(device)
 
         predicted_sequence = torch.LongTensor([test_dataset.child_vocab.stoi["<SOS>"]]).unsqueeze(1).to(device)
-        for i in range(child_sequence.shape[1]):  # Loop over each word in the sequence
+        for i in range(child_sequence.shape[1]):  # Loop over each word in the sequence, sequences are always of the same length!
             with torch.no_grad():
                 codon = model(parent_sequence, predicted_sequence)
 

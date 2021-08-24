@@ -1,3 +1,4 @@
+""" Module for building a transformer model """
 import torch
 import torch.nn as nn
 

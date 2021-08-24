@@ -1,11 +1,11 @@
+import spacy
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import spacy
-from utils import translate_sentence, bleu, save_checkpoint, load_checkpoint
 from torch.utils.tensorboard import SummaryWriter
+from torchtext.legacy.data import BucketIterator, Field
 from torchtext.legacy.datasets import Multi30k
-from torchtext.legacy.data import Field, BucketIterator
+from utils import bleu, load_checkpoint, save_checkpoint, translate_sentence
 
 """
 To install spacy languages do:

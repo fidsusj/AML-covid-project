@@ -1,3 +1,4 @@
+""" Module for hyperparameters """
 # Training hyperparameters
 num_epochs = 10000
 learning_rate = 3e-4

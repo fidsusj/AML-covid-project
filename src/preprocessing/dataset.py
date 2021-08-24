@@ -1,7 +1,8 @@
+""" Module for custom dataset preprocessing """
 import pandas as pd
 import torch
-from torch.utils.data import DataLoader, Dataset
 from sklearn.model_selection import train_test_split
+from torch.utils.data import DataLoader, Dataset
 
 
 class Vocabulary:
@@ -64,21 +65,13 @@ class CustomGISAIDDataset(Dataset):
         self.parent = chosen_dataset["parent"]
         self.child = chosen_dataset["child"]
 
-        # TODO: When doing long training runs one might consider to numericalize the sequences only once here
+        # Numericalize sequences
+        print("Numericalize sequences...")
+        self.parent = self.parent.apply(lambda sequence: [self.parent_vocab.stoi["<SOS>"]] + self.parent_vocab.numericalize(sequence) + [self.parent_vocab.stoi["<EOS>"]])
+        self.child = self.child.apply(lambda sequence: [self.child_vocab.stoi["<SOS>"]] + self.child_vocab.numericalize(sequence) + [self.child_vocab.stoi["<EOS>"]])
 
     def __getitem__(self, index):
-        parent = self.parent.iloc[index]
-        child = self.child.iloc[index]
-
-        numericalized_parent = [self.parent_vocab.stoi["<SOS>"]]
-        numericalized_parent += self.parent_vocab.numericalize(parent)
-        numericalized_parent.append(self.parent_vocab.stoi["<EOS>"])
-
-        numericalized_child = [self.child_vocab.stoi["<SOS>"]]
-        numericalized_child += self.child_vocab.numericalize(child)
-        numericalized_child.append(self.child_vocab.stoi["<EOS>"])
-
-        return torch.tensor(numericalized_parent), torch.tensor(numericalized_child)
+        return torch.tensor(self.parent.iloc[index]), torch.tensor(self.child.iloc[index])
 
     def __len__(self):
         return len(self.df_train) if self.train else len(self.df_test)
