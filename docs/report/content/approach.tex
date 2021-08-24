@@ -2,42 +2,30 @@
 
 \subsection{Dataset Creation}  \label{ch:approachA}
 % Choosing latest mutations that are the most spread
-% created three types of sequence pairs: (real, real), (real, generated), (real, unreal)
+% Created three types of sequence pairs: (real, real), (real, generated), (real, unreal)
+% Phylogenetic tree with "Fasttree"
+% Levenshtein distance
+% Biopython packages?
+% Final dataset metrics
 
 \subsection{Data Preprocessing}  \label{ch:approachB}
 % TODO: Pipeline image
 % Word size 3 is just a hyperparameter (see discussion of the corresponding paper)!  But maybe biologically valid because auf amino acids.
 % DNA2Vec?
-% Phylogenetic tree with "Fasttree"
-% Biopython packages?
-% Levenshtein distance
 
 \begin{itemize}
-	\item DNA Sequencing
+	\item DNA Sequencing (Done during dataset creation, given from GISAID)
 	\item DNA Sequence Tokenization for Amino Acid Dictionary
-	\item (DNA Sequence Padding not necessary as model can handle input of arbitrary length)
-	\item Phologenetic Tree and final dataset metrics
+	\item DNA Sequence Padding
 \end{itemize}
 
 \subsection{Model Architecture}  \label{ch:approachC}
-% Use Keras for implementation + Tensorflow 2
-% https://github.com/tensorflow/nmt
-
-% https://towardsdatascience.com/neural-machine-translation-using-seq2seq-with-keras-c23540453c74
-% Plot accuracy and loss for training and validation
-% Teacher forcing, early stopping?
-% State size 256, 512, 1024?
-% Search other code tutorials
-% Telegram messages Nils
-
-% TRANSFORMER Tutorial: http://nlp.seas.harvard.edu/2018/04/03/attention.html !!!
-% OR: https://colab.research.google.com/github/tensorflow/tensor2tensor/blob/master/tensor2tensor/notebooks/hello_t2t.ipynb
-% use prebuilt transformer
-
+% Hyperparameters and model architecture
+% Reference http://nlp.seas.harvard.edu/2018/04/03/attention.html if one wants to build it by oneself
 
 \subsection{Training Process} \label{ch:approachD}
-
-% Loss functions and teacher forcing
+% Plot accuracy and loss for training and validation
+% Loss functions and teacher forcing, early stopping?
 % Categorical cross-entropy loss for seq2seq, Wasserstein loss for GAN, kullback leibner + cross entropy for transformers
 % Identify changes between sequences using the diff-match package from Google
 % See MutaGAN 6.2 Model training
