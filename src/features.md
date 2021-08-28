@@ -10,8 +10,9 @@ Create Dataset:
 - Bring more variety into the data (currently the sequences only vary at the beginning and the end)
 - Split the data into training, test and validation dataset on .csv file level
 
-Preprocessing:
-- Numericalize only once
+Discriminator:
+- Linear/embedding layer should use the same weight as the embedding layer of the generator
+- Flatten MLP input? -> Shape (batch_size, sequence_length * embedding_size) or (batch_size, sequence_length, embedding_size)
 
 Quality:
 - Delete legacy and template code

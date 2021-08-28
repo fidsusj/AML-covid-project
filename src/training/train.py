@@ -3,24 +3,29 @@ from datetime import datetime
 
 import torch
 import torch.nn as nn
+import torch.nn.functional as functional
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 
-from models.transformer import Transformer
+from models.discriminator import MultiLayerPerceptron, TransformerEncoder
+from models.generator import Transformer
 from path_helper import get_project_root
 from preprocessing.dataset import get_loader
-from training.training_config import (dim_feed_forward, dropout,
+from training.training_config import (batch_size, dim_feed_forward, dropout,
                                       embedding_size, learning_rate,
                                       num_decoder_layers, num_encoder_layers,
                                       num_epochs, num_heads, save_model_every,
                                       training_model)
 
+################################
+#  Plain Transformer
+################################
 
-def run_training(model_training_from_scratch=False):
+def run_transformer_training(model_training_from_scratch=False):
     # Config and load data
     print("Loading data...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    train_dataset, data_loader = get_loader(str(get_project_root()) + "/data/dataset/final.csv", test_set_size=0.05, batch_size=32, train=True)
+    train_dataset, data_loader = get_loader(str(get_project_root()) + "/data/dataset/final.csv", test_set_size=0.05, batch_size=batch_size, train=True)
 
     src_vocab_size = len(train_dataset.parent_vocab)
     trg_vocab_size = len(train_dataset.child_vocab)
@@ -49,7 +54,7 @@ def run_training(model_training_from_scratch=False):
     print("Starting training...")
     model.train()  # Set model to training mode
     for epoch in range(epochs_trained, num_epochs):
-        print(f"[Epoch {epoch+1} / {num_epochs}]")
+        print(f"[Epoch {epoch + 1} / {num_epochs}]")
 
         losses = []
         for _, batch in enumerate(data_loader):
@@ -64,7 +69,7 @@ def run_training(model_training_from_scratch=False):
             # Reshape (batch_size, sequence_length, features) -> (batch_size * sequence_length, features) for CrossEntropyLoss + Remove <SOS> token
             output = output.reshape(-1, output.shape[2])
             child_sequence = child_sequence[:, 1:].reshape(-1)
-            loss = criterion(output, child_sequence)
+            loss = criterion(output, child_sequence[:, 1:])  # Remove <SOS> token of target sequence (output of decoder is also shifted one to the right)
             losses.append(loss.item())
 
             # Backward propagation
@@ -84,14 +89,72 @@ def run_training(model_training_from_scratch=False):
         mean_loss = sum(losses) / len(losses)
         scheduler.step(mean_loss)
 
-        if (epoch+1) % save_model_every == 0:
+        if (epoch + 1) % save_model_every == 0:
             checkpoint = {
                 "state_dict": model.state_dict(),
                 "optimizer": optimizer.state_dict(),
-                "epochs_trained": epoch+1
+                "epochs_trained": epoch + 1
             }
-            save_checkpoint(checkpoint, epoch+1)
+            save_checkpoint(checkpoint, epoch + 1)
 
+
+################################
+#  Transformer inside GAN
+################################
+
+def run_gan_training(model_training_from_scratch=False):
+    # Config and load data
+    print("Loading data...")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    train_dataset, data_loader = get_loader(str(get_project_root()) + "/data/dataset/final.csv", test_set_size=0.05, batch_size=batch_size, train=False)
+
+    src_vocab_size = len(train_dataset.parent_vocab)
+    trg_vocab_size = len(train_dataset.child_vocab)
+    max_len = train_dataset.strain_end - train_dataset.strain_begin
+    src_pad_idx = train_dataset.parent_vocab.stoi["<PAD>"]
+
+    # Training objects
+    print("Initialize model...")
+    generator = Transformer(embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout,
+                            src_vocab_size, trg_vocab_size, src_pad_idx, max_len, device).to(device)
+    optimizer = optim.Adam(generator.parameters(), lr=learning_rate)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, factor=0.1, patience=10, verbose=True
+    )
+    criterion = nn.CrossEntropyLoss(ignore_index=src_pad_idx)
+    epochs_trained = load_checkpoint(generator, optimizer)
+
+    discriminator = TransformerEncoder(generator.transformer.encoder, embedding_size, dropout, trg_vocab_size, src_pad_idx, max_len, device).to(device)
+    mlp = MultiLayerPerceptron(embedding_size, dropout).to(device)
+
+    discriminator.train()
+    mlp.train()
+    for _, batch in enumerate(data_loader):
+        # Batch shape: (2, batch_size, sequence_length)
+        parent_sequence = batch[0].to(device)
+        child_sequence = batch[1].to(device)
+
+        # Forward propagation + Remove <EOS> token of target sequence (input of decoder is shifted one to the right)
+        predicted = generator(parent_sequence, child_sequence[:, :-1])
+        predicted = torch.cat(
+            (
+                functional.one_hot(torch.tensor(train_dataset.child_vocab.stoi["<SOS>"]), trg_vocab_size)
+                    .view(1, 1, -1)  # Add dimension 0 and 1, dimension 2 remains (trg_vocab_size)
+                    .expand(parent_sequence.shape[0], -1, -1)  # Expand batch_size times -> Shape (batch_size, 1, trg_vocab_size)
+                    .to(device),
+                predicted
+            ), dim=1)  # Prepend <SOS> to predicted output again!
+
+        prediction_encoding = discriminator(predicted, true_sequence=False)
+        true_encoding = discriminator(child_sequence, true_sequence=True)  # .float()
+
+        result = torch.cat((prediction_encoding, true_encoding), dim=0)
+        result = mlp(result)
+
+
+################################
+#  Utils
+################################
 
 def save_checkpoint(state, epoch_count):
     print("Saving checkpoint...")
@@ -101,7 +164,7 @@ def save_checkpoint(state, epoch_count):
 
 def load_checkpoint(model, optimizer):
     print("Loading checkpoint...")
-    checkpoint = torch.load(f"training/checkpoints/{training_model}")
+    checkpoint = torch.load(f"{str(get_project_root())}/training/checkpoints/{training_model}")
     model.load_state_dict(checkpoint["state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer"])
     return checkpoint["epochs_trained"]

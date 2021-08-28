@@ -2,7 +2,7 @@
 import torch
 from torchtext.data.metrics import bleu_score
 
-from models.transformer import Transformer
+from models.generator import Transformer
 from path_helper import get_project_root
 from preprocessing.dataset import get_loader
 from training.training_config import (dim_feed_forward, dropout,
