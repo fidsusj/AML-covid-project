@@ -31,7 +31,7 @@ english = Field(
 )
 
 train_data, valid_data, test_data = Multi30k.splits(
-    exts=(".de", ".en"), fields=(german, english)
+    exts=(".de", ".en"), fields=(german, english), root="data"
 )
 
 german.build_vocab(train_data, max_size=10000, min_freq=2)
@@ -125,7 +125,7 @@ forward_expansion = 4
 src_pad_idx = english.vocab.stoi["<pad>"]
 
 # Tensorboard to get nice loss plot
-writer = SummaryWriter("runs/loss_plot")
+writer = SummaryWriter("runs/seq2seq")
 step = 0
 
 train_iterator, valid_iterator, test_iterator = BucketIterator.splits(

@@ -5,7 +5,7 @@ import torch.nn.functional as functional
 
 
 class TransformerEncoder(nn.Module):
-    def __init__(self, encoder, embedding_size, dropout, trg_vocab_size, src_pad_idx, max_sequence_length, device):
+    def __init__(self, encoder, word_embedding_weights, position_embedding_weights, embedding_size, dropout, trg_vocab_size, src_pad_idx, max_sequence_length, device):
         super(TransformerEncoder, self).__init__()
 
         # Note: The true child sequence can either be provided as:
@@ -16,8 +16,14 @@ class TransformerEncoder(nn.Module):
 
         # Embeddings from input
         self.linear = nn.Linear(trg_vocab_size, embedding_size)
+        # self.linear.load_state_dict(word_embedding_weights)
+
         self.embedding = nn.Embedding(trg_vocab_size, embedding_size)
+        self.embedding.load_state_dict(word_embedding_weights)
+
         self.position_embedding = nn.Embedding(max_sequence_length, embedding_size)
+        self.position_embedding.load_state_dict(position_embedding_weights)
+
         self.dropout = nn.Dropout(dropout)
 
         # Transformer

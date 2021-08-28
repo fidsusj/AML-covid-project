@@ -1,4 +1,5 @@
 """ Module for model training """
+import copy
 from datetime import datetime
 
 import torch
@@ -33,7 +34,7 @@ def run_transformer_training(model_training_from_scratch=False):
     src_pad_idx = train_dataset.parent_vocab.stoi["<PAD>"]
 
     # Tensorboard to get nice loss plot
-    writer = SummaryWriter("training/tensorboard/loss_plot")
+    writer = SummaryWriter("training/tensorboard/pretraining/loss_plot")
     step = 0
 
     # Training objects
@@ -69,7 +70,7 @@ def run_transformer_training(model_training_from_scratch=False):
             # Reshape (batch_size, sequence_length, features) -> (batch_size * sequence_length, features) for CrossEntropyLoss + Remove <SOS> token
             output = output.reshape(-1, output.shape[2])
             child_sequence = child_sequence[:, 1:].reshape(-1)
-            loss = criterion(output, child_sequence[:, 1:])  # Remove <SOS> token of target sequence (output of decoder is also shifted one to the right)
+            loss = criterion(output, child_sequence)
             losses.append(loss.item())
 
             # Backward propagation
@@ -102,7 +103,9 @@ def run_transformer_training(model_training_from_scratch=False):
 #  Transformer inside GAN
 ################################
 
-def run_gan_training(model_training_from_scratch=False):
+# Note: We first need to do a pretraining of the generator using the normal cross entropy loss
+
+def run_gan_training():
     # Config and load data
     print("Loading data...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -113,43 +116,64 @@ def run_gan_training(model_training_from_scratch=False):
     max_len = train_dataset.strain_end - train_dataset.strain_begin
     src_pad_idx = train_dataset.parent_vocab.stoi["<PAD>"]
 
+    # Tensorboard to get nice loss plot
+    writer_fake = SummaryWriter("training/tensorboard/training/real/loss_plot")
+    writer_real = SummaryWriter("training/tensorboard/training/real/loss_plot")
+    step = 0
+
     # Training objects
     print("Initialize model...")
     generator = Transformer(embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout,
                             src_vocab_size, trg_vocab_size, src_pad_idx, max_len, device).to(device)
-    optimizer = optim.Adam(generator.parameters(), lr=learning_rate)
-    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, factor=0.1, patience=10, verbose=True
-    )
-    criterion = nn.CrossEntropyLoss(ignore_index=src_pad_idx)
-    epochs_trained = load_checkpoint(generator, optimizer)
 
-    discriminator = TransformerEncoder(generator.transformer.encoder, embedding_size, dropout, trg_vocab_size, src_pad_idx, max_len, device).to(device)
+    word_embedding_weights = generator.trg_word_embedding.state_dict()
+    position_embedding_weights = generator.trg_position_embedding.state_dict()
+    discriminator = TransformerEncoder(copy.deepcopy(generator.transformer.encoder), word_embedding_weights, position_embedding_weights,
+                                       embedding_size, dropout, trg_vocab_size, src_pad_idx, max_len, device).to(device)
+
     mlp = MultiLayerPerceptron(embedding_size, dropout).to(device)
 
-    discriminator.train()
-    mlp.train()
-    for _, batch in enumerate(data_loader):
-        # Batch shape: (2, batch_size, sequence_length)
-        parent_sequence = batch[0].to(device)
-        child_sequence = batch[1].to(device)
+    optimizer_generator = optim.Adam(generator.parameters(), lr=learning_rate)
+    optimizer_discriminator = optim.Adam(generator.parameters(), lr=learning_rate)
+    # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+    #     optimizer_generator, factor=0.1, patience=10, verbose=True
+    # )
 
-        # Forward propagation + Remove <EOS> token of target sequence (input of decoder is shifted one to the right)
-        predicted = generator(parent_sequence, child_sequence[:, :-1])
-        predicted = torch.cat(
-            (
-                functional.one_hot(torch.tensor(train_dataset.child_vocab.stoi["<SOS>"]), trg_vocab_size)
-                    .view(1, 1, -1)  # Add dimension 0 and 1, dimension 2 remains (trg_vocab_size)
-                    .expand(parent_sequence.shape[0], -1, -1)  # Expand batch_size times -> Shape (batch_size, 1, trg_vocab_size)
-                    .to(device),
-                predicted
-            ), dim=1)  # Prepend <SOS> to predicted output again!
+    # Loss of generator: binary + sparse categorical cross entropy
+    criterion = nn.BCELoss()  # PyTorch does not offer WassersteinLoss
 
-        prediction_encoding = discriminator(predicted, true_sequence=False)
-        true_encoding = discriminator(child_sequence, true_sequence=True)  # .float()
+    epochs_trained = load_checkpoint(generator, optimizer_generator)
 
-        result = torch.cat((prediction_encoding, true_encoding), dim=0)
-        result = mlp(result)
+    # Training loop
+    print("Starting training...")
+    discriminator.train()  # Set model to training mode
+    mlp.train()  # Set model to training mode
+    for epoch in range(epochs_trained, num_epochs):
+        for _, batch in enumerate(data_loader):
+            # Batch shape: (2, batch_size, sequence_length)
+            parent_sequence = batch[0].to(device)
+            child_sequence = batch[1].to(device)
+
+            #####################
+            # Train discriminator
+            #####################
+
+            # Forward propagation + Remove <EOS> token of target sequence (input of decoder is shifted one to the right)
+            predicted = generator(parent_sequence, child_sequence[:, :-1])
+            predicted = torch.cat(
+                (
+                    functional.one_hot(torch.tensor(train_dataset.child_vocab.stoi["<SOS>"]), trg_vocab_size)
+                        .view(1, 1, -1)  # Add dimension 0 and 1, dimension 2 remains (trg_vocab_size)
+                        .expand(parent_sequence.shape[0], -1, -1)  # Expand batch_size times -> Shape (batch_size, 1, trg_vocab_size)
+                        .to(device),
+                    predicted
+                ), dim=1)  # Prepend <SOS> to predicted output again!
+
+            prediction_encoding = discriminator(predicted, true_sequence=False)
+            true_encoding = discriminator(child_sequence, true_sequence=True)  # .float()?
+
+            result = torch.cat((prediction_encoding, true_encoding), dim=0)
+            print(mlp(result))
 
 
 ################################

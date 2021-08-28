@@ -2,7 +2,7 @@
 # Training hyperparameters
 num_epochs = 10000
 batch_size = 32
-learning_rate = 3e-4
+learning_rate = 3e-4  # Maybe choose different learning rates for pretraining, generator and discriminator
 save_model_every = 10
 
 # Model hyperparameters
