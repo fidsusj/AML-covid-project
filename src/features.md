@@ -34,11 +34,12 @@ Training:
 - Does model.eval() set the dropouts off in our custom nn.Module?
 - How to select the hyperparameters? -> Read MutaGAN paper
 - Where to train for several hours? Paperspace?
-- Kullback-Leibler divergence instead of cross entropy loss or both?
 - Use diff-match package from Google
 - Use a replay buffer (see MutaGAN paper)?
 - Avoid mode collapse
+- Kullback-Leibler divergence instead of cross entropy loss or both?
 - Scheduler for GAN?
+- Loss chart for GAN training
 
 Evaluation:
 - Define evaluation criteria (MutaGAN paper, BLEU score only?, ...)

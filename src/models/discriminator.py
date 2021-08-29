@@ -34,12 +34,12 @@ class TransformerEncoder(nn.Module):
         self.src_pad_pattern = functional.one_hot(torch.tensor(src_pad_idx), trg_vocab_size).to(device)
         self.device = device
 
-    def forward(self, src, true_sequence=True):
+    def forward(self, src, parent_sequence=True):
         # shape src:
         # - predicted: (batch_size, sequence_length, trg_vocab_size)
         # - true: (batch_size, sequence_length)
 
-        word_embedding = self.embedding(src) if true_sequence else self.linear(src)
+        word_embedding = self.embedding(src) if parent_sequence else self.linear(src)
 
         batch_size = src.shape[0]
         sequence_length = src.shape[1]
@@ -52,7 +52,7 @@ class TransformerEncoder(nn.Module):
         position_embedding = self.position_embedding(positions)
 
         embedding = self.dropout(word_embedding + position_embedding)
-        src_padding_mask = self.make_src_mask(src, true_sequence)
+        src_padding_mask = self.make_src_mask(src, parent_sequence)
 
         return self.transformerEncoder(embedding, src_key_padding_mask=src_padding_mask)
 
@@ -69,13 +69,13 @@ class MultiLayerPerceptron(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.relu = nn.LeakyReLU()
 
-        self.first_batch_norm = nn.BatchNorm1d(embedding_size)
-        self.second_batch_norm = nn.BatchNorm1d(int(embedding_size/2))
-        self.third_batch_norm = nn.BatchNorm1d(int(embedding_size/4))
+        self.first_batch_norm = nn.BatchNorm1d(2*embedding_size)
+        self.second_batch_norm = nn.BatchNorm1d(embedding_size)
+        self.third_batch_norm = nn.BatchNorm1d(int(embedding_size/2))
 
-        self.first_linear = nn.Linear(embedding_size, int(embedding_size/2))
-        self.second_linear = nn.Linear(int(embedding_size/2), int(embedding_size/4))
-        self.third_linear = nn.Linear(int(embedding_size/4), 1)
+        self.first_linear = nn.Linear(2*embedding_size, embedding_size)
+        self.second_linear = nn.Linear(embedding_size, int(embedding_size/2))
+        self.third_linear = nn.Linear(int(embedding_size/2), 1)
 
         self.sigmoid = nn.Sigmoid()
 
