@@ -39,6 +39,7 @@ Training:
 - Avoid mode collapse
 - Kullback-Leibler divergence instead of cross entropy loss or both?
 - Scheduler for GAN?
+- Loss of generator for GAN: binary + sparse categorical cross entropy
 
 Evaluation:
 - Define evaluation criteria (MutaGAN paper, BLEU score only?, ...)
