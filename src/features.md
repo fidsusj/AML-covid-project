@@ -39,7 +39,6 @@ Training:
 - Avoid mode collapse
 - Kullback-Leibler divergence instead of cross entropy loss or both?
 - Scheduler for GAN?
-- Loss chart for GAN training
 
 Evaluation:
 - Define evaluation criteria (MutaGAN paper, BLEU score only?, ...)

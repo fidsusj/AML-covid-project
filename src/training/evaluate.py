@@ -11,7 +11,7 @@ from training.training_config import (dim_feed_forward, dropout,
                                       num_heads)
 
 
-def evaluate():
+def evaluate(pretraining):
     # Config and load data
     print("Loading data...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -26,7 +26,8 @@ def evaluate():
     print("Initialize model...")
     model = Transformer(embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout,
                         src_vocab_size, trg_vocab_size, src_pad_idx, max_len, device).to(device)
-    checkpoint = torch.load(f"training/checkpoints/{evaluation_model}")
+    path = "pretraining" if pretraining else "training"
+    checkpoint = torch.load(f"training/checkpoints/{path}/{evaluation_model}")
     model.load_state_dict(checkpoint["state_dict"])
     targets = []
     outputs = []

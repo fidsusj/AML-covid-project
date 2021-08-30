@@ -16,7 +16,7 @@ from training.training_config import (batch_size, dim_feed_forward, dropout,
                                       embedding_size, learning_rate,
                                       num_decoder_layers, num_encoder_layers,
                                       num_epochs, num_heads, save_model_every,
-                                      training_model)
+                                      pretraining_model, training_model)
 
 
 ################################
@@ -24,7 +24,7 @@ from training.training_config import (batch_size, dim_feed_forward, dropout,
 ################################
 
 
-def run_transformer_training(model_training_from_scratch=False):
+def run_transformer_pretraining(model_training_from_scratch=False):
     # Config and load data
     print("Loading data...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -51,7 +51,7 @@ def run_transformer_training(model_training_from_scratch=False):
 
     epochs_trained = 0
     if not model_training_from_scratch:
-        epochs_trained = load_checkpoint(model, optimizer)
+        epochs_trained = load_checkpoint_pretraining(model, optimizer)
 
     # Training loop
     print("Starting training...")
@@ -98,7 +98,7 @@ def run_transformer_training(model_training_from_scratch=False):
                 "optimizer": optimizer.state_dict(),
                 "epochs_trained": epoch + 1
             }
-            save_checkpoint(checkpoint, epoch + 1)
+            save_checkpoint_pretraining(checkpoint, epoch + 1)
 
 
 ################################
@@ -107,7 +107,7 @@ def run_transformer_training(model_training_from_scratch=False):
 
 # Note: We first need to do a pretraining of the generator using the normal cross entropy loss
 
-def run_gan_training():
+def run_gan_training(model_training_from_scratch=False):
     # Config and load data
     print("Loading data...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -119,8 +119,8 @@ def run_gan_training():
     src_pad_idx = train_dataset.parent_vocab.stoi["<PAD>"]
 
     # Tensorboard to get nice loss plot
-    writer_fake = SummaryWriter("training/tensorboard/training/real/loss_plot")
-    writer_real = SummaryWriter("training/tensorboard/training/real/loss_plot")
+    writer_discriminator = SummaryWriter("training/tensorboard/training/discriminator/loss_plot")
+    writer_generator = SummaryWriter("training/tensorboard/training/generator/loss_plot")
     step = 0
 
     # Training objects
@@ -133,15 +133,22 @@ def run_gan_training():
     discriminator = TransformerEncoder(copy.deepcopy(generator.transformer.encoder), word_embedding_weights, position_embedding_weights,
                                        embedding_size, dropout, trg_vocab_size, src_pad_idx, max_len, device).to(device)
 
-    optimizer_generator = optim.Adam(generator.parameters(), lr=learning_rate)
     optimizer_discriminator = optim.Adam(generator.parameters(), lr=learning_rate)
-    # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-    #     optimizer_generator, factor=0.1, patience=10, verbose=True
-    # )
+    scheduler_discriminator = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer_discriminator, factor=0.1, patience=10, verbose=True
+    )
+
+    optimizer_generator = optim.Adam(generator.parameters(), lr=learning_rate)
+    scheduler_generator = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer_generator, factor=0.1, patience=10, verbose=True
+    )
 
     criterion = nn.BCELoss()  # PyTorch does not offer WassersteinLoss
 
-    epochs_trained = load_checkpoint(generator, optimizer_generator)
+    if not model_training_from_scratch:
+        epochs_trained = load_checkpoint_training(discriminator, generator, optimizer_discriminator, optimizer_generator)
+    else:
+        epochs_trained = load_checkpoint_pretraining(generator, optimizer_generator)
 
     # Training loop
     print("Starting training...")
@@ -149,6 +156,10 @@ def run_gan_training():
     generator.train()
     discriminator.train()
     for epoch in range(epochs_trained, num_epochs):
+        print(f"[Epoch {epoch + 1} / {num_epochs}]")
+
+        losses_discriminator = []
+        losses_generator = []
         for _, batch in enumerate(data_loader):
             # Batch shape: (2, batch_size, sequence_length)
             parent_sequence = batch[0].to(device)
@@ -181,13 +192,20 @@ def run_gan_training():
             loss_fake = criterion(fake, torch.zeros_like(fake))
             loss_real = criterion(real, torch.ones_like(real))
             loss_total_discriminator = (loss_real + loss_fake) / 2
+            losses_discriminator.append(loss_total_discriminator.item())
 
             # Backward propagation
             discriminator.zero_grad()
             loss_total_discriminator.backward(retain_graph=True)
 
+            # Clip to avoid exploding gradient issues, makes sure gradients are within a healthy range
+            torch.nn.utils.clip_grad_norm_(discriminator.parameters(), max_norm=1)
+
             # Batch gradient descent step
             optimizer_discriminator.step()
+
+            # Plot to tensorboard
+            writer_discriminator.add_scalar("Training loss", loss_total_discriminator, global_step=step)
 
             ############################################
             # Train generator
@@ -199,28 +217,71 @@ def run_gan_training():
 
             # Calculate the loss
             loss_total_generator = criterion(output, torch.ones_like(output))
+            losses_generator.append(loss_total_generator.item())
 
             # Backward propagation
             generator.zero_grad()
             loss_total_generator.backward()
 
+            # Clip to avoid exploding gradient issues, makes sure gradients are within a healthy range
+            torch.nn.utils.clip_grad_norm_(generator.parameters(), max_norm=1)
+
             # Batch gradient descent step
             optimizer_generator.step()
+
+            # Plot to tensorboard
+            writer_generator.add_scalar("Training loss", loss_total_generator, global_step=step)
+            step += 1
+
+        mean_loss_discriminator = sum(losses_discriminator) / len(losses_discriminator)
+        scheduler_discriminator.step(mean_loss_discriminator)
+
+        mean_loss_generator = sum(losses_generator) / len(losses_generator)
+        scheduler_generator.step(mean_loss_generator)
+
+        if (epoch + 1) % save_model_every == 0:
+            checkpoint_discriminator = {
+                "state_dict": discriminator.state_dict(),
+                "optimizer": optimizer_discriminator.state_dict(),
+                "epochs_trained": epoch + 1
+            }
+            checkpoint_generator = {
+                "state_dict": generator.state_dict(),
+                "optimizer": optimizer_generator.state_dict(),
+                "epochs_trained": epoch + 1
+            }
+            save_checkpoint_training(checkpoint_discriminator, checkpoint_generator, epoch + 1)
 
 
 ################################
 #  Utils
 ################################
 
-def save_checkpoint(state, epoch_count):
+
+def save_checkpoint_pretraining(state, epoch_count):
     print("Saving checkpoint...")
     training_timestamp = datetime.now().strftime("%d_%m_%Y_%H_%M")
-    torch.save(state, f"training/checkpoints/{training_timestamp}_{epoch_count}.pth.tar")
+    torch.save(state, f"training/checkpoints/pretraining/{training_timestamp}_{epoch_count}.pth.tar")
 
+def save_checkpoint_training(state_discriminator, state_generator, epoch_count):
+    print("Saving checkpoint...")
+    training_timestamp = datetime.now().strftime("%d_%m_%Y_%H_%M")
+    torch.save(state_discriminator, f"training/checkpoints/training/discriminator/{training_timestamp}_{epoch_count}.pth.tar")
+    torch.save(state_generator, f"training/checkpoints/training/generator/{training_timestamp}_{epoch_count}.pth.tar")
 
-def load_checkpoint(model, optimizer):
+def load_checkpoint_pretraining(model, optimizer):
     print("Loading checkpoint...")
-    checkpoint = torch.load(f"{str(get_project_root())}/training/checkpoints/{training_model}")
+    checkpoint = torch.load(f"{str(get_project_root())}/training/checkpoints/pretraining/{pretraining_model}")
     model.load_state_dict(checkpoint["state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer"])
     return checkpoint["epochs_trained"]
+
+def load_checkpoint_training(model_discriminator, model_generator, optimizer_discriminator, optimizer_generator):
+    print("Loading checkpoint...")
+    checkpoint_discriminator = torch.load(f"{str(get_project_root())}/training/checkpoints/training/discriminator/{training_model}")
+    checkpoint_generator = torch.load(f"{str(get_project_root())}/training/checkpoints/training/generator/{training_model}")
+    model_discriminator.load_state_dict(checkpoint_discriminator["state_dict"])
+    optimizer_discriminator.load_state_dict(checkpoint_discriminator["optimizer"])
+    model_generator.load_state_dict(checkpoint_generator["state_dict"])
+    optimizer_generator.load_state_dict(checkpoint_generator["optimizer"])
+    return checkpoint_discriminator["epochs_trained"]
