@@ -8,7 +8,7 @@ import torch.nn.functional as functional
 import torch.optim as optim
 from torch.utils.tensorboard import SummaryWriter
 
-from models.discriminator import MultiLayerPerceptron, TransformerEncoder
+from models.discriminator import TransformerEncoder
 from models.generator import Transformer
 from path_helper import get_project_root
 from preprocessing.dataset import get_loader
@@ -133,8 +133,6 @@ def run_gan_training():
     discriminator = TransformerEncoder(copy.deepcopy(generator.transformer.encoder), word_embedding_weights, position_embedding_weights,
                                        embedding_size, dropout, trg_vocab_size, src_pad_idx, max_len, device).to(device)
 
-    mlp = MultiLayerPerceptron(embedding_size, dropout).to(device)
-
     optimizer_generator = optim.Adam(generator.parameters(), lr=learning_rate)
     optimizer_discriminator = optim.Adam(generator.parameters(), lr=learning_rate)
     # scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
@@ -150,7 +148,6 @@ def run_gan_training():
     # Set models to training mode
     generator.train()
     discriminator.train()
-    mlp.train()
     for epoch in range(epochs_trained, num_epochs):
         for _, batch in enumerate(data_loader):
             # Batch shape: (2, batch_size, sequence_length)
@@ -174,13 +171,11 @@ def run_gan_training():
                 ), dim=1)  # Prepend <SOS> to predicted output again!
 
             # Forward propagation through discriminator
-            prediction_encoding = discriminator(prediction.detach(), parent_sequence=False)
-            # The true child sequence must also use the dense/linear layer in the discriminator, not the embedding layer
-            true_child_encoding = discriminator(functional.one_hot(child_sequence, trg_vocab_size).float(), parent_sequence=False)
-            true_parent_encoding = discriminator(parent_sequence.detach(), parent_sequence=True)
+            fake = discriminator(parent_sequence, prediction).view(-1)
 
-            fake = mlp(torch.cat((prediction_encoding, true_parent_encoding), dim=2)).view(-1)
-            real = mlp(torch.cat((true_child_encoding, true_parent_encoding), dim=2)).view(-1)
+            # The true child sequence must also use the dense/linear layer in the discriminator, not the embedding layer
+            one_hot_encoded_child_sequence = functional.one_hot(child_sequence, trg_vocab_size).float()
+            real = discriminator(parent_sequence, one_hot_encoded_child_sequence).view(-1)
 
             # Calculate the loss
             loss_fake = criterion(fake, torch.zeros_like(fake))
@@ -189,7 +184,7 @@ def run_gan_training():
 
             # Backward propagation
             discriminator.zero_grad()
-            loss_total_discriminator.backward()  # retain_graph=True
+            loss_total_discriminator.backward(retain_graph=True)
 
             # Batch gradient descent step
             optimizer_discriminator.step()
@@ -200,12 +195,10 @@ def run_gan_training():
             ############################################
 
             # Forward propagation through discriminator reusing the previous output of the generator
-            prediction_encoding = discriminator(prediction, parent_sequence=False)
-            true_parent_encoding = discriminator(parent_sequence, parent_sequence=True)
-            fake = mlp(torch.cat((prediction_encoding, true_parent_encoding), dim=2)).view(-1)
+            output = discriminator(parent_sequence.detach(), prediction.detach()).view(-1)
 
             # Calculate the loss
-            loss_total_generator = criterion(fake, torch.ones_like(fake))
+            loss_total_generator = criterion(output, torch.ones_like(output))
 
             # Backward propagation
             generator.zero_grad()
