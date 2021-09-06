@@ -6,27 +6,41 @@ TODO: Pipeline image
 \subsection{Dataset creation} 
 \label{ch:approachA}
 
-\subsubsection{tbd}
+hier irgendwo das Zielschema des Datensatzes beschreiben
+
+\subsubsection{Raw data selection from GISAID}
 \label{ch:approachAa}
 
+focus: Germany from 4.5. - 6.8. (new variant arised in the recent past -> lambda, delta, ...)
+only Germany, to make it possible to handle the data
+about 35000 genomes in our raw dataset
 
-\subsubsection{tbd}
+beispiel record: genome sequence and metadata
+
+
+\subsubsection{Generation of a phylogenetic tree}
 \label{ch:approachAb}
+
+
+\subsubsection{Phylogenetic tree to dataset}
+\label{ch:approachAc}
 
 
 \subsection{Data Preprocessing} 
 \label{ch:approachB}
 
-\subsubsection{tbd}
+two steps:
+- to make the dimensionality managable not the whole 30000 nucleotides are evaluated. We take a subpart of X nucleotides from position A to B
+- Transform string to numeric for model input
+
+\subsubsection{Dimensionality reduction by selecting subpart of the genome}
 \label{ch:approachBa}
 
 
-\subsubsection{tbd}
+\subsubsection{Transform genome sequence to numeric model input}
 \label{ch:approachBb}
 
 
-\subsubsection{tbd}
-\label{ch:approachBc}
 
 \subsection{Model architecture} 
 \label{ch:approachC}
