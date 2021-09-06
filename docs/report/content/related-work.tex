@@ -1,5 +1,151 @@
-\section{Fundamentals and Related Work} \label{fundamentals_related_work}
+\section{Fundamentals and Related Work} \label{fundamentals}
 
-tbd
+\subsection{From Probabilistic Language Models to modeling Evolution Theory} \label{fundamentalsA}
+
+A probabilistic language model tries to approximate the probability distribution 
+
+\begin{equation}
+	P(w_1, ..., w_n) = \Pi_{t=1}^{n} P(w_t | w_1, ..., w_{t-1})
+\end{equation}
+
+with $w_t$ being a word at position (time step) $t$ in a sentence of length $n$. To build language models \acp{RNN} were used to model such probability distributions. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/rnn_architecture.png}
+	\caption{Architecture of a conventional \ac{RNN} \cite{Gertz2020}}
+	\label{rnn_architecture}
+\end{figure}
+
+At each time step $t$ it outputs a probability distribution $P(w_t | w_1, ..., w_{t-1})$ given the words read so far in the current instance (see \autoref{rnn_architecture}). Words are read as a vectorized numerical representation, often given by pretrained so-called word embeddings $x_t$ which are lower dimensional and more semantically-enriched compared to simple one-hot encodings. One then calculates the hidden state $h_t$ by
+
+\begin{equation}
+	h_t = f(W^{(h)} h_{t-1} + W^{(x)} x_t + b_1)
+\end{equation}
+
+and the corresponding output porbability distribution by 
+
+\begin{equation}
+	\hat{y}_t = softmax(U^{(h)} h_t + b_2).
+\end{equation}
+
+The applied weight matrix is always the same for each time step $t$ giving the \ac{RNN} its name. One can therefore simplify the unrolled \ac{RNN} architecture on the left side of \autoref{rnn_architecture} to the one on the right, where the hidden state is continuously passed as an input to the next time step. To achieve a better convergence behavior during training, one can also provide the expected hidden state of time step $t-1$ instead of using the predicted hidden state, which is called teacher forcing. \acp{RNN} are able to process input of arbitrary length and are by their recurrent character capable to use information from previous time steps. Unfortunately, they are vulerable to vanishing and exploding gradient problems. \ac{LSTM} is a special \ac{RNN} architecture that solves such vulnerabilities by owning a separate long-term cell state besides a short-term hidden state and is introduces in \autoref{fundamentalsE}. It is able to preserve information over many time steps. \cite{Gertz2020}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/multi_layer_rnn.png}
+	\caption{Architecture of a multi-layer  \ac{RNN} \cite{Gertz2020}}
+	\label{multi_layer_rnn}
+\end{figure}
+
+One can also use two \acp{RNN}, one traversing a sentence from left to right and another one vice versa, with two different weight matrices to model the probability distribution bidirectionally. One therefore simply concatenates the hidden states of each \ac{RNN} before applying the the weight matrix $U$ and the $softmax()$ function. Also multi-layer \acs{RNN} can be utilized to generate higher-order features (hidden states) for the prediction task (see \autoref{multi_layer_rnn}). \cite{Gertz2020}
+
+The \acp{RNN} or even better \acp{LSTM} architectures used for probabilistic language modeling can be reused in a more complex domain called sequence to sequence modeling for neural machine translation from one language to another. Here one first tries to learn a fixed-dimensional input representation from an input sequence using an encoder architecture based on an \ac{LSTM}. The so-called context vector is then decoded by a second \ac{LSTM} into a new sequence of words preserving the grammar but owning a different meaning. \cite{Sutskever2014}
+
+Sequence to sequence models are introduced together with the \ac{LSTM} architecture in \autoref{fundamentalsE}. Here the connection to evolution theory can be drawn. \ac{RNA} sequences made of a concatenation of nucleotides \footnote{We restrict the representation of nucleotides solely to their nucleobases parts consisting of the distinct nucleobases guanine, adenine, cytosine and thymine. We therefore do not include the phosphate group and the five-carbon sugar components.} can be represented textually using the FASTA format. A sequence to sequence model can then transferably be applied in the domain of \ac{RNA} sequences to model how \ac{RNA}-based viruses change their structure to avoid the detection by the human immune system but still to preserve their infectivity and evolutionary fitness \cite{Hie2021}. 
+
+\subsection{GISAID EpiFlu Data Platform} \label{fundamentalsB}
+
+\subsection{Domain-Specific Methodologies to create Evolutionary  Datasets for Mutation Prediction} \label{fundamentalsC}
+
+\subsection{Previous Work on Mutation Prediction} \label{fundamentalsD}
+
+Even before the rise of Covid-19 there had been studies trying to predict mutations of \ac{RNA} viruses. In the collection of \cite{Wu2007, Yan2007, Wu2008} the authors predict the mutation positions in hemagglutinins from influenza A virus using logistic regression and plain neural networks and then use the resulting amino acid mutating probabilities to derive possible mutated amnio acids. The same approach is further used for H5N1 neuraminidase proteins. 
+
+\cite{Salama2016} proved that nucleotides in an \ac{RNA} sequence can change based on their local neighborhood. Neural networks are used to predict new strains of the Newcastle virus and subsequently a rough set theory based algorithm is introduced to extract the according point mutation patterns. 
+
+\cite{Mohamed2021} uses a more modern sequence to sequence approach based on \acp{LSTM} to learn nucleotide mutations between time-series species of H1N1 Influenza virus and the Newcastle virus as mutations can also be influenced by long-distance relations of amino acids. Therefore one hot-encoded \ac{RNA} sequences of a parent generation preprocessed to words is given as an input and the output is the predicted offspring generation evaluated by accuracy to the compared true offspring generation. The achieved accuracy in this paper is questionably high with 98.9\% on the H1N1 Influenza virus and 96.9\% on the Newcastle virus, possibly because of overfitting to the few 4.609 samples for H1N1 Influenza virus and only 83 for the Newcastle virus. Our approach therefore tries to increase the number of samples available for training when building the dataset. 
+
+Our approach will neither use any of the just mentioned architectures, but uses a transformer based architecture coupled with a GAN-style training architecture. Nevertheless a short introduction into sequence to sequence models and the underlying long short-term memory components shall be given to better point out our architectural decisions . 
+
+\subsection{Sequence to Sequence Models based on Long Short-Term Memory} \label{fundamentalsE}
+
+% TODO: Figure Seq2Seq
+
+The original \ac{LSTM} unit was introduced in \cite{Hochreiter1997} and can be used for language modeling instead of using plain \acp{RNN} to prevent running into vanishing or exploding gradient problems \cite{Sundermeyer2012}. The architecture of an \ac{LSTM} is shwon in the following figure:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figures/lstm_architecture.png}
+	\caption{Architecture of an \ac{LSTM} \cite{Gertz2020}}
+	\label{lstm_architecture}
+\end{figure}
+
+It consists of a hidden state $h_t$ and an additional cell state $c_t$. The cell state stores long-term information and is used to derive a new hidden state. Information flows through three different gates inside the \ac{LSTM}. The forget gate is used to control which parts of the cell state are potentially carried on to the next time step, the input gate is responsible to decide which parts of the cell state should be updated and the output gate determines what is being passed on as the new hidden state. All three gates and depend on the previous hidden state and the current input. They provide factors limited to the interval [0,1] by the sigmoid function and are multiplied with the cell state, the changes to be added to the cell state and the new hidden state derived from the cell state. Through the cell state an \ac{LSTM} therefore makes it possible to capture long-distance dependencies. \cite{Gertz2020}
+
+\cite{Sutskever2014} introduced sequence to sequence learning following a multi-layer encoder-decoder style model architecture. One layer consists of one \ac{LSTM} that is used as an encoder to learn a large fixed-dimensional vector representation of a size-unrestricted input sequence called the context vector. This vector consists of the last cell and hidden state of the encoder and incorporates the structure of the input sequence helping the followig decoder \ac{LSTM} to provide qualitative predictions for the output sequence. The second \ac{LSTM} therefore serves as a beam search\footnote{Do not choose the most probable word but the $B$ most likely word hypothesis and pass them to the next time step in the \ac{LSTM}. Whichever hypothesis results in the lowest loss is kept. To avoid combinatorial explosion limit the beam depth size.} decoder to map the context vector to a corresponding output sequence whose length does not need to match with the length of the input sequence. The output probabiity distribution is therefore given by the equation
+
+\begin{equation}
+	p(y_1, ..., y_{T'} | x_1, ..., x_{T}) = \Pi_{t=1}^{T'} p(y_t | v, y_1, ..., y_{t-1})
+\end{equation}
+
+with $v$ being the context vector. Using an \ac{LSTM} is prefered over a normal \ac{RNN} as it is used to capture the long range temporal dependencies of the input data. The encoder-decoder architecture uses four layers in total partitioned onto four \acp{GPU}. A corpus of 160k words for the input sequence and another one of 80k words for the target sequence was used to create the word embeddings of dimension 1000. Unknown words were replaced by a \textit{UNK} token. The sequence to sequence model approach was evaluated for neural machine translation and reached a 34.81 BLEU score. One finding during training was that reversing the input sequence introduces many short term dependencies as the minimal time lag of the problem is reduced making optimization easier. \cite{Sutskever2014}
+
+\subsection{Applying Generative Adversarial Networks} \label{fundamentalsF}
+
+Using a plain sequence to sequence model for mutation prediction does not necessarily guarantee that the generated sequences are evolutionary offsprings of a parent generation as not being included as is in the ground truth data. The generated sequences might occur realistic and biologically relevant, but a plain sequence to sequence architecture does not inherently check for natural parental descent and therefore does not make sure whether the predicted mutations lead to improved fitness. \cite{Berman2020} developed a novel sequence to sequence framework based on the \ac{GAN} idea to predict genetic mutations and future biological polulations of the influenza virus (see \autoref{mutagan}). MutaGAN describes a sequence to sequence generator within an adversarial framework that predicts protein sequences augmented with possible mutations. By using a sequence to sequence generator and a discriminator specialized on separating fake evolutionary mutations from real ones, one can then guarantee to a certain degree that the evolutionary parent-childhood coherence is given. In MutaGAN a mutation is considered correct if the change in amino acid and location within the \ac{RNA} sequence is equal to the parent's true offspring.  \cite{Berman2020}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figures/mutagan.png}
+	\caption{Architecture of MutaGAN \cite{Berman2020}}
+	\label{mutagan}
+\end{figure}
+
+MutaGAN's generator consists of a sequence to sequence model. The encoder is built from of a bidirectinal \ac{LSTM} and the resulting context vector of dimensionality 512 is combined with noise from a standard normal distribution. The decoder \ac{LSTM} predicts the resulting sequence of amino acids greedily using the $argmax()$ of the $softmax()$ output for every time step. The discriminator is trained on three different parent-child pair configurations to optimally compete against the generator, real parent-child pairs, real parent and generated child pairs and pairs of real sequences that are not parent-child pairs. Two bidirectional \ac{LSTM} encoders sharing the same weight matrix as the encoder of the generator produce a fixed-dimensional encoding of the provided parent-child pair used for classification of evolutionary descent by a plain neural network. The child encoder in the discriminator uses a dense layer having the same weight matrix as the embedding layer of the encoder of the generator. The dense layer is required to directly input the predicted child sequence as its probability distribution rather than the final output after applying the $argmax()$ as it would not enable backpropagation to train the generator. In case of a true child sequence is given a simple one-hot encoding is used. \cite{Berman2020}
+
+Interestingly \cite{Berman2020} states planned improvements by utilizing bigger datasets aquired from the \ac{GISAID} database EpiFlu and by using more length-robust attention-based models to directly work on nucleotide sequences instead of sequences of amino acids. Therefore transformers and the attention mechanism are introduced in the following section.
+
+\subsection{Transformer and Attention Mechanism} \label{fundamentalsG}
+
+Using a sequence to sequence model as introduced based on an encoder-decoder architecture of \ac{LSTM} cells has some drawbacks. First the input needs to be process sequentially in time steps which makes parallelization difficult and increases training time, especially for longer sequences. Furthermore the hidden and cell state vector passed through every timestep tries to encode information of \textit{all} previous time steps without knowing which information is especially inportant for the current time step. This not only makes long distance dependencies hard to capture, but also might not get the prioritization of the previous time step inputs right.  \cite{Bahdanau2016, Vaswani2017} 
+
+To tackle these problems the so-called transformer architecture was introduced in \cite{Vaswani2017}. It feeds an entire sequence into the encoder to be processed in parallel denying any concept of recurrence or convolution. Only using a so called self-attention mechanism the transformer makes sure that during processing every input position, each of them receives the information that is most important to them. This way modeling long dependencies becomes much more easy compared to \acp{LSTM} as the view on the input sequence is more global. In this architecture, the encoder also passes all computed hidden states of every position to the decoder, which th \cite{Vaswani2017}erefore can generate the target sequences based on more semantically enriched features and also in parallel for every position. \cite{Vaswani2017}
+
+The transformer architecture achieved state-of-the-art quality results with a BLEU score of 41.8 on the WMT 2014 English-to-French translation task (cf. BLEU score of \cite{Sutskever2014} was 34.8), while still being much faster to train due to its parallelization capabilities. State-of-the-art results are already achieved after just twelve hours of training on eight P100 \acp{GPU}. As this is still far beyond the scope and resources given for this project, this projects provides a proof-of-concept transformer model trained for far shorter and fewer sequences as one would need to predict entirely new \ac{RNA} sequences. \cite{Vaswani2017}
+
+First the transformer architecture should be introduced in the following:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/transformer.png}
+	\caption{Architecture of the transformer \cite{Vaswani2017}}
+	\label{transformer}
+\end{figure}
+
+The transformer consists of an encoder and a decoder part just as normal sequence to sequence models. One layer of the encoder contains a self-attention layer before passing the hidden state representations of an input sequence to a feed forward neural network consisting of two linear transformations separated by \ac{ReLU}. Thus it makes sure that semantic and contextual dependencies between different positions in the input sequence are also modeled. Also skip connections are added for both components with subsequent layer normalization. \cite{Alammar2018, Vaswani2017}
+
+To calculate the self-attention ouput of a sequence, a query $Q$, key $K$ and value $V$ matrix is calculated through multiplication of the sequence representation\footnote{A matrix containing the hidden state representations of every input position} with learned transformation matrices. Each row of the three received matrices corresponds to a specific input position. The output of the self-attention layer is then calculated through
+
+\begin{equation}
+	(Scaled Dot-Product) Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V.
+\end{equation}
+
+The dot product between $Q$ and $K$ calculates scores that are used as weighting factors for $V$. This models for every input position how relevant all other input positions are for each of the hidden state encodings. The scores are divided by the square root of the dimensionality of the query/key values of the hidden state representations, which is chosen to be 64 (square root eight), to receive more stable non-vanishing gradients. The softmax guarantees that the positional scores lie between zero and one and add up to one. Note that the score of the current input position itself will most likely have the hightest score. \cite{Alammar2018, Vaswani2017}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{figures/multi_head_attention.png}
+	\caption{Multi-head attention architecture \cite{Alammar2018}}
+	\label{multi-head-attention}
+\end{figure}
+
+One can expand self-attention towards a multi-head attention. In this configuration each head produces its own query, key and value matrices and therefore its own self-attention output in its own representation subspace. The resultung hidden state is calculated by concatenating each hidden state output of the different heads and multiplying it with a contraction matrix that outputs a hidden state vector in its single-head dimensionality. Multi-head attention is needed to be able to better focus on multiple parts of the input sequence when encoding an input position, otherwise it might happen that most of the focus is set on the input position itself. \cite{Vaswani2017} uses 8 heads. \cite{Alammar2018, Vaswani2017}
+
+Overall six layers of encoder and decoder components having individual weight matrices are stacked on top of each other to capture low-level as well as high-level features. The dimenionality of the hidden state is 512. Note that each position of the input sequence is encoded on an individual path throught the transformer, which makes parallelization possible compared to \ac{LSTM} based architectures. \cite{Alammar2018, Vaswani2017}
+
+The decoder uses almost the same architecture as the encoder, but contains an additional multi-head attention component that integrates all the hidden state encodings from the encoder. Therefore the final hidden state encodings resulting from the top most encoder are transformed into key and value attention vectors and given to the integrating mutli-head attention component of every decoder. Once again this helps to better focus on the relevant input positions for the current output position based on hidden state information extracted from the encoder. Note that the decoder works in a sequential manner again meaning that the input to the decoder are the already decoded sequence tokens of previous time steps, future input positions are masked away. The first multi-head attention component therefore capture inter-dependencies in the generated output sequence, the second one, the so called encoder-decoder attention, enriches the hidden state encoding with the information given from the encoder hidden states. Finally a linear layer mapping the hidden state vector to a logits vector with dimensionality of the given output dictionary and a $softmax()$ function produce the output sequence using the greedy or beam search approach. The \textit{EOS} token symbolizes the end of the output to be generated. \cite{Alammar2018, Vaswani2017}
+
+Input to the transformer are word embeddings also of fixed dimensionality of 512. Onto each word embedding a positional encoding following a specific pattern is added. These patterns are either learned or fixed and make sure that the distances of the input positions are projected onto the queue, key and value representations to be utilized during scaled dot-product attention. This also enables self-attention to be scaled to unseen lengths of sequences. Transformers usually contain an upper bound of sequence length to be processed, which is different to recurrent architectures that can process inputs of arbitrary length. Input sequences are usually padded up until the specified sequence length, the used \textit{PAD} tokens are masked to be excluded from the self-attention components. \cite{Alammar2018, Vaswani2017}
+
+% One is the total computational complexity per layer. Another is the amount of computation that can be parallelized, as measured by the minimum number of sequential operations required. The third is the path length between long-range dependencies in the network.
+
+\subsection{Other Techniques} \label{fundamentalsH}
+
+\begin{itemize}
+	\item NNs/SVMs: \url{https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0}
+	\item BiLSTM: \url{https://science.sciencemag.org/content/371/6526/284}
+\end{itemize}
+
 
 \newpage

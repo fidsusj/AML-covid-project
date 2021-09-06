@@ -1,9 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'report.blg'
-[56] biber:340> INFO - === Mo Sep  6, 2021, 15:58:14
-[69] Biber.pm:415> INFO - Reading 'report.bcf'
-[133] Biber.pm:952> INFO - Found 0 citekeys in bib section 0
-[138] Utils.pm:395> WARN - The file 'report.bcf' does not contain any citations!
-[145] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[145] bbl.pm:757> INFO - Output to report.bbl
-[145] Biber.pm:128> INFO - WARNINGS: 1
+[79] biber:340> INFO - === Mo Sep  6, 2021, 16:02:50
+[91] Biber.pm:415> INFO - Reading 'report.bcf'
+[154] Biber.pm:952> INFO - Found 14 citekeys in bib section 0
+[166] Biber.pm:4340> INFO - Processing section 0
+[174] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[175] bibtex.pm:1689> INFO - LaTeX decoding ...
+[189] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[304] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[304] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[304] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[304] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[319] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[326] bbl.pm:757> INFO - Output to report.bbl

@@ -3,10 +3,16 @@
 
 TODO: Pipeline image
 
-\subsection{Dataset creation} 
-\label{ch:approachA}
+\subsection{Dataset Creation}  \label{ch:approachA}
+% Choosing latest mutations that are the most spread
+% Created three types of sequence pairs: (real, real), (real, generated), (real, unreal)
+% Phylogenetic tree with "Fasttree"
+% Levenshtein distance
+% Biopython packages?
+% Final dataset metrics
 
 hier irgendwo das Zielschema des Datensatzes beschreiben
+
 
 \subsubsection{Raw data selection from GISAID}
 \label{ch:approachAa}
@@ -26,8 +32,10 @@ beispiel record: genome sequence and metadata
 \label{ch:approachAc}
 
 
-\subsection{Data Preprocessing} 
-\label{ch:approachB}
+\subsection{Data Preprocessing}  \label{ch:approachB}
+% TODO: Pipeline image
+% Word size 3 is just a hyperparameter (see discussion of the corresponding paper)!  But maybe biologically valid because auf amino acids.
+% DNA2Vec?
 
 two steps:
 - to make the dimensionality managable not the whole 30000 nucleotides are evaluated. We take a subpart of X nucleotides from position A to B
@@ -41,12 +49,23 @@ two steps:
 \label{ch:approachBb}
 
 
+\begin{itemize}
+	\item DNA Sequencing (Done during dataset creation, given from GISAID)
+	\item DNA Sequence Tokenization for Amino Acid Dictionary
+	\item DNA Sequence Padding
+\end{itemize}
 
-\subsection{Model architecture} 
-\label{ch:approachC}
+\subsection{Model Architecture}  \label{ch:approachC}
+% Hyperparameters and model architecture
+% Reference http://nlp.seas.harvard.edu/2018/04/03/attention.html if one wants to build it by oneself
 
-\subsection{Training process} 
-\label{ch:approachD}
-
+\subsection{Training Process} \label{ch:approachD}
+% Plot accuracy and loss for training and validation
+% Loss functions and teacher forcing, early stopping?
+% Categorical cross-entropy loss for seq2seq, Wasserstein loss for GAN, kullback leibner + cross entropy for transformers
+% Identify changes between sequences using the diff-match package from Google
+% See MutaGAN 6.2 Model training
+% Replay buffer
+% Dealing with the mode collapse problem
 
 \newpage

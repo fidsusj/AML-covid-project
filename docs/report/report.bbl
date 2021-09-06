@@ -16,5 +16,595 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Alammar2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=071e8b59bcc6de28244fea3bf962a165}{%
+           family={Alammar},
+           familyi={A\bibinitperiod},
+           given={Jay},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{fullhash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{bibnamehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{authorbibnamehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{authornamehash}{071e8b59bcc6de28244fea3bf962a165}
+      \strng{authorfullhash}{071e8b59bcc6de28244fea3bf962a165}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {Illustrated} {Transformer}}
+      \field{urlday}{18}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://jalammar.github.io/illustrated-transformer/
+      \endverb
+      \verb{url}
+      \verb https://jalammar.github.io/illustrated-transformer/
+      \endverb
+    \endentry
+    \entry{Bahdanau2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6d80adec79a13a33e73215c5f46f1605}{%
+           family={Bahdanau},
+           familyi={B\bibinitperiod},
+           given={Dzmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3da7501a79d9346572c7fd6e41b615df}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Kyunghyun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccf5ebef61998aaab5ec6eace8f4564d}
+      \strng{fullhash}{ccf5ebef61998aaab5ec6eace8f4564d}
+      \strng{bibnamehash}{ccf5ebef61998aaab5ec6eace8f4564d}
+      \strng{authorbibnamehash}{ccf5ebef61998aaab5ec6eace8f4564d}
+      \strng{authornamehash}{ccf5ebef61998aaab5ec6eace8f4564d}
+      \strng{authorfullhash}{ccf5ebef61998aaab5ec6eace8f4564d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{Neural {Machine} {Translation} by {Jointly} {Learning} to {Align} and {Translate}}
+      \field{urlday}{19}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1409.0473
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1409.0473
+      \endverb
+    \endentry
+    \entry{Berman2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3f7dc66639560114ec4755c84abe8ef7}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=9c2b03ce24e85198d4d291f0f62b4b3f}{%
+           family={Howser},
+           familyi={H\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f2c09d95e42192290f74b24e4a96c518}{%
+           family={Mehoke},
+           familyi={M\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9dcb9a3a515720c0aea9d74a33100f87}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Jared\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{fullhash}{fd4fe129b519938a2802385525566814}
+      \strng{bibnamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authorbibnamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authornamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
+      \strng{authorfullhash}{fd4fe129b519938a2802385525566814}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{{MutaGAN}: {A} {Seq2seq} {GAN} {Framework} to {Predict} {Mutations} of {Evolving} {Protein} {Populations}}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2008.11790
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2008.11790
+      \endverb
+    \endentry
+    \entry{Gertz2020}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=c0d1310e5d4d58ef6c70f697f07a01f1}{%
+           family={Gertz},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {University Heidelberg}%
+      }
+      \strng{namehash}{c0d1310e5d4d58ef6c70f697f07a01f1}
+      \strng{fullhash}{c0d1310e5d4d58ef6c70f697f07a01f1}
+      \strng{bibnamehash}{c0d1310e5d4d58ef6c70f697f07a01f1}
+      \strng{authorbibnamehash}{c0d1310e5d4d58ef6c70f697f07a01f1}
+      \strng{authornamehash}{c0d1310e5d4d58ef6c70f697f07a01f1}
+      \strng{authorfullhash}{c0d1310e5d4d58ef6c70f697f07a01f1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Text {Analytics} - {Text} {Classification}}
+      \field{urlday}{15}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+    \endentry
+    \entry{Hie2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2218b6e69c35a7ab5d3c0ebfbe634d92}{%
+           family={Hie},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=00ed87e00fb7f3134992bdf1963537b4}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Ellen\bibnamedelima D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0993c86ae6cfb70879c8ca025603d0a3}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Bonnie},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6927778b737afa11f2ecb859f9b328cc}{%
+           family={Bryson},
+           familyi={B\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{fullhash}{7178f69b82932079996658689f305443}
+      \strng{bibnamehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{authorbibnamehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{authornamehash}{211c183ca82cf29ca2d563c628decc4f}
+      \strng{authorfullhash}{7178f69b82932079996658689f305443}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{title}{Learning the language of viral evolution and escape}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/371/6526/284
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/371/6526/284
+      \endverb
+    \endentry
+    \entry{Hochreiter1997}{article}{}
+      \name{author}{2}{}{%
+        {{hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%
+           family={Hochreiter},
+           familyi={H\bibinitperiod},
+           given={Sepp},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{bibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorbibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authornamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Long {Short}-term {Memory}}
+      \field{urlday}{13}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{1997}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/13853244_Long_Short-term_Memory
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/13853244_Long_Short-term_Memory
+      \endverb
+    \endentry
+    \entry{Mohamed2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=18722b1722138f705f11e2fd6c3064e6}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={Takwa},
+           giveni={T\bibinitperiod}}}%
+        {{hash=219b28fd721e14e6736d88d00a8e33e9}{%
+           family={Sayed},
+           familyi={S\bibinitperiod},
+           given={Sabah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8d5a82089ea454dc058dfc3e0f3f9a0a}{%
+           family={Salah},
+           familyi={S\bibinitperiod},
+           given={Akram},
+           giveni={A\bibinitperiod}}}%
+        {{hash=87e055635f127d7d0299303aa31cc874}{%
+           family={Houssein},
+           familyi={H\bibinitperiod},
+           given={Essam\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{f69cd45ad8b035deeaf688bd2ec5f3ba}
+      \strng{fullhash}{cfb1a8fed6ce9cfaf923f260b955933f}
+      \strng{bibnamehash}{f69cd45ad8b035deeaf688bd2ec5f3ba}
+      \strng{authorbibnamehash}{f69cd45ad8b035deeaf688bd2ec5f3ba}
+      \strng{authornamehash}{f69cd45ad8b035deeaf688bd2ec5f3ba}
+      \strng{authorfullhash}{cfb1a8fed6ce9cfaf923f260b955933f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hindawi}
+      \field{title}{Long {Short}-{Term} {Memory} {Neural} {Networks} for {RNA} {Viruses} {Mutations} {Prediction}}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.hindawi.com/journals/mpe/2021/9980347/
+      \endverb
+      \verb{url}
+      \verb https://www.hindawi.com/journals/mpe/2021/9980347/
+      \endverb
+    \endentry
+    \entry{Salama2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=71493582b51e5a80f53e8a66b97800d1}{%
+           family={Salama},
+           familyi={S\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=31264f56eaa77c0e956e16889e3d450f}{%
+           family={Hassanien},
+           familyi={H\bibinitperiod},
+           given={Aboul\bibnamedelima Ella},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=589af1c3f1193b0b46c0a8cf856fc3f0}{%
+           family={Mostafa},
+           familyi={M\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{fullhash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{bibnamehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{authorbibnamehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{authornamehash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \strng{authorfullhash}{6d38756640e6ef959432e8f83f1ef2a1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
+      \field{title}{The prediction of virus mutation using neural networks and rough set techniques}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
+      \endverb
+      \verb{url}
+      \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
+      \endverb
+    \endentry
+    \entry{Sundermeyer2012}{article}{}
+      \name{author}{3}{}{%
+        {{hash=94098ab247708c567b7a53d25e958fca}{%
+           family={Sundermeyer},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b9c2eaa2f0f77590a890988afefaf75b}{%
+           family={Schlüter},
+           familyi={S\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cf68a4c2b64db77cc898cdc9fbdeb0c4}{%
+           family={Ney},
+           familyi={N\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
+      \strng{fullhash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
+      \strng{bibnamehash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
+      \strng{authorbibnamehash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
+      \strng{authornamehash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
+      \strng{authorfullhash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ISCA Archive}
+      \field{title}{{LSTM} {Neural} {Networks} for {Language} {Modeling}}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.isca-speech.org/archive/archive_papers/interspeech_2012/i12_0194.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.isca-speech.org/archive/archive_papers/interspeech_2012/i12_0194.pdf
+      \endverb
+    \endentry
+    \entry{Sutskever2014}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=494b568c5dc85ba8f3f409635f9c5f25}{%
+           family={Vinyals},
+           familyi={V\bibinitperiod},
+           given={Oriol},
+           giveni={O\bibinitperiod}}}%
+        {{hash=c636f146591d51579a8119b777394878}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Quoc\bibnamedelima V.},
+           giveni={Q\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{d60494862bf48faf76d925f3780a6aee}
+      \strng{fullhash}{d60494862bf48faf76d925f3780a6aee}
+      \strng{bibnamehash}{d60494862bf48faf76d925f3780a6aee}
+      \strng{authorbibnamehash}{d60494862bf48faf76d925f3780a6aee}
+      \strng{authornamehash}{d60494862bf48faf76d925f3780a6aee}
+      \strng{authorfullhash}{d60494862bf48faf76d925f3780a6aee}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{Sequence to {Sequence} {Learning} with {Neural} {Networks}}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1409.3215
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1409.3215
+      \endverb
+    \endentry
+    \entry{Vaswani2017}{article}{}
+      \name{author}{8}{}{%
+        {{hash=7f28e84700536646dd6620a0db07ad09}{%
+           family={Vaswani},
+           familyi={V\bibinitperiod},
+           given={Ashish},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62efade83d70f0323fe248755e6c90c5}{%
+           family={Shazeer},
+           familyi={S\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=06649ebab1ea5cac0250746a19764975}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={Niki},
+           giveni={N\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2fd2982e30ebcec93ec1cf76e0d797fd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Llion},
+           giveni={L\bibinitperiod}}}%
+        {{hash=27b07e4eacbf4ef7a1438e3badb7dd8d}{%
+           family={Gomez},
+           familyi={G\bibinitperiod},
+           given={Aidan\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=f2bc899b1160163417da7bf510f15d33}{%
+           family={Kaiser},
+           familyi={K\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=95595a0fefb86187cbc36e551017d332}{%
+           family={Polosukhin},
+           familyi={P\bibinitperiod},
+           given={Illia},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{fullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \strng{bibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorbibnamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
+      \strng{authorfullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv}
+      \field{title}{Attention {Is} {All} {You} {Need}}
+      \field{urlday}{17}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1706.03762
+      \endverb
+    \endentry
+    \entry{Yan2007}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bb0edb9eb2b3d3a2a43e3cbb68c51184}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6ae7ced3f7447a4a5461f848c77675de}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Shaomin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{fullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{bibnamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authorbibnamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authornamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authorfullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SpringerLink}
+      \field{title}{Prediction of mutations engineered by randomness in {H5N1} hemagglutinins of influenza {A} virus}
+      \field{urlday}{13}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s00726-007-0602-4
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s00726-007-0602-4
+      \endverb
+    \endentry
+    \entry{Wu2007}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bb0edb9eb2b3d3a2a43e3cbb68c51184}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6ae7ced3f7447a4a5461f848c77675de}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Shaomin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{fullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{bibnamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authorbibnamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authornamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authorfullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SpringerLink}
+      \field{title}{Prediction of mutations engineered by randomness in {H5N1} neuraminidases from influenza {A} virus}
+      \field{urlday}{13}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s00726-007-0579-z
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s00726-007-0579-z
+      \endverb
+    \endentry
+    \entry{Wu2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bb0edb9eb2b3d3a2a43e3cbb68c51184}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=6ae7ced3f7447a4a5461f848c77675de}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Shaomin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{fullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{bibnamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authorbibnamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authornamehash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \strng{authorfullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
+      \field{extraname}{3}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prediction of mutations in {H1} neuraminidases from {North} {America} influenza {A} virus engineered by internal randomness}
+      \field{urlday}{13}
+      \field{urlmonth}{8}
+      \field{urlyear}{2021}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s11030-008-9067-y
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s11030-008-9067-y
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
