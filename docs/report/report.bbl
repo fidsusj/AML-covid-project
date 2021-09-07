@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{Alammar2018}{misc}{}
+    \entry{Alammar2018}{online}{}
       \name{author}{1}{}{%
         {{hash=071e8b59bcc6de28244fea3bf962a165}{%
            family={Alammar},
@@ -37,11 +37,12 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The {Illustrated} {Transformer}}
+      \field{title}{The {{Illustrated Transformer}}}
       \field{urlday}{18}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2018}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://jalammar.github.io/illustrated-transformer/
@@ -79,11 +80,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}
-      \field{title}{Neural {Machine} {Translation} by {Jointly} {Learning} to {Align} and {Translate}}
+      \field{title}{Neural {{Machine Translation}} by {{Jointly Learning}} to {{Align}} and {{Translate}}}
       \field{urlday}{19}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2016}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/1409.0473
@@ -126,11 +128,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}
-      \field{title}{{MutaGAN}: {A} {Seq2seq} {GAN} {Framework} to {Predict} {Mutations} of {Evolving} {Protein} {Populations}}
+      \field{title}{{{MutaGAN}}: {{A Seq2seq GAN Framework}} to {{Predict Mutations}} of {{Evolving Protein Populations}}}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
       \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/2008.11790
@@ -160,12 +163,9 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Text {Analytics} - {Text} {Classification}}
-      \field{urlday}{15}
-      \field{urlmonth}{8}
-      \field{urlyear}{2021}
+      \field{title}{Text {{Analytics}} - {{Text Classification}}}
       \field{year}{2020}
-      \field{urldateera}{ce}
+      \field{dateera}{ce}
     \endentry
     \entry{Hie2021}{article}{}
       \name{author}{4}{}{%
@@ -190,6 +190,9 @@
            given={Bryan},
            giveni={B\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
       \strng{namehash}{211c183ca82cf29ca2d563c628decc4f}
       \strng{fullhash}{7178f69b82932079996658689f305443}
       \strng{bibnamehash}{211c183ca82cf29ca2d563c628decc4f}
@@ -200,13 +203,22 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{issn}{0036-8075}
       \field{journaltitle}{Science}
-      \field{title}{Learning the language of viral evolution and escape}
+      \field{number}{6526}
+      \field{title}{Learning the Language of Viral Evolution and Escape}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
+      \field{volume}{371}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
+      \field{pages}{284\bibrangedash 288}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1126/science.abd7331
+      \endverb
       \verb{urlraw}
       \verb https://science.sciencemag.org/content/371/6526/284
       \endverb
@@ -238,11 +250,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ResearchGate}
-      \field{title}{Long {Short}-term {Memory}}
+      \field{title}{Long {{Short}}-Term {{Memory}}}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{1997}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.researchgate.net/publication/13853244_Long_Short-term_Memory
@@ -250,6 +263,39 @@
       \verb{url}
       \verb https://www.researchgate.net/publication/13853244_Long_Short-term_Memory
       \endverb
+    \endentry
+    \entry{10.5555/1965281}{book}{}
+      \name{author}{2}{}{%
+        {{hash=4279cdc0481b4faaaf6bbcd8c96ffa28}{%
+           family={Laird},
+           familyi={L\bibinitperiod},
+           given={Nan\bibnamedelima M.},
+           giveni={N\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e68beeb96b34fa2bf948d704fcb7a3fb}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Publishing Company, Incorporated}%
+      }
+      \strng{namehash}{f67d6e16601d164d02827a037ade17ad}
+      \strng{fullhash}{f67d6e16601d164d02827a037ade17ad}
+      \strng{bibnamehash}{f67d6e16601d164d02827a037ade17ad}
+      \strng{authorbibnamehash}{f67d6e16601d164d02827a037ade17ad}
+      \strng{authornamehash}{f67d6e16601d164d02827a037ade17ad}
+      \strng{authorfullhash}{f67d6e16601d164d02827a037ade17ad}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book covers the statistical models and methods that are used to understand human genetics, following the historical and recent developments of human genetics. Starting with Mendels first experiments to genome-wide association studies, the book describes how genetic information can be incorporated into statistical models to discover disease genes.All commonly used approaches in statistical genetics (e.g. aggregation analysis, segregation, linkage analysis, etc), are used, but the focus of the book is modern approaches to association analysis.Numerous examples illustrate key points throughout the text, both of Mendelian and complex genetic disorders. The intended audience is statisticians, biostatisticians, epidemiologists and quantitatively- oriented geneticists and health scientists wanting to learn about statistical methods for genetic analysis, whether to better analyze genetic data, or to pursue research in methodology.A background in intermediate level statistical methods is required.The authors include fewmathematical derivations, and the exercises provide problems for students with a broad range of skill levels.No background in genetics is assumed.}
+      \field{edition}{1st}
+      \field{isbn}{978-1-4419-7337-5}
+      \field{title}{The Fundamentals of Modern Statistical Genetics}
+      \field{year}{2010}
+      \field{dateera}{ce}
     \endentry
     \entry{Mohamed2021}{article}{}
       \name{author}{4}{}{%
@@ -285,11 +331,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Hindawi}
-      \field{title}{Long {Short}-{Term} {Memory} {Neural} {Networks} for {RNA} {Viruses} {Mutations} {Prediction}}
+      \field{title}{Long {{Short}}-{{Term Memory Neural Networks}} for {{RNA Viruses Mutations Prediction}}}
       \field{urlday}{11}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2021}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.hindawi.com/journals/mpe/2021/9980347/
@@ -297,6 +344,90 @@
       \verb{url}
       \verb https://www.hindawi.com/journals/mpe/2021/9980347/
       \endverb
+    \endentry
+    \entry{NAQVI2020165878}{article}{}
+      \name{author}{10}{}{%
+        {{hash=7c715b4b6f601fcc94e55f5fbc85d672}{%
+           family={Naqvi},
+           familyi={N\bibinitperiod},
+           given={Ahmad\bibnamedelimb Abu\bibnamedelima Turab},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=cbbf189322b7ba61f6e1361a38768423}{%
+           family={Fatima},
+           familyi={F\bibinitperiod},
+           given={Kisa},
+           giveni={K\bibinitperiod}}}%
+        {{hash=40f34b7d63b4f178a2aed47ee7d39fad}{%
+           family={Mohammad},
+           familyi={M\bibinitperiod},
+           given={Taj},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4928fc8b7d4acfcbc13a181d91ff579e}{%
+           family={Fatima},
+           familyi={F\bibinitperiod},
+           given={Urooj},
+           giveni={U\bibinitperiod}}}%
+        {{hash=2ec750b292bd3792a459969cb966ee39}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Indrakant\bibnamedelima K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=6df91caf6a12ceb0c13e9b805c750500}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Archana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e7dbdc3ba84a1ea9364058db34f6926b}{%
+           family={Atif},
+           familyi={A\bibinitperiod},
+           given={Shaikh\bibnamedelima Muhammad},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e0f53035867281ad39d7f03d6be3ba79}{%
+           family={Hariprasad},
+           familyi={H\bibinitperiod},
+           given={Gururao},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2730c8c176dfc679a8e8b3a9449d47f4}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Gulam\bibnamedelima Mustafa},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4fef9e746a7a99114c0f701bb2871c3d}{%
+           family={Hassan},
+           familyi={H\bibinitperiod},
+           given={Md.\bibnamedelimi Imtaiyaz},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{88096c1c2e143a7c6e6b7f2d4c3c64c1}
+      \strng{fullhash}{2d1183f14ac3d346289f9796ce1ccf33}
+      \strng{bibnamehash}{88096c1c2e143a7c6e6b7f2d4c3c64c1}
+      \strng{authorbibnamehash}{88096c1c2e143a7c6e6b7f2d4c3c64c1}
+      \strng{authornamehash}{88096c1c2e143a7c6e6b7f2d4c3c64c1}
+      \strng{authorfullhash}{2d1183f14ac3d346289f9796ce1ccf33}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The sudden emergence of severe respiratory disease, caused by a novel severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), has recently become a public health emergency. Genome sequence analysis of SARS-CoV-2 revealed its close resemblance to the earlier reported SARS-CoV and Middle East respiratory syndrome coronavirus (MERS-CoV). However, initial testing of the drugs used against SARS-CoV and MERS-CoV has been ineffective in controlling SARS-CoV-2. The present study highlights the genomic, proteomic, pathogenesis, and therapeutic strategies in SARS-CoV-2 infection. We have carried out sequence analysis of potential drug target proteins in SARS-CoV-2 and, compared them with SARS-CoV and MERS viruses. Analysis of mutations in the coding and non-coding regions, genetic diversity, and pathogenicity of SARS-CoV-2 has also been done. A detailed structural analysis of drug target proteins has been performed to gain insights into the mechanism of pathogenesis, structure-function relationships, and the development of structure-guided therapeutic approaches. The cytokine profiling and inflammatory signalling are different in the case of SARS-CoV-2 infection. We also highlighted possible therapies and their mechanism of action followed by clinical manifestation. Our analysis suggests a minimal variation in the genome sequence of SARS-CoV-2, may be responsible for a drastic change in the structures of target proteins, which makes available drugs ineffective.}
+      \field{issn}{0925-4439}
+      \field{journaltitle}{Biochimica et Biophysica Acta (BBA) - Molecular Basis of Disease}
+      \field{number}{10}
+      \field{title}{Insights into {{SARS}}-{{CoV}}-2 Genome, Structure, Evolution, Pathogenesis and Therapies: {{Structural}} Genomics Approach}
+      \field{volume}{1866}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{165878}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.bbadis.2020.165878
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S092544392030226X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S092544392030226X
+      \endverb
+      \keyw{Comparative genomics,COVID-19,Drug target,Molecular basis of pathogenesis,Molecular evolution,SARS-CoV-2}
     \endentry
     \entry{Salama2016}{article}{}
       \name{author}{3}{}{%
@@ -327,18 +458,45 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
-      \field{title}{The prediction of virus mutation using neural networks and rough set techniques}
-      \field{urlday}{5}
-      \field{urlmonth}{7}
-      \field{urlyear}{2021}
+      \field{title}{The Prediction of Virus Mutation Using Neural Networks and Rough Set Techniques}
+      \field{volume}{2016}
       \field{year}{2016}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1186/s13637-016-0042-0
       \endverb
-      \verb{url}
-      \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
-      \endverb
+    \endentry
+    \entry{schererStatisticalGeneticsGenetic2021}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=bfa0c2066e1f2f5927f2ea2d6f7feefb}{%
+           family={Scherer},
+           familyi={S\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1eeeb8dda5a6d7f92a8443244d50b55a}{%
+           family={Lorenzo\bibnamedelima Bermejo},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Justo},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {University Heidelberg}%
+      }
+      \strng{namehash}{750888b2a8e47248011389c71f813397}
+      \strng{fullhash}{750888b2a8e47248011389c71f813397}
+      \strng{bibnamehash}{750888b2a8e47248011389c71f813397}
+      \strng{authorbibnamehash}{750888b2a8e47248011389c71f813397}
+      \strng{authornamehash}{750888b2a8e47248011389c71f813397}
+      \strng{authorfullhash}{750888b2a8e47248011389c71f813397}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{lecture manuscript}
+      \field{title}{Statistical {{Genetics}} and Genetic Epidemiology - {{SNPs}} and Other Common Variants}
+      \field{type}{lecture manuscript}
+      \field{year}{2021}
+      \field{dateera}{ce}
     \endentry
     \entry{Sundermeyer2012}{article}{}
       \name{author}{3}{}{%
@@ -369,11 +527,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ISCA Archive}
-      \field{title}{{LSTM} {Neural} {Networks} for {Language} {Modeling}}
+      \field{title}{{{LSTM Neural Networks}} for {{Language Modeling}}}
       \field{urlday}{12}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2012}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.isca-speech.org/archive/archive_papers/interspeech_2012/i12_0194.pdf
@@ -411,11 +570,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}
-      \field{title}{Sequence to {Sequence} {Learning} with {Neural} {Networks}}
+      \field{title}{Sequence to {{Sequence Learning}} with {{Neural Networks}}}
       \field{urlday}{15}
       \field{urlmonth}{5}
       \field{urlyear}{2021}
       \field{year}{2014}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/1409.3215
@@ -478,11 +638,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv}
-      \field{title}{Attention {Is} {All} {You} {Need}}
+      \field{title}{Attention {{Is All You Need}}}
       \field{urlday}{17}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2017}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/abs/1706.03762
@@ -516,11 +677,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SpringerLink}
-      \field{title}{Prediction of mutations engineered by randomness in {H5N1} hemagglutinins of influenza {A} virus}
+      \field{title}{Prediction of Mutations Engineered by Randomness in {{H5N1}} Hemagglutinins of Influenza {{A}} Virus}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.1007/s00726-007-0602-4
@@ -554,11 +716,12 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SpringerLink}
-      \field{title}{Prediction of mutations engineered by randomness in {H5N1} neuraminidases from influenza {A} virus}
+      \field{title}{Prediction of Mutations Engineered by Randomness in {{H5N1}} Neuraminidases from Influenza {{A}} Virus}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2007}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.1007/s00726-007-0579-z
@@ -591,11 +754,12 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Prediction of mutations in {H1} neuraminidases from {North} {America} influenza {A} virus engineered by internal randomness}
+      \field{title}{Prediction of Mutations in {{H1}} Neuraminidases from {{North America}} Influenza {{A}} Virus Engineered by Internal Randomness}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
       \field{year}{2008}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://link.springer.com/article/10.1007/s11030-008-9067-y

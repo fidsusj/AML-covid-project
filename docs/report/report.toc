@@ -7,42 +7,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Fundamentals and Related Work}{3}{section.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}From Probabilistic Language Models to modeling Evolution Theory}{3}{subsection.10}%
+\contentsline {subsection}{\numberline {2.1}Basics from molecular biology}{3}{subsection.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}GISAID EpiFlu Data Platform}{5}{subsection.20}%
+\contentsline {subsection}{\numberline {2.2}From Probabilistic Language Models to modeling Evolution Theory}{6}{subsection.24}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Domain-Specific Methodologies to create Evolutionary Datasets for Mutation Prediction}{5}{subsection.21}%
+\contentsline {subsection}{\numberline {2.3}GISAID EpiFlu Data Platform}{8}{subsection.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Previous Work on Mutation Prediction}{5}{subsection.22}%
+\contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evolutionary Datasets for Mutation Prediction}{8}{subsection.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Sequence to Sequence Models based on Long Short-Term Memory}{6}{subsection.23}%
+\contentsline {subsection}{\numberline {2.5}Previous Work on Mutation Prediction}{8}{subsection.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Applying Generative Adversarial Networks}{7}{subsection.28}%
+\contentsline {subsection}{\numberline {2.6}Sequence to Sequence Models based on Long Short-Term Memory}{9}{subsection.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Transformer and Attention Mechanism}{9}{subsection.32}%
+\contentsline {subsection}{\numberline {2.7}Applying Generative Adversarial Networks}{10}{subsection.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Other Techniques}{13}{subsection.38}%
+\contentsline {subsection}{\numberline {2.8}Transformer and Attention Mechanism}{12}{subsection.45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Approach}{14}{section.39}%
+\contentsline {subsection}{\numberline {2.9}Other Techniques}{16}{subsection.51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Dataset Creation}{14}{subsection.40}%
+\contentsline {section}{\numberline {3}Approach}{17}{section.52}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Raw data selection from GISAID}{14}{subsubsection.41}%
+\contentsline {subsection}{\numberline {3.1}Dataset Creation}{17}{subsection.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Generation of a phylogenetic tree}{14}{subsubsection.42}%
+\contentsline {subsubsection}{\numberline {3.1.1}Raw data selection from GISAID}{17}{subsubsection.54}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}Phylogenetic tree to dataset}{14}{subsubsection.43}%
+\contentsline {subsubsection}{\numberline {3.1.2}Generation of a phylogenetic tree}{17}{subsubsection.55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{14}{subsection.44}%
+\contentsline {subsubsection}{\numberline {3.1.3}Phylogenetic tree to dataset}{17}{subsubsection.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}Dimensionality reduction by selecting subpart of the genome}{14}{subsubsection.45}%
+\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{17}{subsection.57}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}Transform genome sequence to numeric model input}{14}{subsubsection.46}%
+\contentsline {subsubsection}{\numberline {3.2.1}Dimensionality reduction by selecting subpart of the genome}{17}{subsubsection.58}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Model Architecture}{14}{subsection.47}%
+\contentsline {subsubsection}{\numberline {3.2.2}Transform genome sequence to numeric model input}{17}{subsubsection.59}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Training Process}{14}{subsection.48}%
+\contentsline {subsection}{\numberline {3.3}Model Architecture}{17}{subsection.60}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experimental results}{15}{section.49}%
+\contentsline {subsection}{\numberline {3.4}Training Process}{17}{subsection.61}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{16}{section.50}%
+\contentsline {section}{\numberline {4}Experimental results}{18}{section.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{19}{section.63}%
