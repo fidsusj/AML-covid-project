@@ -19,6 +19,80 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{gisaideditorGISAID2021}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfae96e1d0349eab172c1f715c70d26d}{%
+           family={(editor)},
+           familyi={(\bibinitperiod},
+           given={GISAID},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{fullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{bibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorbibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \field{extraname}{1}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{{{GISAID}}}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gisaid.org/
+      \endverb
+      \verb{url}
+      \verb https://www.gisaid.org/
+      \endverb
+    \endentry
+    \entry{Gisaid2021}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfae96e1d0349eab172c1f715c70d26d}{%
+           family={(editor)},
+           familyi={(\bibinitperiod},
+           given={GISAID},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GISAID mission}%
+      }
+      \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{fullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{bibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorbibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \field{extraname}{2}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{GISAID}} - {{Mission}}}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/QL66KXY2/mission.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.gisaid.org/about-us/mission/
+      \endverb
+      \verb{url}
+      \verb https://www.gisaid.org/about-us/mission/
+      \endverb
+    \endentry
     \entry{Alammar2018}{online}{}
       \name{author}{1}{}{%
         {{hash=071e8b59bcc6de28244fea3bf962a165}{%
@@ -297,6 +371,43 @@
       \field{year}{2010}
       \field{dateera}{ce}
     \endentry
+    \entry{nationallibraryofmedicinencbieditorNCBISARSCoV2Resources}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f491c4bfdee35754b7bd1d21891ba5dc}{%
+           family={Medicine\bibnamedelimb (NCBI)\bibnamedelima (editor)},
+           familyi={M\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={National\bibnamedelima Library},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{fullhash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{bibnamehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{authorbibnamehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{authornamehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{authorfullhash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Find SARS-CoV-2 related resources at NCBI. Download and submit sequences. Explore literature, identify clinical trials, and compounds used in them.}
+      \field{langid}{english}
+      \field{title}{{{NCBI SARS}}-{{CoV}}-2 {{Resources}}}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/LERBY646/sars-cov-2.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncbi.nlm.nih.gov/sars-cov-2/
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/sars-cov-2/
+      \endverb
+    \endentry
     \entry{Mohamed2021}{article}{}
       \name{author}{4}{}{%
         {{hash=18722b1722138f705f11e2fd6c3064e6}{%
@@ -497,6 +608,57 @@
       \field{type}{lecture manuscript}
       \field{year}{2021}
       \field{dateera}{ce}
+    \endentry
+    \entry{shuGISAIDGlobalInitiative2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=85b49983cceabed0131076d320f12944}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Yuelong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=53630f3477daa83b0d1080df88251f9d}{%
+           family={McCauley},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{fullhash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{bibnamehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{authorbibnamehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{authornamehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{authorfullhash}{5315805d9f126bc6589ecb5849c779b5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{30}
+      \field{issn}{1560-7917}
+      \field{journaltitle}{Eurosurveillance}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{13}
+      \field{shorttitle}{{{GISAID}}}
+      \field{title}{{{GISAID}}: {{Global}} Initiative on Sharing All Influenza Data – from Vision to Reality}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{volume}{22}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2807/1560-7917.ES.2017.22.13.30494
+      \endverb
+      \verb{file}
+      \verb /home/st/Zotero/storage/R4GNKD2Q/Shu and McCauley - 2017 - GISAID Global initiative on sharing all influenza.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2017.22.13.30494
+      \endverb
+      \verb{url}
+      \verb https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2017.22.13.30494
+      \endverb
     \endentry
     \entry{Sundermeyer2012}{article}{}
       \name{author}{3}{}{%
