@@ -6,9 +6,8 @@ from time import strptime
 import pandas as pd
 from Bio import SeqIO
 from dendropy import Tree
-from dendropy.calculate.treemeasure import PatristicDistanceMatrix
-
 from path_helper import get_project_root
+from phylodm.pdm import PDM
 
 
 def run_create_dataset(run_from_scratch):
@@ -16,7 +15,7 @@ def run_create_dataset(run_from_scratch):
     if run_from_scratch:
         print("\nRecreate dataset:")
         combine_separate_input_files(str(get_project_root()) + "/data/raw/separate_input_files")
-        construct_phylogenetic_tree()
+        # construct_phylogenetic_tree()
         df_parent_child = calculate_related_sequences_based_on_phylogenetic_tree()
         df_dataset = fill_parent_child_combinations_with_genome_data(df_parent_child)
         return df_dataset
@@ -52,22 +51,22 @@ def calculate_related_sequences_based_on_phylogenetic_tree():
     """ Get parent child combinations from phylogenetic tree """
     print(" - Calculate related sequences")
     tree = Tree.get(path=str(get_project_root()) + "/data/dataset/tree.nwk", schema="newick")
-    patristic_distance_matrix = PatristicDistanceMatrix(tree)
+    patristic_distance_matrix = PDM.get_from_dendropy(tree=tree, method='pd', cpus=1)
+
     # k nächste finden (k = 1 für den Anfang)
     best_pairs = []
     for i, taxa_1 in enumerate(tree.taxon_namespace):
         best_pair = None
         closest_distance = 10000000000
         for taxa_2 in tree.taxon_namespace[i + 1:]:
-            #print("Distance between '%s' and '%s': %s" % (
-            #    taxa_1.label, taxa_2.label, patristic_distance_matrix(taxa_1, taxa_2)))
-            if (patristic_distance_matrix(taxa_1, taxa_2) < closest_distance):
-                closest_distance = patristic_distance_matrix(taxa_1, taxa_2)
+            # print("Distance between '%s' and '%s': %s" % (
+            #    taxa_1.label, taxa_2.label, patristic_distance_matrix.get_value(taxa_1.label, taxa_2.label)))
+            if (patristic_distance_matrix.get_value(taxa_1.label, taxa_2.label) < closest_distance):
+                closest_distance = patristic_distance_matrix.get_value(taxa_1.label, taxa_2.label)
                 best_pair = [taxa_1.label.replace(" ", "_"), taxa_2.label.replace(" ", "_")]
         best_pairs.append(best_pair)
 
     best_pairs = [x for x in best_pairs if x is not None]
-    #print(best_pairs)
 
     df_metadata = pd.read_csv(str(get_project_root()) + "/data/dataset/sanitized_metadata_focal.tsv", header=0,
                               sep='\t')
@@ -77,7 +76,7 @@ def calculate_related_sequences_based_on_phylogenetic_tree():
     # [[parent, child], [parent, child], ...]
     sorted_by_time = []
     for pair in best_pairs:
-        #print(pair)
+        # print(pair)
         taxa_1_row_index = df_metadata[df_metadata["strain"] == pair[0]].index[0]
         taxa_2_row_index = df_metadata[df_metadata["strain"] == pair[1]].index[0]
         taxa_1_date = df_metadata.at[taxa_1_row_index, "date"]
@@ -107,7 +106,7 @@ def fill_parent_child_combinations_with_genome_data(df_parent_child):
 
     # matching and fill df
     for index, row in df_parent_child.iterrows():
-        #print(row['parent'])
+        # print(row['parent'])
         df_parent_child.at[index, 'parent'] = sequences[row['parent']]
         df_parent_child.at[index, 'child'] = sequences[row['child']]
 
