@@ -15,7 +15,7 @@ def run_create_dataset(run_from_scratch):
     if run_from_scratch:
         print("\nRecreate dataset:")
         combine_separate_input_files(str(get_project_root()) + "/data/raw/separate_input_files")
-        # construct_phylogenetic_tree()
+        construct_phylogenetic_tree()
         df_parent_child = calculate_related_sequences_based_on_phylogenetic_tree()
         df_dataset = fill_parent_child_combinations_with_genome_data(df_parent_child)
         return df_dataset
@@ -74,23 +74,32 @@ def calculate_related_sequences_based_on_phylogenetic_tree():
 
     # Paare nach Datum in parent child sortieren
     # [[parent, child], [parent, child], ...]
+    #print(best_pairs)
     sorted_by_time = []
     for pair in best_pairs:
         # print(pair)
-        taxa_1_row_index = df_metadata[df_metadata["strain"] == pair[0]].index[0]
-        taxa_2_row_index = df_metadata[df_metadata["strain"] == pair[1]].index[0]
-        taxa_1_date = df_metadata.at[taxa_1_row_index, "date"]
-        taxa_2_date = df_metadata.at[taxa_2_row_index, "date"]
+        error_count = 0
+        try:
+            taxa_1_row_index = df_metadata[df_metadata["strain"] == pair[0]].index[0]
+            taxa_2_row_index = df_metadata[df_metadata["strain"] == pair[1]].index[0]
+            taxa_1_date = df_metadata.at[taxa_1_row_index, "date"]
+            taxa_2_date = df_metadata.at[taxa_2_row_index, "date"]
 
-        taxa_1_date = strptime(taxa_1_date, "%Y-%m-%d")
-        taxa_2_date = strptime(taxa_2_date, "%Y-%m-%d")
-        if (taxa_1_date > taxa_2_date):
-            parent = pair[1]
-            child = pair[0]
-        else:
-            parent = pair[0]
-            child = pair[1]
-        sorted_by_time.append([parent, child])
+            taxa_1_date = strptime(taxa_1_date, "%Y-%m-%d")
+            taxa_2_date = strptime(taxa_2_date, "%Y-%m-%d")
+            if (taxa_1_date > taxa_2_date):
+                parent = pair[1]
+                child = pair[0]
+            else:
+                parent = pair[0]
+                child = pair[1]
+            sorted_by_time.append([parent, child])
+        except:
+            # nicht erwarteter fehler (key error) daher try except
+            print(pair[0])
+            print(pair[1])
+            error_count += 1
+            #print("Error count: {}".format(error_count))
 
     df_dataset_parent_child_strain_names = pd.DataFrame(sorted_by_time, columns=["parent", "child"])
     df_dataset_parent_child_strain_names.to_csv("./data/dataset/df_dataset_parent_child_strain_names.csv", index=False)

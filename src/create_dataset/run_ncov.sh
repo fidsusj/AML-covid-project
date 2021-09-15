@@ -3,6 +3,8 @@
 echo "     -> Create conda envs"
 source ~/miniconda3/etc/profile.d/conda.sh
 
+conda activate base
+
 conda update  -y -n base conda
 conda install -y -n base -c conda-forge mamba
 

@@ -2435,6 +2435,11 @@
     <bcf:citekey order="80">Vaswani2017</bcf:citekey>
     <bcf:citekey order="81">Alammar2018</bcf:citekey>
     <bcf:citekey order="81">Vaswani2017</bcf:citekey>
+    <bcf:citekey order="82">robertkochinstituteditorBerichtVirusvariantenSARSCoV22021</bcf:citekey>
+    <bcf:citekey order="83">robertkochinstituteditorBerichtVirusvariantenSARSCoV22021</bcf:citekey>
+    <bcf:citekey order="84">10.1093/bioinformatics/bty407</bcf:citekey>
+    <bcf:citekey order="85">own representation</bcf:citekey>
+    <bcf:citekey order="86">own representation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

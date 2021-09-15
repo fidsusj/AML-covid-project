@@ -93,6 +93,39 @@
       \verb https://www.gisaid.org/about-us/mission/
       \endverb
     \endentry
+    \entry{robertkochinstituteditorBerichtVirusvariantenSARSCoV22021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3cca57c33175f9ac3c58995eb5c4c4fd}{%
+           family={(editor)},
+           familyi={(\bibinitperiod},
+           given={Robert\bibnamedelimb Koch\bibnamedelima Institut},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{fullhash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{bibnamehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{authorbibnamehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{authornamehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{authorfullhash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \field{extraname}{3}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{langid}{german}
+      \field{month}{7}
+      \field{series}{Bericht zu Virusvarianten von SARS-CoV-2 in Deutschland}
+      \field{title}{Bericht zu Virusvarianten von SARS-CoV-2 in Deutschland}
+      \field{volume}{18}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{19}
+      \range{pages}{1}
+      \verb{file}
+      \verb /home/st/Zotero/storage/X63STRXD/Bericht zu Virusvarianten von SARS-CoV-2 in Deutsc.pdf
+      \endverb
+    \endentry
     \entry{Alammar2018}{online}{}
       \name{author}{1}{}{%
         {{hash=071e8b59bcc6de28244fea3bf962a165}{%
@@ -1267,6 +1300,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{own representation}
 \endrefsection
 \endinput
 
