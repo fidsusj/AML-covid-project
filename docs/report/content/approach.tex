@@ -14,7 +14,7 @@ TODO: Pipeline image
 hier irgendwo das Zielschema des Datensatzes beschreiben
 
 
-\subsubsection{Raw data selection from GISAID}
+\subsubsection{Raw data selection from \ac{GISAID}}
 \label{ch:approachAa}
 
 In the first step of the dataset creation the raw genomes and their metadata are downloaded from \ac{GISAID}. Therefore a selection of a suitable subpart of the data is necessary. The \ac{GISAID} platform only allows the download of 5000 genomes at once. That is why we decided to focus our analysis on Germany (for one country the selection of < 5000 genomes is rather simple compared to the selection of data from multiple countries). By looking at the latest "Report on virus variants of SARS-CoV-2 in Germany" from the \ac{RKI} we decided for a time period. Figure \ref{rkiVariantDistribution} shows the distribution of different variants over time. Starting from calendar week 18 the Delta variant gradually displaces the previously widespread Alpha variant.
@@ -29,7 +29,7 @@ In the first step of the dataset creation the raw genomes and their metadata are
 That is why we selected the data from 04.05.2021 (calendar week 18) until 15.07.2021 (calendar week 28). This results in a raw dataset of 35.818 genomes.
 Each genome consists of a fasta file containing the genomes sequence and a record in a tsv file with the metadata.
 
-TODO: beispiel record: genome sequence and metadata
+%TODO: beispiel record: genome sequence and metadata
 
 
 \subsubsection{Generation of a phylogenetic tree}

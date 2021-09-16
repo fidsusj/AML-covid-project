@@ -1,25 +1,25 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0}Project Setup}{2}{section.8}%
+\contentsline {section}{\numberline {0}Project Setup}{2}{section.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Introduction}{2}{section.9}%
+\contentsline {section}{\numberline {1}Introduction}{2}{section.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Fundamentals and Related Work}{3}{section.14}%
+\contentsline {section}{\numberline {2}Fundamentals and Related Work}{3}{section.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Basics from molecular biology}{3}{subsection.15}%
+\contentsline {subsection}{\numberline {2.1}Basics from molecular biology}{3}{subsection.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Genome sequences}{3}{subsubsection.16}%
+\contentsline {subsubsection}{\numberline {2.1.1}Genome sequences}{3}{subsubsection.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Protein biosynthesis}{3}{subsubsection.19}%
+\contentsline {subsubsection}{\numberline {2.1.2}Protein biosynthesis}{3}{subsubsection.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.3}Structure of \ac {SARS-CoV-2}}{4}{subsubsection.26}%
+\contentsline {subsubsection}{\numberline {2.1.3}Structure of \ac {SARS-CoV-2}}{4}{subsubsection.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.4}Relationships between biological objects}{5}{subsubsection.31}%
+\contentsline {subsubsection}{\numberline {2.1.4}Relationships between biological objects}{5}{subsubsection.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}From Probabilistic Language Models to modeling Evolution Theory}{6}{subsection.33}%
+\contentsline {subsection}{\numberline {2.2}From Probabilistic Language Models to modeling Evolution Theory}{6}{subsection.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}GISAID EpiFlu Data Platform}{9}{subsection.41}%
+\contentsline {subsection}{\numberline {2.3}GISAID EpiFlu Data Platform}{9}{subsection.42}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evolutionary Datasets for Mutation Prediction}{9}{subsection.44}%
 \defcounter {refsection}{0}\relax 
@@ -37,7 +37,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.1}Dataset Creation}{19}{subsection.61}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Raw data selection from GISAID}{19}{subsubsection.62}%
+\contentsline {subsubsection}{\numberline {3.1.1}Raw data selection from \ac {GISAID}}{19}{subsubsection.62}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.1.2}Generation of a phylogenetic tree}{20}{subsubsection.65}%
 \defcounter {refsection}{0}\relax 
@@ -55,4 +55,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Experimental results}{22}{section.73}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{23}{section.74}%
+\contentsline {subsection}{\numberline {4.1}Dataset insights}{22}{subsection.74}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.1}Complete dataset}{22}{subsubsection.75}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed dataset}{23}{subsubsection.78}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Evaluation}{23}{subsection.79}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{24}{section.80}%

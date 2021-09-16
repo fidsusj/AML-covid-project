@@ -63,7 +63,7 @@
            giveni={G\bibinitperiod}}}%
       }
       \list{organization}{1}{%
-        {GISAID mission}%
+        {GISAID - Mission}%
       }
       \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
       \strng{fullhash}{cfae96e1d0349eab172c1f715c70d26d}
@@ -511,9 +511,6 @@
            given={Bryan},
            giveni={B\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {American Association for the Advancement of Science}%
-      }
       \strng{namehash}{211c183ca82cf29ca2d563c628decc4f}
       \strng{fullhash}{7178f69b82932079996658689f305443}
       \strng{bibnamehash}{211c183ca82cf29ca2d563c628decc4f}
@@ -524,22 +521,14 @@
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0036-8075}
       \field{journaltitle}{Science}
-      \field{number}{6526}
       \field{title}{Learning the Language of Viral Evolution and Escape}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
-      \field{volume}{371}
       \field{year}{2021}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{284\bibrangedash 288}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1126/science.abd7331
-      \endverb
       \verb{urlraw}
       \verb https://science.sciencemag.org/content/371/6526/284
       \endverb
@@ -939,11 +928,17 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
       \field{title}{The Prediction of Virus Mutation Using Neural Networks and Rough Set Techniques}
-      \field{volume}{2016}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2021}
       \field{year}{2016}
       \field{dateera}{ce}
-      \verb{doi}
-      \verb 10.1186/s13637-016-0042-0
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
+      \endverb
+      \verb{url}
+      \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
       \endverb
     \endentry
     \entry{schererStatisticalGeneticsGenetic2021}{unpublished}{}
