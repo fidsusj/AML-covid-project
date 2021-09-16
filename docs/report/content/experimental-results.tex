@@ -11,7 +11,7 @@ The distribution how the parent and child sequences differ can be seen in figure
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\linewidth]{figures/distributionDifferencesParentChild.png}
+	\includegraphics[width=0.7\linewidth]{figures/distributionDifferencesParentChild.png}
 	\caption{Distribution of the differences between parent and child sequences \cite{own representation}}
 	\label{distributionDifferencesParentChild}
 \end{figure}
@@ -30,6 +30,26 @@ Based on this distribution -> subpart selection in preprocessing
 
 \subsubsection{Preprocessed dataset}  \label{ch:experimentsAb}
 
+The complete dataset is preprocessed as described in chapter \ref{ch:approachB}.
+The distribution how the parent and child amino acids differ in the selected subpart can be seen in figure \ref{preprocessedDistributionDifferencesParentChild}. The majority (6946) of parent child pairs are equal.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/preprocessedDistributionDifferencesParentChild.png}
+	\caption{Preprocessed dataset: Distribution of the differences between parent and child sequences \cite{own representation}}
+	\label{preprocessedDistributionDifferencesParentChild}
+\end{figure}
+
+Figure \ref{preprocessedMutatedGeneticLoci} visualizes the differing amino acids and their positions of the selected subpart of the \ac{SARS-CoV-2} genome. They are distributed equally over the selected subpart.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{figures/preprocessedMutatedGeneticLoci.png}
+	\caption{Preprocessed dataset: Differing amino acid positions \cite{own representation}}
+	\label{preprocessedMutatedGeneticLoci}
+\end{figure}
+
+Based on this distribution -> subpart selection in preprocessing
 
 
 \subsection{Evaluation}  \label{ch:experimentsB}

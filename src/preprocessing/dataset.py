@@ -40,7 +40,7 @@ class Vocabulary:
 
 
 class CustomGISAIDDataset(Dataset):
-    def __init__(self, dataset_file, test_set_size=0.05, train=True, strain_begin=101, strain_end=200):
+    def __init__(self, dataset_file, test_set_size=0.05, train=True, strain_begin=21800, strain_end=21899):
         # Load the data and restrict to RNA strains
         print("Loading data and cutting to strains...")
         self.df_dataset = pd.read_csv(dataset_file)

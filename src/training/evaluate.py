@@ -1,5 +1,6 @@
 """ Module for model evaluation """
 import torch
+import torch.utils.data
 from torchtext.data.metrics import bleu_score
 
 from models.generator import Transformer
@@ -60,3 +61,4 @@ def evaluate(pretraining):
 
     score = bleu_score(outputs, targets)
     print(f"Bleu score {score * 100:.2f}")
+    print(score)
