@@ -1,3 +1,14 @@
 \section{Conclusion} \label{conclusion}
 
-% next steps: data source: global subsampling
+Coming to a conclusion, our main research question was whether a \ac{ML} model can be trained to predict the next possible \ac{SARS-CoV-2} mutations.
+
+The short answer to this is, that our trained \ac{ML} model is definitely able to generate possible next sequences. 
+
+TODO: BLEU scores for pretraining and training
+TODO: is it really that convincing?
+
+Furthermore, while answering this research question we created a new dataset based on raw data from \ac{GISAID}. As part of this we developed a reusable pipeline for creating evolutionary datasets.
+
+\vspace{0.5cm}
+
+As an outlook, there are some improvements and further investigations we would like to evaluate in future work. As realized while generating data insights of the dataset, lots of our data instances are very similar to each other. To really model the worldwide development of \ac{SARS-CoV-2} mutation events, the raw dataset should be based on a subsampling of all available global data instances. Further improvements could be achieved by using a computing cluster for generating a larger dataset and for training the model on the full \ac{SARS-CoV-2} genome and not on a subset of the genome.
