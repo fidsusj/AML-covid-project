@@ -14,18 +14,18 @@
 \BOOKMARK [2][]{subsection.51}{2.7 Applying Generative Adversarial Networks}{section.15}% 14
 \BOOKMARK [2][]{subsection.53}{2.8 Transformer and Attention Mechanism}{section.15}% 15
 \BOOKMARK [1][]{section.59}{3 Approach}{}% 16
-\BOOKMARK [2][]{subsection.60}{3.1 Dataset Creation}{section.59}% 17
-\BOOKMARK [3][]{subsubsection.61}{3.1.1 Raw data selection from GISAID}{subsection.60}% 18
-\BOOKMARK [3][]{subsubsection.64}{3.1.2 Generation of a phylogenetic tree}{subsection.60}% 19
-\BOOKMARK [3][]{subsubsection.66}{3.1.3 Phylogenetic tree to dataset}{subsection.60}% 20
-\BOOKMARK [2][]{subsection.67}{3.2 Data Preprocessing}{section.59}% 21
-\BOOKMARK [3][]{subsubsection.68}{3.2.1 Dimensionality reduction by selecting subpart of the genome}{subsection.67}% 22
-\BOOKMARK [3][]{subsubsection.69}{3.2.2 Transform genome sequence to numeric model input}{subsection.67}% 23
-\BOOKMARK [2][]{subsection.70}{3.3 Model Architecture}{section.59}% 24
-\BOOKMARK [2][]{subsection.71}{3.4 Training Process}{section.59}% 25
-\BOOKMARK [1][]{section.72}{4 Experimental results}{}% 26
-\BOOKMARK [2][]{subsection.73}{4.1 Dataset insights}{section.72}% 27
-\BOOKMARK [3][]{subsubsection.74}{4.1.1 Complete dataset}{subsection.73}% 28
-\BOOKMARK [3][]{subsubsection.77}{4.1.2 Preprocessed dataset}{subsection.73}% 29
-\BOOKMARK [2][]{subsection.80}{4.2 Evaluation}{section.72}% 30
-\BOOKMARK [1][]{section.81}{5 Conclusion}{}% 31
+\BOOKMARK [2][]{subsection.61}{3.1 Dataset Creation}{section.59}% 17
+\BOOKMARK [3][]{subsubsection.62}{3.1.1 Raw data selection from GISAID}{subsection.61}% 18
+\BOOKMARK [3][]{subsubsection.65}{3.1.2 Generation of a phylogenetic tree}{subsection.61}% 19
+\BOOKMARK [3][]{subsubsection.67}{3.1.3 Phylogenetic tree to dataset}{subsection.61}% 20
+\BOOKMARK [2][]{subsection.68}{3.2 Data Preprocessing}{section.59}% 21
+\BOOKMARK [3][]{subsubsection.69}{3.2.1 Dimensionality reduction by selecting subpart of the genome}{subsection.68}% 22
+\BOOKMARK [3][]{subsubsection.70}{3.2.2 Transform genome sequence to numeric model input}{subsection.68}% 23
+\BOOKMARK [2][]{subsection.71}{3.3 Model Architecture}{section.59}% 24
+\BOOKMARK [2][]{subsection.72}{3.4 Training Process}{section.59}% 25
+\BOOKMARK [1][]{section.73}{4 Experimental results}{}% 26
+\BOOKMARK [2][]{subsection.74}{4.1 Dataset insights}{section.73}% 27
+\BOOKMARK [3][]{subsubsection.75}{4.1.1 Complete dataset}{subsection.74}% 28
+\BOOKMARK [3][]{subsubsection.78}{4.1.2 Preprocessed dataset}{subsection.74}% 29
+\BOOKMARK [2][]{subsection.81}{4.2 Evaluation}{section.73}% 30
+\BOOKMARK [1][]{section.82}{5 Conclusion}{}% 31

@@ -2434,11 +2434,11 @@
     <bcf:citekey order="79">Vaswani2017</bcf:citekey>
     <bcf:citekey order="80">Alammar2018</bcf:citekey>
     <bcf:citekey order="80">Vaswani2017</bcf:citekey>
-    <bcf:citekey order="81">robertkochinstituteditorBerichtVirusvariantenSARSCoV22021</bcf:citekey>
-    <bcf:citekey order="82">robertkochinstituteditorBerichtVirusvariantenSARSCoV22021</bcf:citekey>
-    <bcf:citekey order="83">10.1093/bioinformatics/bty407</bcf:citekey>
-    <bcf:citekey order="84">own representation</bcf:citekey>
-    <bcf:citekey order="85">own representation</bcf:citekey>
+    <bcf:citekey order="81">own representation</bcf:citekey>
+    <bcf:citekey order="82">own representation</bcf:citekey>
+    <bcf:citekey order="83">robertkochinstituteditorBerichtVirusvariantenSARSCoV22021</bcf:citekey>
+    <bcf:citekey order="84">robertkochinstituteditorBerichtVirusvariantenSARSCoV22021</bcf:citekey>
+    <bcf:citekey order="85">10.1093/bioinformatics/bty407</bcf:citekey>
     <bcf:citekey order="86">own representation</bcf:citekey>
     <bcf:citekey order="87">own representation</bcf:citekey>
     <bcf:citekey order="88">own representation</bcf:citekey>
@@ -2447,6 +2447,8 @@
     <bcf:citekey order="91">own representation</bcf:citekey>
     <bcf:citekey order="92">own representation</bcf:citekey>
     <bcf:citekey order="93">own representation</bcf:citekey>
+    <bcf:citekey order="94">own representation</bcf:citekey>
+    <bcf:citekey order="95">own representation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
