@@ -1,7 +1,7 @@
 \section{Approach} 
 \label{approach}
 
-Figure \ref{pipeline} visualizes the steps of our approach , which are described in detail in the following chapters.
+Figure \ref{pipeline} visualizes the steps of our approach, which are described in detail in the following chapters.
 
 \begin{figure}[ht]
 	\centering
@@ -19,8 +19,7 @@ Figure \ref{pipeline} visualizes the steps of our approach , which are described
 % Biopython packages?
 % Final dataset metrics
 
-hier irgendwo das Zielschema des Datensatzes beschreiben
-
+As described in chapter \ref{fundamentalsC} a dataset consisting of parent child pairs is needed to learn a \ac{ML} model for mutation prediction. The steps to create this dataset are described in the following chapters.
 
 \subsubsection{Raw data selection from \ac{GISAID}}
 \label{ch:approachAa}
@@ -47,7 +46,7 @@ As described above we need parent child genome sequence pairs to be able to trai
 As described in chapter \ref{fundamentalsA0d} this is done in biology through phylogenetic trees.
 For the data preparation (e.g. alignment) and the calculation of the phylogenetic tree we use the nextstrain pipeline \cite{10.1093/bioinformatics/bty407}.
 The pipeline was executed on a local computer with Intel Core i7-7500U (4*2.70GHz), NVIDIA GeForce 940MX and 16 GB RAM.
-Unfortunately after two days of calculation, the nextstrain pipeline exited with a out of memory exception. That is why the amount of data is decreased. This was done through iterative reduction of the dataset size. The largest locally computable dataset consists of 11.773 genome sequences.
+Unfortunately after two days of calculation, the nextstrain pipeline exited with an out of memory exception. That is why the amount of data is decreased. This was done through iterative reduction of the dataset size. The largest locally computable dataset consists of 11.773 genome sequences.
 
 The generated phylogenetic tree can be seen in figure \ref{phylogeneticTree}.
 %TODO: Beschreibung was man sieht
@@ -65,7 +64,7 @@ The generated phylogenetic tree can be seen in figure \ref{phylogeneticTree}.
 
 Based on the calculated phylogenetic tree the final dataset is generated. Therefore the patristic distances between all leaf nodes are calculated. From the resulting patristic distance matrix for each leaf node the most related next leaf node can be evaluated. The two leaf nodes with the smallest distance are the closest relatives to each other and therefore represent a parent child pair. After the evaluation which leaf nodes are one parent child pair, the question which node is the parent and which node is the child is clarified. Therefore the two nodes are sorted by their date, which is stored in the metadata file. The older genome sequence is the parent and the younger genome sequence is the child.
 
-For calculating the patristic distance matrix we first used Dendropy (version: 4.5.2). Again this leads to problems due to limited RAM on our local computer. As a consequence we switched to PhyloDM (version: 1.3.1), which is a library for calculating patristic distances in a memory and time efficient manner.
+For calculating the patristic distance matrix we first used Dendropy (version: 4.5.2) \cite{DendroPyPhylogeneticComputing}. Again this leads to problems due to limited RAM on our local computer. As a consequence we switched to PhyloDM (version: 1.3.1) \cite{aaron_mussig_2020_4089111}, which is a library for calculating patristic distances in a memory and time efficient manner.
 
 Finally we received a dataset containing parent child genome sequences.
 
@@ -74,17 +73,17 @@ Finally we received a dataset containing parent child genome sequences.
 % Word size 3 is just a hyperparameter (see discussion of the corresponding paper)!  But maybe biologically valid because auf amino acids.
 % DNA2Vec?
 
-two steps:
-- to make the dimensionality managable not the whole 30000 nucleotides are evaluated. We take a subpart of X nucleotides from position A to B
-- Transform string to numeric for model input
-
 \subsubsection{Dimensionality reduction by selecting subpart of the genome}
 \label{ch:approachBa}
 
+The full \ac{SARS-CoV-2} genome consists of about 30.000 nucleotides. Due to the limited computing capacity on our local computers we need to reduce the dimensionality of the dataset. This is done by selecting a subpart based on the gained data insights from chapter \ref{ch:experimentsA}. In figure \ref{mutatedGeneticLoci} parts of the genome with lots of mutations are visible. Based upon this we selected 99 nucleotides (33 amino acids) in the range between position 21.800 and 21.899.
 
 \subsubsection{Transform genome sequence to numeric model input}
 \label{ch:approachBb}
 
+TODO
+
+- Transform string to numeric for model input
 
 \begin{itemize}
 	\item DNA Sequencing (Done during dataset creation, given from GISAID)

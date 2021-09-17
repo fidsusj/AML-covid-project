@@ -1,17 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'report.blg'
-[66] biber:340> INFO - === Fr Sep 17, 2021, 13:59:07
-[79] Biber.pm:415> INFO - Reading 'report.bcf'
-[149] Biber.pm:952> INFO - Found 28 citekeys in bib section 0
-[161] Biber.pm:4340> INFO - Processing section 0
-[170] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[172] bibtex.pm:1689> INFO - LaTeX decoding ...
-[203] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[64] biber:340> INFO - === Fr Sep 17, 2021, 14:35:24
+[76] Biber.pm:415> INFO - Reading 'report.bcf'
+[144] Biber.pm:952> INFO - Found 30 citekeys in bib section 0
+[155] Biber.pm:4340> INFO - Processing section 0
+[164] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[166] bibtex.pm:1689> INFO - LaTeX decoding ...
+[197] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
 [395] Utils.pm:395> WARN - I didn't find a database entry for 'own representation' (section 0)
-[427] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[427] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[427] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[427] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[454] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[472] bbl.pm:757> INFO - Output to report.bbl
-[472] Biber.pm:128> INFO - WARNINGS: 1
+[430] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[430] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[430] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[431] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[458] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[477] bbl.pm:757> INFO - Output to report.bbl
+[477] Biber.pm:128> INFO - WARNINGS: 1

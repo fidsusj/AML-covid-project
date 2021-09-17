@@ -381,6 +381,25 @@
       \verb https://doi.org/10.1093/bioinformatics/btp163
       \endverb
     \endentry
+    \entry{DendroPyPhylogeneticComputing}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{title}{{{DendroPy Phylogenetic Computing Library}} — {{DendroPy}} 4.5.2 Documentation}
+      \field{urlday}{17}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/GIXPSXNZ/dendropy.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://dendropy.org/
+      \endverb
+      \verb{url}
+      \verb https://dendropy.org/
+      \endverb
+    \endentry
     \entry{Gertz2020}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=c0d1310e5d4d58ef6c70f697f07a01f1}{%
@@ -735,6 +754,42 @@
       \endverb
       \verb{url}
       \verb https://www.hindawi.com/journals/mpe/2021/9980347/
+      \endverb
+    \endentry
+    \entry{aaron_mussig_2020_4089111}{software}{}
+      \name{author}{1}{}{%
+        {{hash=968a624f530d61c1eb8d6b323ce5366a}{%
+           family={Mussig},
+           familyi={M\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{968a624f530d61c1eb8d6b323ce5366a}
+      \strng{fullhash}{968a624f530d61c1eb8d6b323ce5366a}
+      \strng{bibnamehash}{968a624f530d61c1eb8d6b323ce5366a}
+      \strng{authorbibnamehash}{968a624f530d61c1eb8d6b323ce5366a}
+      \strng{authornamehash}{968a624f530d61c1eb8d6b323ce5366a}
+      \strng{authorfullhash}{968a624f530d61c1eb8d6b323ce5366a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Aaronmussig/{{PhyloDM}}: 1.3.1}
+      \field{version}{1.3.1}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.5281/zenodo.4089111
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.4089111
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.4089111
       \endverb
     \endentry
     \entry{NAQVI2020165878}{article}{}
