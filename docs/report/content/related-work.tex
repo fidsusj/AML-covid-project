@@ -6,14 +6,21 @@ This chapter gives a brief introduction into the underlying biological domain.
 
 \subsubsection{Genome sequences} \label{fundamentalsA0a}
 
-The human genome is encoded as \ac{DNA}. The \ac{DNA} carries genetic instructions how \ac{DNA} based organisms develop and behave. It is structured as a double helix and consists of two nucleotide pair combinations: adenine (A), thymine (T) and cytosine (C), guanine (G). \cite[p. 8]{10.5555/1965281}
-
-\begin{figure}[ht]
+\begin{wrapfigure}{R}{6cm}
 	\centering
-	\includegraphics[width=0.5\linewidth]{figures/dnaDoubleHelix.png}
+	\includegraphics[width=0.9\linewidth]{figures/dnaDoubleHelix.png}
 	\caption{\ac{DNA} double helix \cite[p. 8]{10.5555/1965281}}
 	\label{dna_double_helix}
-\end{figure}
+\end{wrapfigure}
+
+The human genome is encoded as \ac{DNA}. The \ac{DNA} carries genetic instructions how \ac{DNA} based organisms develop and behave. It is structured as a double helix and consists of two nucleotide pair combinations: adenine (A), thymine (T) and cytosine (C), guanine (G). \cite[p. 8]{10.5555/1965281}
+
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=0.35\linewidth]{figures/dnaDoubleHelix.png}
+%	\caption{\ac{DNA} double helix \cite[p. 8]{10.5555/1965281}}
+%	\label{dna_double_helix}
+%\end{figure}
 
 \subsubsection{Protein biosynthesis} \label{fundamentalsA0b}
 
@@ -26,19 +33,20 @@ The process of the protein biosynthesis can be seen in figure \ref{protein_biosy
 	\item Translation: Ribosomes translate the mRNA into amino acids. Three nucleotides (one codon) decode one amino acid. The matching which codons decode for which amino acid can be seen in figure \ref{genetic_code}. \cite[p. 9]{schererStatisticalGeneticsGenetic2021}
 \end{enumerate}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/dogmaMolecularBiology.png}
 	\caption{Protein biosynthesis \cite{schererStatisticalGeneticsGenetic2021}}
 	\label{protein_biosynthesis}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.4\linewidth]{figures/geneticCode.png}
 	\caption{Genetic code \cite{schererStatisticalGeneticsGenetic2021}}
 	\label{genetic_code}
 \end{figure}
+
 
 \subsubsection{Structure of \ac{SARS-CoV-2}} \label{fundamentalsA0c}
 
@@ -73,7 +81,7 @@ Padded by a 5' \ac{UTR} at the beginning and a 3' \ac{UTR} in the end, the middl
 
 \subsubsection{Relationships between biological objects} \label{fundamentalsA0d}
 
-One main question in biology is to determine relationships between objects, such as individuals or genome sequences. The observed objects are called taxa. Most commonly used for determining these relationships is the phylogenetic analysis which generates a phylogenetic tree. In this phylogenetic tree each leaf node corresponds to exactly one taxa. The inner nodes of the tree are the infered hypothetical ancestors, which are no taxas. The relatedness between different taxas can be evaluated by their distance. \cite{böckenhauer2013algorithmische}
+One main question in biology is to determine relationships between objects, such as individuals or genome sequences. The observed objects are called taxa. Most commonly used for determining these relationships is the phy\-lo\-ge\-ne\-tic analysis which generates a phy\-lo\-ge\-ne\-tic tree. In this phy\-lo\-ge\-ne\-tic tree each leaf node corresponds to exactly one taxa. The inner nodes of the tree are the infered hypothetical ancestors, which are no taxas. The relatedness between different taxas can be evaluated by their distance. \cite{böckenhauer2013algorithmische}
 
 Figure \ref{examplePhylogeneticTree} shows an example phylogenetic tree calculated based on the species genomes. On the right side each leaf node (taxa) corresponds to one current species. From left to right one can see the infered historical development from the ancestors to the current species. One can see, that Gorillas and Orangutans have earlier developed apart then the other species. Furthermore one can see, that the  Chimpanzees and Bonobos share a most recent common ancestor (inner node next to both). That is why they are more related to each other. \cite{mallawaarachchiMolecularPhylogeneticsUsing2018}
 
@@ -84,8 +92,7 @@ Figure \ref{examplePhylogeneticTree} shows an example phylogenetic tree calculat
 	\label{examplePhylogeneticTree}
 \end{figure}
 
-%TODO?: maximum likelihood Prozess zum aufstellen beschreiben?
-
+\newpage
 
 \subsection{From Probabilistic Language Models to modeling Evolution Theory} \label{fundamentalsA}
 

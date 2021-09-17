@@ -14,6 +14,6 @@ dropout = 0.10
 dim_feed_forward = 512
 
 # Models
-pretraining_model = "16_09_2021_15_11_10.pth.tar"
+pretraining_model = "16_09_2021_20_50_250.pth.tar"
 training_model = ""
-evaluation_model = "16_09_2021_15_11_10.pth.tar"
+evaluation_model = "16_09_2021_20_50_250.pth.tar"

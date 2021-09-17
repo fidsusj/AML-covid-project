@@ -36,11 +36,13 @@ def evaluate(pretraining):
     # Evaluation loop
     print("Starting evaluation...")
     model.eval()  # Set model to evaluation mode (e.g. deactivate dropout)
+    parents = []
     for instance_number, instance in enumerate(data_loader):
         print(f"[Instance {instance_number+1} / {len(test_dataset)}]")
 
         parent_sequence = instance[0].to(device)
         child_sequence = instance[1].to(device)
+        parents.append(parent_sequence)
 
         predicted_sequence = torch.LongTensor([test_dataset.child_vocab.stoi["<SOS>"]]).unsqueeze(1).to(device)
         for i in range(child_sequence.shape[1]):  # Loop over each word in the sequence, sequences are always of the same length!
@@ -58,6 +60,16 @@ def evaluate(pretraining):
 
         targets.append([child_sequence])
         outputs.append(predicted_sequence)
+
+    prediction_equal = 0
+    for i, output in enumerate(outputs):
+        output = [test_dataset.child_vocab.stoi[idx] for idx in output]
+        print("Parent sequence: {}".format(parents[i].tolist()[0]))
+        print("model generated: {}".format(output))
+        print("expected sequen: {}".format([test_dataset.child_vocab.stoi[idx] for idx in targets[i][0]]))
+        if output == parents[i].tolist()[0]:
+            prediction_equal += prediction_equal
+    print("Prediction equal to parent in {} cases".format(prediction_equal))
 
     score = bleu_score(outputs, targets)
     print(f"Bleu score {score * 100:.2f}")
