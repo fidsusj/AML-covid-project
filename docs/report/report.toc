@@ -57,8 +57,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.1.1}Complete dataset}{23}{subsubsection.75}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed dataset}{23}{subsubsection.78}%
+\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed dataset}{24}{subsubsection.78}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Evaluation}{24}{subsection.81}%
+\contentsline {subsection}{\numberline {4.2}Evaluation}{25}{subsection.81}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{25}{section.82}%
+\contentsline {subsubsection}{\numberline {4.2.1}Transformer pretraining}{25}{subsubsection.83}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.2.2}GAN training}{25}{subsubsection.85}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Conclusion}{26}{section.86}%

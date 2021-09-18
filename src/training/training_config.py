@@ -1,9 +1,9 @@
 """ Module for hyperparameters """
 # Training hyperparameters
-num_epochs = 1000 #10000
+num_epochs = 10 #1000 #10000
 batch_size = 32
 learning_rate = 3e-4  # Maybe choose different learning rates for pretraining, generator and discriminator
-save_model_every = 10
+save_model_every = 2
 
 # Model hyperparameters
 embedding_size = 128  # Must be dividable by 4
@@ -14,6 +14,6 @@ dropout = 0.10
 dim_feed_forward = 512
 
 # Models
-pretraining_model = "16_09_2021_20_50_250.pth.tar"
+pretraining_model = "17_09_2021_16_09_2.pth.tar"
 training_model = ""
-evaluation_model = "16_09_2021_20_50_250.pth.tar"
+evaluation_model = "17_09_2021_16_09_2.pth.tar"

@@ -28,4 +28,6 @@
 \BOOKMARK [3][]{subsubsection.75}{4.1.1 Complete dataset}{subsection.74}% 28
 \BOOKMARK [3][]{subsubsection.78}{4.1.2 Preprocessed dataset}{subsection.74}% 29
 \BOOKMARK [2][]{subsection.81}{4.2 Evaluation}{section.73}% 30
-\BOOKMARK [1][]{section.82}{5 Conclusion}{}% 31
+\BOOKMARK [3][]{subsubsection.83}{4.2.1 Transformer pretraining}{subsection.81}% 31
+\BOOKMARK [3][]{subsubsection.85}{4.2.2 GAN training}{subsection.81}% 32
+\BOOKMARK [1][]{section.86}{5 Conclusion}{}% 33

@@ -2451,6 +2451,8 @@
     <bcf:citekey order="95">own representation</bcf:citekey>
     <bcf:citekey order="96">own representation</bcf:citekey>
     <bcf:citekey order="97">own representation</bcf:citekey>
+    <bcf:citekey order="98">Berman2020</bcf:citekey>
+    <bcf:citekey order="99">Berman2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
