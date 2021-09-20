@@ -287,6 +287,108 @@
       \verb https://books.google.de/books?id=2HL3BQAAQBAJ
       \endverb
     \endentry
+    \entry{cockBiopythonFreelyAvailable2009}{article}{useprefix=true}
+      \name{author}{11}{}{%
+        {{hash=961b84215f587c306ba5c9176491354a}{%
+           family={Cock},
+           familyi={C\bibinitperiod},
+           given={P.\bibnamedelimi J.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=76a643b635700503967d3270673f3725}{%
+           family={Antao},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2b56f25cf534aaed6a069154f877d15b}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=79fce4054f00e38db1167016395aeee0}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={B.\bibnamedelimi A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=372a4169dadddfc13cbb217cd4988266}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=283890fe7a2cfb7b4f33ce7c4dd31c94}{%
+           family={Dalke},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a97700ec514801a8ff28019dbbc5f561}{%
+           family={Friedberg},
+           familyi={F\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=507011cb085de1c9dece64a1b0639d17}{%
+           family={Hamelryck},
+           familyi={H\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f0c582515d03436b2730da6243c7601c}{%
+           family={Kauff},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=91523821ca3393e5c453165c08c2a550}{%
+           family={Wilczynski},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=12f2aad47db9b563f9f5ca9e3220e04b}{%
+           family={Hoon},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi J.\bibnamedelimi L.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{fullhash}{3699ff44caf9c526aa644e70ada987de}
+      \strng{bibnamehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{authorbibnamehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{authornamehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{authorfullhash}{3699ff44caf9c526aa644e70ada987de}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{1}
+      \field{issn}{1367-4803, 1460-2059}
+      \field{journaltitle}{Bioinformatics}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{11}
+      \field{shortjournal}{Bioinformatics}
+      \field{shorttitle}{Biopython}
+      \field{title}{Biopython: Freely Available {{Python}} Tools for Computational Molecular Biology and Bioinformatics}
+      \field{urlday}{20}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{volume}{25}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1422\bibrangedash 1423}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btp163
+      \endverb
+      \verb{file}
+      \verb /home/st/Zotero/storage/NDTSQ3RT/Cock et al. - 2009 - Biopython freely available Python tools for compu.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btp163
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btp163
+      \endverb
+    \endentry
     \entry{10.1093/bioinformatics/btp163}{article}{useprefix=true}
       \name{author}{11}{}{%
         {{hash=1233053bd570a535b94aefb668da4464}{%
@@ -353,6 +455,7 @@
       \strng{authorbibnamehash}{be5d01c92697061bb7d2a0c8023cabe6}
       \strng{authornamehash}{be5d01c92697061bb7d2a0c8023cabe6}
       \strng{authorfullhash}{a87099b1898d69086317113a4820b401}
+      \field{extraname}{2}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -1351,6 +1454,7 @@
     \endentry
   \enddatalist
   \missing{own representation}
+  \missing{own screenshot}
 \endrefsection
 \endinput
 
