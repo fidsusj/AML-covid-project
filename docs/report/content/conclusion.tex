@@ -1,13 +1,16 @@
 \section{Conclusion} \label{conclusion}
 
 Coming to a conclusion, our main research question was whether a \ac{ML} model can be trained to predict the next possible \ac{SARS-CoV-2} mutations.
+The short answer to this is, that our trained \ac{ML} model is definitely able to generate possible next sequences. The pretraining of the transformer achieved a BLEU score of 0.8559 and the training of the \ac{GAN} achieved a BLEU score of TODO.
 
-The short answer to this is, that our trained \ac{ML} model is definitely able to generate possible next sequences. 
+Based on related works introduced in chapter \ref{fundamentals}, we decided for a \ac{ML} model architecture consisting of a transfomer based \ac{GAN} Framework. This architecture was influenced by Berman et al. \cite{Berman2020}. Our novelity is the usage of transformers instead of \ac{LSTM}. This enables faster training, because transformers can be trained in parallel. 
 
-TODO: BLEU scores for pretraining and training
-TODO: is it really that convincing?
+For answering our research question we created a new dataset based on raw data from \ac{GISAID}. As part of this we developed a reusable pipeline for creating evolutionary datasets.
 
-Furthermore, while answering this research question we created a new dataset based on raw data from \ac{GISAID}. As part of this we developed a reusable pipeline for creating evolutionary datasets.
+Another novelty is the application and training of such an \ac{ML} architecture for \ac{SARS-CoV-2}.
+
+%TODO: Wie schneiden wir im vergleich zu den anderen arbeiten ab?
+%TODO: is it really that convincing?
 
 \vspace{0.5cm}
 

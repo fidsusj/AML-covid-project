@@ -29,7 +29,7 @@ Figure \ref{mutatedGeneticLoci} visualizes the distribution of mutations over th
 \newpage
 \subsubsection{Preprocessed dataset}  \label{ch:experimentsAb}
 
-The complete dataset is preprocessed as described in chapter \ref{ch:approachB}. The distribution how the parent and child amino acids differ in the selected subpart can be seen in figure \ref{preprocessedDistributionDifferencesParentChild}. The majority (6946) of parent-child pairs are equal.
+The complete dataset is preprocessed as described in chapter \ref{ch:approachB}. The distribution how the parent and child amino acids differ in the selected subpart can be seen in figure \ref{preprocessedDistributionDifferencesParentChild}. The majority (6946) of parent-child pairs are equal. This is not optimal for training the \ac{ML} model and is further discussed in chapter \ref{ch:experimentsB}. 
 
 \begin{figure}[ht]
 	\centering
@@ -42,7 +42,7 @@ Figure \ref{preprocessedMutatedGeneticLoci} visualizes the differing amino acids
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\linewidth]{figures/preprocessedMutatedGeneticLoci.png}
+	\includegraphics[width=0.9\linewidth]{figures/preprocessedMutatedGeneticLoci.png}
 	\caption{Preprocessed dataset: Differing amino acid positions \cite{own representation}}
 	\label{preprocessedMutatedGeneticLoci}
 \end{figure}
@@ -50,7 +50,7 @@ Figure \ref{preprocessedMutatedGeneticLoci} visualizes the differing amino acids
 \newpage
 \subsection{Evaluation}  \label{ch:experimentsB}
 
-For evaluating the model prediction we need to compare the generated se\-quence with the real sequence. For this text similarity task there are already metrics available in the \ac{NLP} area. Berman et al. \cite{Berman2020} have used the \ac{BLEU} score. This metric comes from the area of machine translation and evaluates the similarity between machine generated text and human generated text. The more similar the two texts are, the better the \ac{BLEU} score is. It is always in the range between zero and one. With one as perfect similarity and zero means no similarity.
+For evaluating the model prediction we need to compare the generated se\-quence with the real sequence. For this similarity task there are already metrics available in the \ac{NLP} area. Berman et al. \cite{Berman2020} have used the \ac{BLEU} score. This metric comes from the area of machine translation and evaluates the similarity between machine generated text and human generated text. The more similar the two texts are, the better the \ac{BLEU} score is. It is always in the range between zero and one. With one as perfect similarity and zero means no similarity.
 
 \subsubsection{Transformer pretraining}  \label{ch:experimentsBa}
 

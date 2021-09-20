@@ -277,7 +277,7 @@
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-322-80043-5}
       \field{series}{{{XLeitfäden}} Der Informatik}
-      \field{title}{Algorithmische Grundlagen Der Bioinformatik: {{Modelle}}, Methoden Und Komplexität}
+      \field{title}{Algorithmische {{Grundlagen}} Der {{Bioinformatik}}: {{Modelle}}, {{Methoden}} Und {{Komplexität}}}
       \field{year}{2013}
       \field{dateera}{ce}
       \verb{urlraw}
@@ -488,7 +488,7 @@
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labeltitlesource}{title}
-      \field{title}{{{DendroPy Phylogenetic Computing Library}} — {{DendroPy}} 4.5.2 Documentation}
+      \field{title}{{{DendroPy Phylogenetic Computing Library}} —{} {{DendroPy}} 4.5.2 Documentation}
       \field{urlday}{17}
       \field{urlmonth}{9}
       \field{urlyear}{2021}
@@ -524,7 +524,7 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Text {{Analytics}} - {{Text Classification}}}
+      \field{title}{Text {{Analytics}} - {{Text Classification}}, Lecture Script}
       \field{year}{2020}
       \field{dateera}{ce}
     \endentry
@@ -750,7 +750,7 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Have you ever wondered how life formed from the primordial soup and evolved to the different life forms which can be seen at present? How…}
+      \field{abstract}{Have you ever wondered how life formed from the primordial soup and evolved to the different life forms which can be seen at present? How\ldots}
       \field{day}{24}
       \field{hour}{12}
       \field{langid}{english}
@@ -1161,7 +1161,7 @@
       \field{month}{3}
       \field{number}{13}
       \field{shorttitle}{{{GISAID}}}
-      \field{title}{{{GISAID}}: {{Global}} Initiative on Sharing All Influenza Data – from Vision to Reality}
+      \field{title}{{{GISAID}}: {{Global}} Initiative on Sharing All Influenza Data –{} from Vision to Reality}
       \field{urlday}{8}
       \field{urlmonth}{9}
       \field{urlyear}{2021}
