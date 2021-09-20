@@ -1,11 +1,23 @@
-# AML Project - Prediction of the next SARS-CoV-2 variants
+# AML Project - Prediction of the next SARS-CoV-2 mutations by a Transformer based GAN Framework
 
 ## Introduction  
 
 This project is part of the Advanced Machine Learning course at Heidelberg university. The project is located in the area 
-of Covid-19 research. The goal of this project is to:
+of Covid-19 research. The goal of this project is to predict the next possible mutations of the Covid-19 virus.
 
-- Predict mutations of the Covid-19 virus
+During the genome replication random mutations can appear. As a consequence the encoded protein sequence could be changed, which can lead to different behavior. If this change increases the fitness, it is probably passed on to the next generation. 
+
+A currently well known example for a mutating virus is SARS-CoV-2. Due to the developed vaccines the hope for an end of the pandemic arises. Nevertheless this is only true, if the vaccines, which are developed against the wild type of SARS-CoV-2, also remain effective against new mutations. To enable fast responses to new arising mutations it would be helpful to know the possible next mutations in advance. This can influence the treatment and prevention of diseases, by enabling the development of countermeasures and preventive measures in advance.
+
+Machine Learning, especially Deep Learning enabled improvements in lots of different domains. This work applies Deep Learning to the area of virus genome mutation prediction. Due to the fact, that genome sequences could be treated as text data, methods from the NLP area can be applied. The success of Deep Learning for NLP tasks has already been shown in various areas such as text generation, text summarization or translation.
+
+## Research question and proposed novelties  
+
+**Our research question is whether a Machine Learning model can be trained to predict the next possible SARS-CoV-2 mutations. In this work, we propose three novelties:**
+
+- **Model architecture**: A new GAN based architecture influenced by [Berman et al.](https://arxiv.org/abs/2008.11790). Our novelty is the usage of transformers instead of LSTM in the seq2seq model
+- **Dataset**: Generation of a dataset for SARS-CoV-2, consisting of 9199 parent-child data instances
+- **Application domain**: The training of the network for SARS-CoV-2
 
 
 ## Setup
@@ -36,9 +48,9 @@ Run isort from project root:
 
         isort .
 
-## About the dataset
-- All parent and child sequences are of fixed length 29904
-- All sequences are positionally aligned and padded to the length of 29904
+## Project details
+
+For details about the project (e.g. used dataset, choosen Machine Learning approach, results) see the [report](https://github.com/nilskre/AML-covid-project/blob/main/docs/report/report.pdf).
 
 ## Project team
 

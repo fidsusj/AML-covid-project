@@ -1,7 +1,6 @@
 ## Features to be implemented
 
 Documentation:
-- Add motivation section to the README
 - Provide Docker image parallel to setup guide
 - Keep conda requirements up to date
 - Add [PyTorch Tutorial](https://github.com/aladdinpersson/Machine-Learning-Collection) to references
