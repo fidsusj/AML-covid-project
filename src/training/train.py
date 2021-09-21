@@ -15,8 +15,8 @@ from preprocessing.dataset import get_loader
 from training.training_config import (batch_size, dim_feed_forward, dropout,
                                       embedding_size, learning_rate,
                                       num_decoder_layers, num_encoder_layers,
-                                      num_epochs, num_heads, save_model_every,
-                                      pretraining_model, training_model)
+                                      num_epochs_training, num_heads, save_model_every,
+                                      pretraining_model, training_model, num_epochs_pretraining)
 
 
 ################################
@@ -51,13 +51,13 @@ def run_transformer_pretraining(model_training_from_scratch=False):
 
     epochs_trained = 0
     if not model_training_from_scratch:
-        epochs_trained = load_checkpoint_pretraining(model, optimizer)
+        epochs_trained, step = load_checkpoint_pretraining(model, optimizer)
 
     # Training loop
     print("Starting training...")
     model.train()  # Set model to training mode
-    for epoch in range(epochs_trained, num_epochs):
-        print(f"[Epoch {epoch + 1} / {num_epochs}]")
+    for epoch in range(epochs_trained, num_epochs_pretraining):
+        print(f"[Epoch {epoch + 1} / {num_epochs_pretraining}]")
 
         losses = []
         for _, batch in enumerate(data_loader):
@@ -96,7 +96,8 @@ def run_transformer_pretraining(model_training_from_scratch=False):
             checkpoint = {
                 "state_dict": model.state_dict(),
                 "optimizer": optimizer.state_dict(),
-                "epochs_trained": epoch + 1
+                "epochs_trained": epoch + 1,
+                "step": step,
             }
             save_checkpoint_pretraining(checkpoint, epoch + 1)
 
@@ -121,7 +122,6 @@ def run_gan_training(model_training_from_scratch=False):
     # Tensorboard to get nice loss plot
     writer_discriminator = SummaryWriter("training/tensorboard/training/discriminator/loss_plot")
     writer_generator = SummaryWriter("training/tensorboard/training/generator/loss_plot")
-    step = 0
 
     # Training objects
     print("Initialize model...")
@@ -146,17 +146,17 @@ def run_gan_training(model_training_from_scratch=False):
     criterion = nn.BCELoss()  # PyTorch does not offer WassersteinLoss
 
     if not model_training_from_scratch:
-        epochs_trained = load_checkpoint_training(discriminator, generator, optimizer_discriminator, optimizer_generator)
+        epochs_trained, step = load_checkpoint_training(discriminator, generator, optimizer_discriminator, optimizer_generator)
     else:
-        epochs_trained = load_checkpoint_pretraining(generator, optimizer_generator)
+        epochs_trained, step = load_checkpoint_pretraining(generator, optimizer_generator)
 
     # Training loop
     print("Starting training...")
     # Set models to training mode
     generator.train()
     discriminator.train()
-    for epoch in range(epochs_trained, num_epochs):
-        print(f"[Epoch {epoch + 1} / {num_epochs}]")
+    for epoch in range(epochs_trained, num_epochs_training):
+        print(f"[Epoch {epoch + 1} / {num_epochs_training}]")
 
         losses_discriminator = []
         losses_generator = []
@@ -243,12 +243,14 @@ def run_gan_training(model_training_from_scratch=False):
             checkpoint_discriminator = {
                 "state_dict": discriminator.state_dict(),
                 "optimizer": optimizer_discriminator.state_dict(),
-                "epochs_trained": epoch + 1
+                "epochs_trained": epoch + 1,
+                "step": step,
             }
             checkpoint_generator = {
                 "state_dict": generator.state_dict(),
                 "optimizer": optimizer_generator.state_dict(),
-                "epochs_trained": epoch + 1
+                "epochs_trained": epoch + 1,
+                "step": step,
             }
             save_checkpoint_training(checkpoint_discriminator, checkpoint_generator, epoch + 1)
 
@@ -263,18 +265,21 @@ def save_checkpoint_pretraining(state, epoch_count):
     training_timestamp = datetime.now().strftime("%d_%m_%Y_%H_%M")
     torch.save(state, f"training/checkpoints/pretraining/{training_timestamp}_{epoch_count}.pth.tar")
 
+
 def save_checkpoint_training(state_discriminator, state_generator, epoch_count):
     print("Saving checkpoint...")
     training_timestamp = datetime.now().strftime("%d_%m_%Y_%H_%M")
     torch.save(state_discriminator, f"training/checkpoints/training/discriminator/{training_timestamp}_{epoch_count}.pth.tar")
     torch.save(state_generator, f"training/checkpoints/training/generator/{training_timestamp}_{epoch_count}.pth.tar")
 
+
 def load_checkpoint_pretraining(model, optimizer):
     print("Loading checkpoint...")
     checkpoint = torch.load(f"{str(get_project_root())}/training/checkpoints/pretraining/{pretraining_model}")
     model.load_state_dict(checkpoint["state_dict"])
     optimizer.load_state_dict(checkpoint["optimizer"])
-    return checkpoint["epochs_trained"]
+    return checkpoint["epochs_trained"], checkpoint["step"]
+
 
 def load_checkpoint_training(model_discriminator, model_generator, optimizer_discriminator, optimizer_generator):
     print("Loading checkpoint...")
@@ -284,4 +289,4 @@ def load_checkpoint_training(model_discriminator, model_generator, optimizer_dis
     optimizer_discriminator.load_state_dict(checkpoint_discriminator["optimizer"])
     model_generator.load_state_dict(checkpoint_generator["state_dict"])
     optimizer_generator.load_state_dict(checkpoint_generator["optimizer"])
-    return checkpoint_discriminator["epochs_trained"]
+    return checkpoint_discriminator["epochs_trained"], checkpoint_discriminator["step"]

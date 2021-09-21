@@ -3,16 +3,11 @@
 Documentation:
 - Provide Docker image parallel to setup guide
 - Keep conda requirements up to date
+- Picture of project structure showing the git ignored folders
 - Add [PyTorch Tutorial](https://github.com/aladdinpersson/Machine-Learning-Collection) to references
 
 Create Dataset:
-- Improve logic how parent-child sequences are selected (Phylogenetic analysis/tree, Levenshtein distance, read papers (like https://science.sciencemag.org/content/371/6526/284)) -> We need temporal relations
-- Bring more variety into the data (currently the sequences only vary at the beginning and the end)
 - Split the data into training, test and validation dataset on .csv file level
-- After training, create pairs of:
-  - True parent and child pairs
-  - True Parent and predicted child pairs
-  - True but unrelated parent child pairs
 
 Preprocessing:
 - Minimal frequency to be added to the vocabulary?
@@ -22,23 +17,46 @@ Discriminator:
 - Flatten MLP input? -> Shape (batch_size, sequence_length * embedding_size) or (batch_size, sequence_length, embedding_size)
 
 Generator:
-- DNA2Vec instead of PyTorchs nn.Embedding?
 - Beam search instead of greedy decoding?
 
 Quality:
 - Delete legacy and template code
 
 Training:
-- Do the training
 - Does model.eval() set the dropouts off in our custom nn.Module?
-- How to select the hyperparameters? -> Read MutaGAN paper
-- Where to train for several hours? Paperspace?
-- Use diff-match package from Google
 - Use a replay buffer (see MutaGAN paper)?
 - Avoid mode collapse
 - Kullback-Leibler divergence instead of cross entropy loss or both?
-- Scheduler for GAN?
 - Loss of generator for GAN: binary + sparse categorical cross entropy
 
 Evaluation:
 - Define evaluation criteria (MutaGAN paper, BLEU score only?, ...)
+
+For the report:
+- Work to do:
+  - Reverse the sequences?
+  - Hyperparameter tuning -> Read MutaGAN paper and play around (e.g. smaller embedding size)
+  - Other evaluation methods -> MutaGAN Generator Evaluation, read its evaluation chapter in general
+  - What happens if I restart the training? Also big initial drop?
+  - Increase patience for LR schedule
+  - Wasserstein loss
+  - => Still leads to mode collapse, explain why: dataset, wrong loss function, not trained enough, LR schedule, ...?
+  - Use diff-match package from Google
+  - Compare performance with those of others in general
+- Content:
+  - Other techniques section?
+  - We don't have true parent, but unrelated child sequences like MutaGAN. Why did MutaGAN use this?
+  - Dataset dividable by 3 (length of sequence: 29904)
+  - Loss curve does not converge as fast because opf the loss curve
+  - How many batches are necessary according to MutaGAN and how many epochs, how long does training normally take?
+  - Get inspired by motivation from MutaGAN
+  - We use teacher forcing and early stopping
+  - See comments in LaTeX and harmonize
+- Formal:
+  - Update contributions with the chapters written
+  - Don't write "we"
+  - Smartphone picture: either replace or explain in footnote why this happened
+  - Delete "own representation"
+
+Roadmap: 
+- 
