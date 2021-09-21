@@ -96,17 +96,29 @@ To integrate the dataset into the training routine, PyTorchs \textit{DataLoader}
 
 \subsection{Model Architecture}  \label{ch:approachC}
 
-The connection of modeling evolution theory of virus mutations to probabilistic language modeling has already been explained in \autoref{fundamentalsA}. To create such a probabilistic language model an approach closely related to the one introduced by the MutaGAN paper \cite{Berman2020} as explained in \autoref{fundamentalsF} is chosen with the novelty that attention-based transformers are used instead of \acp{LSTM}\footnote{This improvement was also named in the conclusion of the MutaGAN paper.}. To implement the \ac{GAN} framework PyTorch is used as it provides full-featured classes for transformers, embedding layers and other architectural components needed. This way one can specialize on the training routine instead of implementing a custom transformer architecture, which might be too error-prone\footnote{In case one is interested in how to implement a custom transformer architecture, see \url{http://nlp.seas.harvard.edu/2018/04/03/attention.html}.}. 
-% Give further explanations here
+The connection of modeling evolution theory of virus mutations to probabilistic language modeling has already been explained in \autoref{fundamentalsA}. To create such a probabilistic language model an approach closely related to the one introduced by the MutaGAN paper \cite{Berman2020} as explained in \autoref{fundamentalsF} is chosen with the novelty that attention-based transformers are used instead of \acp{LSTM}\footnote{This improvement was also named in the conclusion of the MutaGAN paper.}. To implement the \ac{GAN} framework, PyTorch is used as it provides full-featured classes for transformers, embedding layers and other architectural components needed compared to other frameworks like Keras. This way one can specialize on the training routine instead of implementing a custom transformer architecture, which might be too error-prone\footnote{In case one is interested in how to implement a custom transformer architecture, see \url{http://nlp.seas.harvard.edu/2018/04/03/attention.html}.}. 
 
-The numericalized codon sequences first need to be transformed to input embeddings. Therefore ...
+The architecture of the generator was shown in \autoref{transformer}. The numericalized codon sequences of the source parent and the target child sequence first need to be transformed to input embeddings of size 128 for each codon. This size was chosen in the order of magnitude used in the MutaGAN paper \cite{Berman2020} and seemed to work best in practice. To those input embeddings positional encodings are added that are formed by embedding each index in a sequence of positional indices for each instance. To both input sequences dropout layers are applied with a dropout rate of 10\%. The transformer then predicts the child sequence as a hidden representation of dimensionality 512 for each codon. In total three encoder and decoder layers are used each having eight heads. The transformer also uses a dropout rate of 10\%. The final feed forward network reduces the dimensionality from 512 back to the size of the vocabulary for each codon and applies the softmax function to receive the final output probabilities. Note that padding tokens or so far unpredicted child tokens are masked away to not be considered when calculating the loss during the training routine.
 
-% Hyperparameters and model architecture
-% Reverse sequences?
+The architecture of the discriminator is kept similar to \autoref{mutagan} using PyTorch's \textit{TransformerEncoders} instead of \acp{LSTM}. Again one transforms the numericalized parent and either true or generated child sequence to embeddings of size 128 of each codon and adds the positional embeddings before applying dropout. Instead of using an embedding layer for the true or generated child sequence one uses a dense layer instead in order to directly feed in the probability distribution of generated child sequences. The true child sequence therefore needs to be one-hot encoded before being provided to the discriminator in order to match the shape. The transformer encoder then produces an encoding of dimensionality 128 for each codon. During the training phase dropout is once again used with a rate of 10\%. Note that until this step the same weights are used as in the generator. In the following step the two hidden representations of the parent and true or generated child sequence are concatenated along the embedding dimension. The subsequent feed-forward network uses three blocks of dropout, batch normalization and a linear layer with \ac{ReLU} activation. The \ac{ReLU} layer in the last block is replaced with a sigmoid layer that makes sure each codon receives a score between zero and one that states how likely its a true or generated codon. Once again padding tokens are masked away during the training phase.
 
 \subsection{Training Process} \label{ch:approachD}
 
-TODO
+The training phase is two-fold. First a pre-training phase for the generator needs to be performed in order to produce first reasonable child sequences. Also the weights of the embedding layers and the encoder part of the generator need to be reused for the discriminator in the second training phase. For the pre-training phase the cross-entropy loss function typical for language modeling is used. In the main training phase the generator and discriminator compete against each other. When training the discriminator, the generator first generates a child sequence given a parent sequence. The true and generated child sequence is then given to the discriminator. Here the binary cross entropy loss is used to model the two parts of the classical \ac{GAN} loss function: 
+
+\begin{equation}
+	\underset{G}{arg min} \; \underset{D}{arg max} \; E_{x \sim p*(x)}(log(D(x))) + E_{z \sim p(z)}(log(1-D(G(z))))
+\end{equation}
+
+PyTorch's \textit{BCELoss} function is given as:
+
+\begin{equation}
+	l = -w(y\,log(x)) + (1-y)\,log(1-x)
+\end{equation}
+
+We therefore pass $y=1$ when calculating the left part of the loss using the true child sequence and $y=0$ when calculating the right part of the loss using the generated child sequence. We use the same mechanism to calculate the loss for the generator, but maximize $log(D(G(z)))$ instead of minimizing $log(1-D(G(z)))$. After experiencing mode collapse problems the MutaGAN paper \cite{Berman2020} switched to the Wasserstein loss function instead of the binary cross entropy function and therefore also changed the last layer of the discriminator to be a linear activation function. As PyTorch does not offer a Wasserstein loss function the binary cross entropy loss function was kept. 
+
+Both training phases use batch gradient descent as their optimization method with a batch size of 32. Gradients are clipped to a maximal norm of one to avoid exploding gradients. Furthermore for both training phases the Adam optimizer is used with an initial learning rate of $3*10^{-4}$. A learning rate scheduler makes sure to reduce the learning rate by a factor of ten in case the loss has not improved for ten epochs. On every batch gradient descent a tensorboard is updated to draw the loss curve. Every ten epochs a model checkpoint is saved. Pretraining is done for only 10 epochs whereas the main training phase runs for 500 epochs. 
 
 % Plot accuracy and loss for training and validation
 % Loss functions and teacher forcing, early stopping?
@@ -115,5 +127,6 @@ TODO
 % See MutaGAN 6.2 Model training
 % Replay buffer
 % Dealing with the mode collapse problem
+% Measure training time
 
 \newpage

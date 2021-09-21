@@ -1,33 +1,33 @@
-\BOOKMARK [1][]{section.9}{\376\377\0000\000\040\000P\000r\000o\000j\000e\000c\000t\000\040\000S\000e\000t\000u\000p}{}% 1
-\BOOKMARK [1][]{section.10}{\376\377\0001\000\040\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{}% 2
-\BOOKMARK [1][]{section.15}{\376\377\0002\000\040\000F\000u\000n\000d\000a\000m\000e\000n\000t\000a\000l\000s\000\040\000a\000n\000d\000\040\000R\000e\000l\000a\000t\000e\000d\000\040\000W\000o\000r\000k}{}% 3
-\BOOKMARK [2][]{subsection.16}{\376\377\0002\000.\0001\000\040\000B\000a\000s\000i\000c\000s\000\040\000f\000r\000o\000m\000\040\000m\000o\000l\000e\000c\000u\000l\000a\000r\000\040\000b\000i\000o\000l\000o\000g\000y}{section.15}% 4
-\BOOKMARK [3][]{subsubsection.17}{\376\377\0002\000.\0001\000.\0001\000\040\000G\000e\000n\000o\000m\000e\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000s}{subsection.16}% 5
-\BOOKMARK [3][]{subsubsection.20}{\376\377\0002\000.\0001\000.\0002\000\040\000P\000r\000o\000t\000e\000i\000n\000\040\000b\000i\000o\000s\000y\000n\000t\000h\000e\000s\000i\000s}{subsection.16}% 6
-\BOOKMARK [3][]{subsubsection.27}{\376\377\0002\000.\0001\000.\0003\000\040\000S\000t\000r\000u\000c\000t\000u\000r\000e\000\040\000o\000f\000\040\000S\000A\000R\000S\000-\000C\000o\000V\000-\0002}{subsection.16}% 7
-\BOOKMARK [3][]{subsubsection.32}{\376\377\0002\000.\0001\000.\0004\000\040\000R\000e\000l\000a\000t\000i\000o\000n\000s\000h\000i\000p\000s\000\040\000b\000e\000t\000w\000e\000e\000n\000\040\000b\000i\000o\000l\000o\000g\000i\000c\000a\000l\000\040\000o\000b\000j\000e\000c\000t\000s}{subsection.16}% 8
-\BOOKMARK [2][]{subsection.34}{\376\377\0002\000.\0002\000\040\000F\000r\000o\000m\000\040\000P\000r\000o\000b\000a\000b\000i\000l\000i\000s\000t\000i\000c\000\040\000L\000a\000n\000g\000u\000a\000g\000e\000\040\000M\000o\000d\000e\000l\000s\000\040\000t\000o\000\040\000m\000o\000d\000e\000l\000i\000n\000g\000\040\000E\000v\000o\000l\000u\000t\000i\000o\000n\000\040\000T\000h\000e\000o\000r\000y}{section.15}% 9
-\BOOKMARK [2][]{subsection.42}{\376\377\0002\000.\0003\000\040\000G\000I\000S\000A\000I\000D\000\040\000E\000p\000i\000F\000l\000u\000\040\000D\000a\000t\000a\000\040\000P\000l\000a\000t\000f\000o\000r\000m}{section.15}% 10
-\BOOKMARK [2][]{subsection.44}{\376\377\0002\000.\0004\000\040\000D\000o\000m\000a\000i\000n\000-\000S\000p\000e\000c\000i\000f\000i\000c\000\040\000M\000e\000t\000h\000o\000d\000o\000l\000o\000g\000i\000e\000s\000\040\000t\000o\000\040\000c\000r\000e\000a\000t\000e\000\040\000E\000v\000o\000l\000u\000t\000i\000o\000n\000a\000r\000y\000\040\000D\000a\000t\000a\000s\000e\000t\000s\000\040\000f\000o\000r\000\040\000M\000u\000t\000a\000t\000i\000o\000n\000\040\000P\000r\000e\000d\000i\000c\000t\000i\000o\000n}{section.15}% 11
-\BOOKMARK [2][]{subsection.45}{\376\377\0002\000.\0005\000\040\000P\000r\000e\000v\000i\000o\000u\000s\000\040\000W\000o\000r\000k\000\040\000o\000n\000\040\000M\000u\000t\000a\000t\000i\000o\000n\000\040\000P\000r\000e\000d\000i\000c\000t\000i\000o\000n}{section.15}% 12
-\BOOKMARK [2][]{subsection.46}{\376\377\0002\000.\0006\000\040\000S\000e\000q\000u\000e\000n\000c\000e\000\040\000t\000o\000\040\000S\000e\000q\000u\000e\000n\000c\000e\000\040\000M\000o\000d\000e\000l\000s\000\040\000b\000a\000s\000e\000d\000\040\000o\000n\000\040\000L\000o\000n\000g\000\040\000S\000h\000o\000r\000t\000-\000T\000e\000r\000m\000\040\000M\000e\000m\000o\000r\000y}{section.15}% 13
-\BOOKMARK [2][]{subsection.51}{\376\377\0002\000.\0007\000\040\000A\000p\000p\000l\000y\000i\000n\000g\000\040\000G\000e\000n\000e\000r\000a\000t\000i\000v\000e\000\040\000A\000d\000v\000e\000r\000s\000a\000r\000i\000a\000l\000\040\000N\000e\000t\000w\000o\000r\000k\000s}{section.15}% 14
-\BOOKMARK [2][]{subsection.53}{\376\377\0002\000.\0008\000\040\000T\000r\000a\000n\000s\000f\000o\000r\000m\000e\000r\000\040\000a\000n\000d\000\040\000A\000t\000t\000e\000n\000t\000i\000o\000n\000\040\000M\000e\000c\000h\000a\000n\000i\000s\000m}{section.15}% 15
-\BOOKMARK [1][]{section.59}{\376\377\0003\000\040\000A\000p\000p\000r\000o\000a\000c\000h}{}% 16
-\BOOKMARK [2][]{subsection.61}{\376\377\0003\000.\0001\000\040\000D\000a\000t\000a\000s\000e\000t\000\040\000C\000r\000e\000a\000t\000i\000o\000n}{section.59}% 17
-\BOOKMARK [3][]{subsubsection.62}{\376\377\0003\000.\0001\000.\0001\000\040\000R\000a\000w\000\040\000d\000a\000t\000a\000\040\000s\000e\000l\000e\000c\000t\000i\000o\000n\000\040\000f\000r\000o\000m\000\040\000G\000I\000S\000A\000I\000D}{subsection.61}% 18
-\BOOKMARK [3][]{subsubsection.65}{\376\377\0003\000.\0001\000.\0002\000\040\000G\000e\000n\000e\000r\000a\000t\000i\000o\000n\000\040\000o\000f\000\040\000a\000\040\000p\000h\000y\000l\000o\000g\000e\000n\000e\000t\000i\000c\000\040\000t\000r\000e\000e}{subsection.61}% 19
-\BOOKMARK [3][]{subsubsection.67}{\376\377\0003\000.\0001\000.\0003\000\040\000P\000h\000y\000l\000o\000g\000e\000n\000e\000t\000i\000c\000\040\000t\000r\000e\000e\000\040\000t\000o\000\040\000d\000a\000t\000a\000s\000e\000t}{subsection.61}% 20
-\BOOKMARK [2][]{subsection.68}{\376\377\0003\000.\0002\000\040\000D\000a\000t\000a\000\040\000P\000r\000e\000p\000r\000o\000c\000e\000s\000s\000i\000n\000g}{section.59}% 21
-\BOOKMARK [3][]{subsubsection.69}{\376\377\0003\000.\0002\000.\0001\000\040\000D\000i\000m\000e\000n\000s\000i\000o\000n\000a\000l\000i\000t\000y\000\040\000r\000e\000d\000u\000c\000t\000i\000o\000n\000\040\000b\000y\000\040\000s\000e\000l\000e\000c\000t\000i\000n\000g\000\040\000s\000u\000b\000p\000a\000r\000t\000\040\000o\000f\000\040\000t\000h\000e\000\040\000g\000e\000n\000o\000m\000e}{subsection.68}% 22
-\BOOKMARK [3][]{subsubsection.70}{\376\377\0003\000.\0002\000.\0002\000\040\000T\000r\000a\000n\000s\000f\000o\000r\000m\000\040\000g\000e\000n\000o\000m\000e\000\040\000s\000e\000q\000u\000e\000n\000c\000e\000\040\000t\000o\000\040\000n\000u\000m\000e\000r\000i\000c\000\040\000m\000o\000d\000e\000l\000\040\000i\000n\000p\000u\000t}{subsection.68}% 23
-\BOOKMARK [2][]{subsection.71}{\376\377\0003\000.\0003\000\040\000M\000o\000d\000e\000l\000\040\000A\000r\000c\000h\000i\000t\000e\000c\000t\000u\000r\000e}{section.59}% 24
-\BOOKMARK [2][]{subsection.74}{\376\377\0003\000.\0004\000\040\000T\000r\000a\000i\000n\000i\000n\000g\000\040\000P\000r\000o\000c\000e\000s\000s}{section.59}% 25
-\BOOKMARK [1][]{section.75}{\376\377\0004\000\040\000E\000x\000p\000e\000r\000i\000m\000e\000n\000t\000a\000l\000\040\000r\000e\000s\000u\000l\000t\000s}{}% 26
-\BOOKMARK [2][]{subsection.76}{\376\377\0004\000.\0001\000\040\000D\000a\000t\000a\000s\000e\000t\000\040\000i\000n\000s\000i\000g\000h\000t\000s}{section.75}% 27
-\BOOKMARK [3][]{subsubsection.77}{\376\377\0004\000.\0001\000.\0001\000\040\000C\000o\000m\000p\000l\000e\000t\000e\000\040\000d\000a\000t\000a\000s\000e\000t}{subsection.76}% 28
-\BOOKMARK [3][]{subsubsection.80}{\376\377\0004\000.\0001\000.\0002\000\040\000P\000r\000e\000p\000r\000o\000c\000e\000s\000s\000e\000d\000\040\000d\000a\000t\000a\000s\000e\000t}{subsection.76}% 29
-\BOOKMARK [2][]{subsection.83}{\376\377\0004\000.\0002\000\040\000E\000v\000a\000l\000u\000a\000t\000i\000o\000n}{section.75}% 30
-\BOOKMARK [3][]{subsubsection.85}{\376\377\0004\000.\0002\000.\0001\000\040\000T\000r\000a\000n\000s\000f\000o\000r\000m\000e\000r\000\040\000p\000r\000e\000t\000r\000a\000i\000n\000i\000n\000g}{subsection.83}% 31
-\BOOKMARK [3][]{subsubsection.87}{\376\377\0004\000.\0002\000.\0002\000\040\000G\000A\000N\000\040\000t\000r\000a\000i\000n\000i\000n\000g}{subsection.83}% 32
-\BOOKMARK [1][]{section.88}{\376\377\0005\000\040\000C\000o\000n\000c\000l\000u\000s\000i\000o\000n}{}% 33
+\BOOKMARK [1][]{section.9}{0 Project Setup}{}% 1
+\BOOKMARK [1][]{section.10}{1 Introduction}{}% 2
+\BOOKMARK [1][]{section.15}{2 Fundamentals and Related Work}{}% 3
+\BOOKMARK [2][]{subsection.16}{2.1 Basics from molecular biology}{section.15}% 4
+\BOOKMARK [3][]{subsubsection.17}{2.1.1 Genome sequences}{subsection.16}% 5
+\BOOKMARK [3][]{subsubsection.20}{2.1.2 Protein biosynthesis}{subsection.16}% 6
+\BOOKMARK [3][]{subsubsection.27}{2.1.3 Structure of SARS-CoV-2}{subsection.16}% 7
+\BOOKMARK [3][]{subsubsection.32}{2.1.4 Relationships between biological objects}{subsection.16}% 8
+\BOOKMARK [2][]{subsection.34}{2.2 From Probabilistic Language Models to modeling Evolution Theory}{section.15}% 9
+\BOOKMARK [2][]{subsection.42}{2.3 GISAID EpiFlu Data Platform}{section.15}% 10
+\BOOKMARK [2][]{subsection.44}{2.4 Domain-Specific Methodologies to create Evolutionary Datasets for Mutation Prediction}{section.15}% 11
+\BOOKMARK [2][]{subsection.45}{2.5 Previous Work on Mutation Prediction}{section.15}% 12
+\BOOKMARK [2][]{subsection.46}{2.6 Sequence to Sequence Models based on Long Short-Term Memory}{section.15}% 13
+\BOOKMARK [2][]{subsection.51}{2.7 Applying Generative Adversarial Networks}{section.15}% 14
+\BOOKMARK [2][]{subsection.53}{2.8 Transformer and Attention Mechanism}{section.15}% 15
+\BOOKMARK [1][]{section.59}{3 Approach}{}% 16
+\BOOKMARK [2][]{subsection.61}{3.1 Dataset Creation}{section.59}% 17
+\BOOKMARK [3][]{subsubsection.62}{3.1.1 Raw data selection from GISAID}{subsection.61}% 18
+\BOOKMARK [3][]{subsubsection.65}{3.1.2 Generation of a phylogenetic tree}{subsection.61}% 19
+\BOOKMARK [3][]{subsubsection.67}{3.1.3 Phylogenetic tree to dataset}{subsection.61}% 20
+\BOOKMARK [2][]{subsection.68}{3.2 Data Preprocessing}{section.59}% 21
+\BOOKMARK [3][]{subsubsection.69}{3.2.1 Dimensionality reduction by selecting subpart of the genome}{subsection.68}% 22
+\BOOKMARK [3][]{subsubsection.70}{3.2.2 Transform genome sequence to numeric model input}{subsection.68}% 23
+\BOOKMARK [2][]{subsection.71}{3.3 Model Architecture}{section.59}% 24
+\BOOKMARK [2][]{subsection.74}{3.4 Training Process}{section.59}% 25
+\BOOKMARK [1][]{section.77}{4 Experimental results}{}% 26
+\BOOKMARK [2][]{subsection.78}{4.1 Dataset insights}{section.77}% 27
+\BOOKMARK [3][]{subsubsection.79}{4.1.1 Complete dataset}{subsection.78}% 28
+\BOOKMARK [3][]{subsubsection.82}{4.1.2 Preprocessed dataset}{subsection.78}% 29
+\BOOKMARK [2][]{subsection.85}{4.2 Evaluation}{section.77}% 30
+\BOOKMARK [3][]{subsubsection.87}{4.2.1 Transformer pretraining}{subsection.85}% 31
+\BOOKMARK [3][]{subsubsection.89}{4.2.2 GAN training}{subsection.85}% 32
+\BOOKMARK [1][]{section.90}{5 Conclusion}{}% 33
