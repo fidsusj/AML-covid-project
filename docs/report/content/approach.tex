@@ -76,27 +76,33 @@ Finally we received a dataset containing parent-child genome sequences.
 \subsubsection{Dimensionality reduction by selecting subpart of the genome}
 \label{ch:approachBa}
 
-The full \ac{SARS-CoV-2} genome consists of about 30.000 nucleotides. Due to the limited computing capacity on our local computers we need to reduce the dimensionality of the dataset. This is done by selecting a subpart based on the gained data insights from chapter \ref{ch:experimentsA}. In figure \ref{mutatedGeneticLoci} parts of the genome with lots of mutations are visible. Based upon this we selected 99 nucleotides (33 amino acids) in the range between position 21.800 and 21.899.
+The full \ac{SARS-CoV-2} genome consists of about 30.000 nucleotides. Due to the limited computing capacity on our local computers we need to reduce the dimensionality of the dataset. This is done by selecting a subpart based on the gained data insights from chapter \ref{ch:experimentsA}. In figure \ref{mutatedGeneticLoci} parts of the genome with lots of mutations are visible. Based upon this we selected 99 nucleotides (33 codons) in the range between position 21.800 and 21.899.
 
 \subsubsection{Transform genome sequence to numeric model input}
 \label{ch:approachBb}
 
-TODO
-
-- Transform string to numeric for model input
+Input to the model are numericalized codon sequences with each codon being composed of three nucleotides. Therefore one needs to build a vocabulary with all codons existing in the dataset that assigns each codon a unique number. Each genome string is therefore tokenized to codons and so far unseen codons are added to the vocabulary. The vocabulary also contains special tokens like:
 
 \begin{itemize}
-	\item DNA Sequencing (Done during dataset creation, given from GISAID)
-	\item DNA Sequence Tokenization for Amino Acid Dictionary
-	\item DNA Sequence Padding
+	\item \textit{<SOS>}: start of sentence
+	\item \textit{<EOS>}: end of sentence
+	\item \textit{<UNK>}: unknown
+	\item \textit{<PAD>}: padding
 \end{itemize}
+
+A codon is encoded as unknown in case at least one nulceotide is unknown or at least one padding character is contained. Only in the special case of three padding characters the padding token is returned. 
+
+To integrate the dataset into the training routine, PyTorchs \textit{DataLoader} is used (see \autoref{ch:approachD}). Therefore a \textit{CustomGISAIDDataset} class is derived from PyTorchs Dataset class that can be utilized by the \textit{DataLoader}. It can be configured to return the training or test dataset instances. Each instance is already numericalized by vocabulary index lookups for each codon, padded with the numericalized \textit{<SOS>} and \textit{<EOS>} token and transformed to a PyTorch tensor. 
 
 \subsection{Model Architecture}  \label{ch:approachC}
 
-TODO
+The connection of modeling evolution theory of virus mutations to probabilistic language modeling has already been explained in \autoref{fundamentalsA}. To create such a probabilistic language model an approach closely related to the one introduced by the MutaGAN paper \cite{Berman2020} as explained in \autoref{fundamentalsF} is chosen with the novelty that attention-based transformers are used instead of \acp{LSTM}\footnote{This improvement was also named in the conclusion of the MutaGAN paper.}. To implement the \ac{GAN} framework PyTorch is used as it provides full-featured classes for transformers, embedding layers and other architectural components needed. This way one can specialize on the training routine instead of implementing a custom transformer architecture, which might be too error-prone\footnote{In case one is interested in how to implement a custom transformer architecture, see \url{http://nlp.seas.harvard.edu/2018/04/03/attention.html}.}. 
+% Give further explanations here
+
+The numericalized codon sequences first need to be transformed to input embeddings. Therefore ...
 
 % Hyperparameters and model architecture
-% Reference http://nlp.seas.harvard.edu/2018/04/03/attention.html if one wants to build it by oneself
+% Reverse sequences?
 
 \subsection{Training Process} \label{ch:approachD}
 

@@ -2446,7 +2446,7 @@
     <bcf:citekey order="90">own representation</bcf:citekey>
     <bcf:citekey order="91">DendroPyPhylogeneticComputing</bcf:citekey>
     <bcf:citekey order="92">aaron_mussig_2020_4089111</bcf:citekey>
-    <bcf:citekey order="93">own representation</bcf:citekey>
+    <bcf:citekey order="93">Berman2020</bcf:citekey>
     <bcf:citekey order="94">own representation</bcf:citekey>
     <bcf:citekey order="95">own representation</bcf:citekey>
     <bcf:citekey order="96">own representation</bcf:citekey>
@@ -2454,9 +2454,10 @@
     <bcf:citekey order="98">own representation</bcf:citekey>
     <bcf:citekey order="99">own representation</bcf:citekey>
     <bcf:citekey order="100">own representation</bcf:citekey>
-    <bcf:citekey order="101">Berman2020</bcf:citekey>
+    <bcf:citekey order="101">own representation</bcf:citekey>
     <bcf:citekey order="102">Berman2020</bcf:citekey>
     <bcf:citekey order="103">Berman2020</bcf:citekey>
+    <bcf:citekey order="104">Berman2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
