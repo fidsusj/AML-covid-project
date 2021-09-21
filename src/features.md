@@ -45,6 +45,7 @@ For the report:
   - Compare performance with those of others in general
 - Content:
   - Other techniques section?
+  - We do not use beam search
   - We don't have true parent, but unrelated child sequences like MutaGAN. Why did MutaGAN use this?
   - Dataset dividable by 3 (length of sequence: 29904)
   - Loss curve does not converge as fast because opf the loss curve
@@ -58,5 +59,23 @@ For the report:
   - Smartphone picture: either replace or explain in footnote why this happened
   - Delete "own representation"
 
-Roadmap: 
-- 
+Wednesday:
+- Other evaluation methods -> MutaGAN Generator Evaluation, read its evaluation chapter in general
+=> Write methods of evaluation subchapter in report
+- Hyperparameter tuning -> Read MutaGAN paper and play around (e.g. smaller embedding size)
+- Reverse the sequences?
+- What happens if I restart the training? Also big initial drop?
+- Increase patience for LR schedule
+- Wasserstein loss feasible?
+=> Create BLEU Score table
+- => Still leads to mode collapse, explain why: dataset, wrong loss function, not trained enough, LR schedule, ...?
+- Use diff-match package from Google
+- Compare performance with those of others in general
+
+Thursday:
+- Harmonize the report
+- And finish off points left open => Into conclusion
+
+Friday:
+- Harmonize the report
+- Meeting with Nils
