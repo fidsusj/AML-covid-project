@@ -4,6 +4,7 @@ Documentation:
 - Provide Docker image parallel to setup guide
 - Keep conda requirements up to date
 - Picture of project structure showing the git ignored folders
+- Upload the models
 - Add [PyTorch Tutorial](https://github.com/aladdinpersson/Machine-Learning-Collection) to references
 
 Create Dataset:
@@ -37,22 +38,26 @@ For the report:
   - Reverse the sequences?
   - Hyperparameter tuning -> Read MutaGAN paper and play around (e.g. smaller embedding size)
   - Other evaluation methods -> MutaGAN Generator Evaluation, read its evaluation chapter in general
-  - What happens if I restart the training? Also big initial drop?
   - Increase patience for LR schedule
   - Wasserstein loss
   - => Still leads to mode collapse, explain why: dataset, wrong loss function, not trained enough, LR schedule, ...?
   - Use diff-match package from Google
   - Compare performance with those of others in general
+  - Does GAN training improve the performance?
+  - \# encoder/decoder layers
 - Content:
   - Other techniques section?
   - We do not use beam search
   - We don't have true parent, but unrelated child sequences like MutaGAN. Why did MutaGAN use this?
   - Dataset dividable by 3 (length of sequence: 29904)
-  - Loss curve does not converge as fast because opf the loss curve
+  - Loss curve does not converge as fast because of the loss curve
   - How many batches are necessary according to MutaGAN and how many epochs, how long does training normally take?
   - Get inspired by motivation from MutaGAN
   - We use teacher forcing and early stopping
   - See comments in LaTeX and harmonize
+  - Show correct mutation prediction at the specific position (BLEU score not only high because the parts that never change are correctly "predicted"")
+  - Shorten
+  - Explain train test mode
 - Formal:
   - Update contributions with the chapters written
   - Don't write "we"

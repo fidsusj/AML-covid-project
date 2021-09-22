@@ -13,11 +13,15 @@ from models.generator import Transformer
 from path_helper import get_project_root
 from preprocessing.dataset import get_loader
 from training.training_config import (batch_size, dim_feed_forward, dropout,
-                                      embedding_size, learning_rate,
+                                      embedding_size,
+                                      learning_rate_discriminator,
+                                      learning_rate_generator,
+                                      learning_rate_pretraining,
                                       num_decoder_layers, num_encoder_layers,
-                                      num_epochs_training, num_heads, save_model_every,
-                                      pretraining_model, training_model, num_epochs_pretraining)
-
+                                      num_epochs_pretraining,
+                                      num_epochs_training, num_heads,
+                                      pretraining_model, save_model_every,
+                                      training_model)
 
 ################################
 #  Plain Transformer
@@ -43,7 +47,7 @@ def run_transformer_pretraining(model_training_from_scratch=False):
     print("Initialize model...")
     model = Transformer(embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout,
                         src_vocab_size, trg_vocab_size, src_pad_idx, max_len, device).to(device)
-    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate_pretraining)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer, factor=0.1, patience=10, verbose=True
     )
@@ -133,12 +137,12 @@ def run_gan_training(model_training_from_scratch=False):
     discriminator = TransformerEncoder(copy.deepcopy(generator.transformer.encoder), word_embedding_weights, position_embedding_weights,
                                        embedding_size, dropout, trg_vocab_size, src_pad_idx, max_len, device).to(device)
 
-    optimizer_discriminator = optim.Adam(generator.parameters(), lr=learning_rate)
+    optimizer_discriminator = optim.Adam(generator.parameters(), lr=learning_rate_discriminator)
     scheduler_discriminator = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer_discriminator, factor=0.1, patience=10, verbose=True
     )
 
-    optimizer_generator = optim.Adam(generator.parameters(), lr=learning_rate)
+    optimizer_generator = optim.Adam(generator.parameters(), lr=learning_rate_generator)
     scheduler_generator = torch.optim.lr_scheduler.ReduceLROnPlateau(
         optimizer_generator, factor=0.1, patience=10, verbose=True
     )

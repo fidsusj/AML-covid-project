@@ -6,8 +6,9 @@ from time import strptime
 import pandas as pd
 from Bio import SeqIO
 from dendropy import Tree
-from path_helper import get_project_root
 from phylodm.pdm import PDM
+
+from path_helper import get_project_root
 
 
 def run_create_dataset(run_from_scratch):
