@@ -2455,17 +2455,19 @@
     <bcf:citekey order="93">Berman2020</bcf:citekey>
     <bcf:citekey order="94">Berman2020</bcf:citekey>
     <bcf:citekey order="95">Berman2020</bcf:citekey>
-    <bcf:citekey order="96">own representation</bcf:citekey>
-    <bcf:citekey order="97">own representation</bcf:citekey>
+    <bcf:citekey order="96">Berman2020</bcf:citekey>
+    <bcf:citekey order="97">Berman2020</bcf:citekey>
     <bcf:citekey order="98">own representation</bcf:citekey>
     <bcf:citekey order="99">own representation</bcf:citekey>
     <bcf:citekey order="100">own representation</bcf:citekey>
     <bcf:citekey order="101">own representation</bcf:citekey>
     <bcf:citekey order="102">own representation</bcf:citekey>
     <bcf:citekey order="103">own representation</bcf:citekey>
-    <bcf:citekey order="104">Berman2020</bcf:citekey>
-    <bcf:citekey order="105">Berman2020</bcf:citekey>
+    <bcf:citekey order="104">own representation</bcf:citekey>
+    <bcf:citekey order="105">own representation</bcf:citekey>
     <bcf:citekey order="106">Berman2020</bcf:citekey>
+    <bcf:citekey order="107">Berman2020</bcf:citekey>
+    <bcf:citekey order="108">Berman2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

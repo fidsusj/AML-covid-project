@@ -51,18 +51,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4}Training Process}{22}{subsection.74}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experimental results}{24}{section.77}%
+\contentsline {section}{\numberline {4}Experimental results}{25}{section.77}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Dataset insights}{24}{subsection.78}%
+\contentsline {subsection}{\numberline {4.1}Dataset insights}{25}{subsection.78}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Complete dataset}{24}{subsubsection.79}%
+\contentsline {subsubsection}{\numberline {4.1.1}Complete dataset}{25}{subsubsection.79}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed dataset}{25}{subsubsection.82}%
+\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed dataset}{26}{subsubsection.82}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Evaluation}{26}{subsection.85}%
+\contentsline {subsection}{\numberline {4.2}Evaluation}{27}{subsection.85}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Transformer pretraining}{26}{subsubsection.87}%
+\contentsline {subsubsection}{\numberline {4.2.1}Transformer pretraining}{27}{subsubsection.87}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}GAN training}{26}{subsubsection.89}%
+\contentsline {subsubsection}{\numberline {4.2.2}GAN training}{27}{subsubsection.89}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{27}{section.90}%
+\contentsline {section}{\numberline {5}Conclusion}{28}{section.90}%
