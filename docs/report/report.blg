@@ -1,18 +1,26 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'report.blg'
-[66] biber:340> INFO - === Mo Sep 20, 2021, 15:34:23
-[79] Biber.pm:415> INFO - Reading 'report.bcf'
-[149] Biber.pm:952> INFO - Found 32 citekeys in bib section 0
-[161] Biber.pm:4340> INFO - Processing section 0
-[169] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[172] bibtex.pm:1689> INFO - LaTeX decoding ...
-[206] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[418] Utils.pm:395> WARN - I didn't find a database entry for 'own screenshot' (section 0)
-[418] Utils.pm:395> WARN - I didn't find a database entry for 'own representation' (section 0)
-[453] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[453] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[453] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[453] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[481] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[502] bbl.pm:757> INFO - Output to report.bbl
-[502] Biber.pm:128> INFO - WARNINGS: 2
+[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
+[1] Config.pm:315> INFO - Logfile is 'report.blg'
+[653] biber-MSWIN64:330> INFO - === 
+[698] Biber.pm:415> INFO - Reading 'report.bcf'
+[659] Biber.pm:952> INFO - Found 33 citekeys in bib section 0
+[690] Biber.pm:4334> INFO - Processing section 0
+[725] Biber.pm:4523> INFO - Looking for bibtex format file 'references.bib' for section 0
+[[1073] bibtex.pm:1682> INFO - LaTeX decoding ...[8[1166] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib[1375] Utils.pm:395> WARN - I didn't find a database entry for 'schererStatisticalGeneticsGenetic2021' (section 0)
+[1375] Utils.pm:395> WARN - I didn't find a database entry for 'mallawaarachchiMolecularPhylogeneticsUsing2018' (section 0)
+[1375] Utils.pm:395> WARN - I didn't find a database entry for 'cockBiopythonFreelyAvailable2009' (section 0)
+[1375] Utils.pm:395> WARN - I didn't find a database entry for 'gisaideditorGISAID2021' (section 0)
+[1375] Utils.pm:395> WARN - I didn't find a database entry for 'shuGISAIDGlobalInitiative2017' (section 0)
+[1376] Utils.pm:395> WARN - I didn't find a database entry for 'nationallibraryofmedicinencbieditorNCBISARSCoV2Resources' (section 0)
+[1376] Utils.pm:395> WARN - I didn't find a database entry for 'own screenshot' (section 0)
+[1376] Utils.pm:395> WARN - I didn't find a database entry for 'ogaliMolecularCharacterizationNewcastle2018' (section 0)
+[1376] Utils.pm:395> WARN - I didn't find a database entry for 'own representation' (section 0)
+[1376] Utils.pm:395> WARN - I didn't find a database entry for 'robertkochinstituteditorBerichtVirusvariantenSARSCoV22021' (section 0)
+[1376] Utils.pm:395> WARN - I didn't find a database entry for 'DendroPyPhylogeneticComputing' (section 0)
+[1474] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1474] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1474] Biber.pm:4162> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1474] Biber.pm:4168> INFO - No sort tailoring available for locale 'en-US'
+[1565] bbl.pm:651> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[1592] bbl.pm:754> INFO - Output to report.bbl
+[1593] Biber.pm:128> INFO - WARNINGS: 11
+1

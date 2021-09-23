@@ -50,7 +50,17 @@ Figure \ref{preprocessedMutatedGeneticLoci} visualizes the differing amino acids
 \newpage
 \subsection{Evaluation}  \label{ch:experimentsB}
 
-For evaluating the model prediction we need to compare the generated se\-quence with the real sequence. For this similarity task there are already metrics available in the \ac{NLP} area. Berman et al. \cite{Berman2020} have used the \ac{BLEU} score. This metric comes from the area of machine translation and evaluates the similarity between machine generated text and human generated text. The more similar the two texts are, the better the \ac{BLEU} score is. It is always in the range between zero and one. With one as perfect similarity and zero means no similarity.
+\subsubsection{Evaluation criteria}
+
+To measure the success of the transformer model different evaluation criteria need to be introduced that capture how well the mutations observed in the data can be reproduced by the generator. A mutation prediction is considered correct in case the prediction matches in codons and locations. Further to distinguish are partially correct mutation predictions in case mutations are observed at the right locations but in different codons. Mutation predictions can further be considered as wrong in case they were not observed in the true child sequences or missed in case they could not be observed in the generated sequences. 
+
+A common metric used in the domain of \ac{NMT} is the so-called \ac{BLEU} score \cite{Papineni2002}. Its so-called modified n-gram precision captures common n-grams between the generated sentence and the true reference translation sentence independently of their position. Also a sentence brevity penalty is incorporated into the score. The \ac{BLEU} score ranges between zero and one with one being a perfect match to the reference translation. \cite{Papineni2002}
+
+Using solely the \ac{BLEU} score would mean less focus on the concrete mutation prediction at critical genome positions but rather a correct overall child sequence prediction. As the child sequence is mostly similar to the parent sequence, predicting a nearly identical child sequence is not too difficult and the \ac{BLEU} score would resolves already to a high value at early stages of training. 
+
+Therefore the MutaGAN paper \cite{Berman2020} introduced several other metrics besides the \ac{BLEU} score. For instance the distribution of specific codon mutations between the ground truth data and the generated data was calculated to evaluate the similarity of both mutation profiles. Furthermore a so-called sequence true positive rate is determined by capturing all observable mutations over all generated child sequences and comparing them to the list of actual existing mutations in the ground truth data. 
+
+Besides the \ac{BLEU} score, we also utilize the sequence true positive rate to evaluate the model using Google's \textit{Diff Match and Patch} libraries to identify the mutations\footnote{For the Diff Match and Patch libraries, see \url{https://github.com/google/diff-match-patch}}. The Levenshtein distance is used as a simple metric to evaluate the degree of similarity between parent and generated child sequences. 
 
 \subsubsection{Transformer pretraining}  \label{ch:experimentsBa}
 
@@ -67,10 +77,5 @@ Figure \ref{pretrainingLossPlot} shows the loss plot for the Transformer pretrai
 \subsubsection{GAN training}  \label{ch:experimentsBb}
 
 TODO
-
-% Define what is a correct mutation prediction, see MutaGAN paper - Generator Evaluation
-% Define Evlauation metrics, see MutaGAN paper - Generator Evaluation
-% Evaluation chaper of MutaGAN very well written, will be inspiring
-% Compare our performance to those of other papers
 
 \newpage
