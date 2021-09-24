@@ -1,17 +1,16 @@
 \section{Conclusion} \label{conclusion}
 
-Coming to a conclusion, our main research question was whether a \ac{ML} model can be trained to predict the next possible \ac{SARS-CoV-2} mutations.
-The short answer to this is, that our trained \ac{ML} model is definitely able to generate possible next sequences. The pretraining of the transformer achieved a \ac{BLEU} score of 0.8559 and the training of the \ac{GAN} achieved a \ac{BLEU} score of TODO.
+Coming to a conclusion, the main research question was whether a machine learning model can be trained to predict the next possible \ac{SARS-CoV-2} mutations. The short answer to this is, that the trained model is definitely able to generate possible next genome sequences demonstrating a \ac{BLEU} score of 87.42\% and a sequence true positive rate of 31\%.
 
-Based on related works introduced in chapter \ref{fundamentals}, we decided for a \ac{ML} model architecture consisting of a transfomer based \ac{GAN} Framework. This architecture was influenced by Berman et al. \cite{Berman2020}. Our novelity is the usage of transformers instead of \ac{LSTM}. This enables faster training, because transformers can be trained in parallel. 
+Based on related works introduced in chapter \ref{fundamentals}, a model architecture consisting of a transfomer-based \ac{GAN} framework was chosen. This architecture was influenced by Berman et al. \cite{Berman2020} and builds upon its improvement proposal to incorporate transformers instead of \acp{LSTM} as a central novelty in this paper leveraging the attention mechanism and parallel processing power of the transformer architecture to achieve higher quality predictions. 
 
-For answering our research question we created a new dataset based on raw data from \ac{GISAID}. As part of this we developed a reusable pipeline for creating evolutionary datasets.
+For answering the research question a new dataset based on raw data from \ac{GISAID} was created. As part of this, a reusable pipeline for creating evolutionary datasets was created.
 
-Another novelty is the application and training of such an \ac{ML} architecture for \ac{SARS-CoV-2}.
+Another novelty is the application and training of such a machine learning architecture for \ac{SARS-CoV-2}.
 
 %TODO: Wie schneiden wir im vergleich zu den anderen arbeiten ab?
-%TODO: is it really that convincing?
+%TODO: Is it really that convincing?
 
 \vspace{0.5cm}
 
-As an outlook, there are some improvements and further investigations we would like to evaluate in future work. As realized while generating data insights of the dataset, lots of our data instances are very similar to each other. To really model the worldwide development of \ac{SARS-CoV-2} mutation events, the raw dataset should be based on a subsampling of all available global data instances. Further improvements could be achieved by using a computing cluster for generating a larger dataset and for training the model on the full \ac{SARS-CoV-2} genome and not on a subset of the genome. Moreover in the model evaluation more domain specific metrics as proposed by Berman et al. \cite{Berman2020} could be used in addition to the BLEU score.
+As an outlook, there are some improvements and further investigations we would like to evaluate in future work. As realized while generating data insights of the dataset, lots of our data instances are very similar to each other. To really model the worldwide development of \ac{SARS-CoV-2} mutation events, the raw dataset should be based on a subsampling of all available global data instances. Further improvements could be achieved by using a computing cluster for generating a larger dataset and for training the model on the full \ac{SARS-CoV-2} genome and not on a subset of the genome. Moreover, beam search instead of greedy decoding during the training phase could be further examined.
