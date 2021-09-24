@@ -5,7 +5,7 @@ num_epochs_training = 350
 batch_size = 32
 learning_rate_pretraining = 5e-3
 learning_rate_generator = 1e-4
-learning_rate_discriminator = 3e-2
+learning_rate_discriminator = 3e-5
 save_model_every = 10
 
 # Model hyperparameters
@@ -18,5 +18,5 @@ dim_feed_forward = 64
 
 # Models
 pretraining_model = "23_09_2021_23_01_50.pth.tar"
-training_model = "24_09_2021_18_18_350.pth.tar"
-evaluation_model = "23_09_2021_23_01_50.pth.tar"
+training_model = "24_09_2021_20_48_350.pth.tar"
+evaluation_model = "24_09_2021_20_48_350.pth.tar"

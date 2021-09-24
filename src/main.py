@@ -7,5 +7,5 @@ if __name__ == "__main__":
     # run_create_dataset(run_from_scratch=False)
     # run_transformer_pretraining(model_training_from_scratch=True)
     # run_gan_training(model_training_from_scratch=True)
-    evaluate(pretraining=True)
+    evaluate(pretraining=False)
 

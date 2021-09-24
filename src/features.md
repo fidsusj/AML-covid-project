@@ -22,27 +22,19 @@ Training:
 ## Work to do - Report
 
 General:
-- Read the report from top to bottom
-- Check comments in LaTeX and harmonize
-- Shorten
-- Update contributions with the chapters written
-- Don't write "we"
-- Smartphone picture: either replace or explain in footnote why this happened
-- Delete "own representation"
+- Shorten, e.g. related work, figures into appendix?
+- Delete "own representation"?
 - Harmonize bibliography
-- Grammarly
-- "MutaGAN paper" or just [6]?
-- genome or strang
-- sequennce or genome
 
 Related Work:
 - Other techniques section?
 
-Evaluation:
-- Mode collapse reason: dataset, wrong loss function, not trained enough, LR schedule, ...?
-
-Conclusion:
-- State open features as future improvements
+Nils:
+- Example record: genome sequence and metadata
+- Better phylogenetic tree image + explanation (maybe explain in footnote why this happened)
+- Read over Felix's chapters regarding domain specific terminology
+- Why not prefilter completely equal parent-child genome pairs?
+- Compile references
 
 Handover:
 - Picture of project structure showing the git ignored folders
@@ -51,9 +43,3 @@ Handover:
 - Delete legacy and template code
 - Code comments
 - Upload code to Mampf?
-
-## Notes
-
-MutaGAN:
-- Pretraining: 72 epochs, but converged far before that
-- Training: 350 epochs
