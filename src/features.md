@@ -51,6 +51,7 @@ Evaluation:
 - Mode collapse reason: dataset, wrong loss function, not trained enough, LR schedule, ...?
 - The generated sequences are very close, but not identical to the parent sequences, indicating that the model is augmenting its input to account for the learned model of protein evolution.
 - The BLEU score for MutaGAN model is 97.46%, which indicates a high level of precision in sequence generation
+- We can fill gaps of UNK tokens
 
 Conclusion:
 - State open features as future improvements
