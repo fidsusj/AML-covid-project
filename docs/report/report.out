@@ -29,6 +29,5 @@
 \BOOKMARK [3][]{subsubsection.83}{4.1.2 Preprocessed dataset}{subsection.79}% 29
 \BOOKMARK [2][]{subsection.86}{4.2 Evaluation}{section.78}% 30
 \BOOKMARK [3][]{subsubsection.87}{4.2.1 Evaluation criteria}{subsection.86}% 31
-\BOOKMARK [3][]{subsubsection.90}{4.2.2 Transformer pretraining}{subsection.86}% 32
-\BOOKMARK [3][]{subsubsection.92}{4.2.3 GAN training}{subsection.86}% 33
-\BOOKMARK [1][]{section.93}{5 Conclusion}{}% 34
+\BOOKMARK [3][]{subsubsection.90}{4.2.2 Training phase and evaluation}{subsection.86}% 32
+\BOOKMARK [1][]{section.93}{5 Conclusion}{}% 33

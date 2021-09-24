@@ -58,24 +58,31 @@ A common metric used in the domain of \ac{NMT} is the so-called \ac{BLEU} score 
 
 Using solely the \ac{BLEU} score would mean less focus on the concrete mutation prediction at critical genome positions but rather a correct overall child sequence prediction. As the child sequence is mostly similar to the parent sequence, predicting a nearly identical child sequence is not too difficult and the \ac{BLEU} score would resolves already to a high value at early stages of training. 
 
-Therefore the MutaGAN paper \cite{Berman2020} introduced several other metrics besides the \ac{BLEU} score. For instance the distribution of specific codon mutations between the ground truth data and the generated data was calculated to evaluate the similarity of both mutation profiles. Furthermore a so-called sequence true positive rate is determined by capturing all observable mutations over all generated child sequences and comparing them to the list of actual existing mutations in the ground truth data. 
+Therefore the MutaGAN paper \cite{Berman2020} introduced several other metrics besides the \ac{BLEU} score. For instance the distribution of specific codon mutations between the ground truth data and the generated data was calculated to evaluate the similarity of both mutation profiles. Furthermore a so-called sequence true positive rate is determined by capturing all observable predicted mutations for each parent sequence and comparing them to the list of actual existing mutations for each parent sequence in the ground truth data. 
 
-Besides the \ac{BLEU} score, we also utilize the sequence true positive rate to evaluate the model using Google's \textit{Diff Match and Patch} libraries to identify the mutations\footnote{For the Diff Match and Patch libraries, see \url{https://github.com/google/diff-match-patch}}. The Levenshtein distance is used as a simple metric to evaluate the degree of similarity between parent and generated child sequences. 
+Besides the \ac{BLEU} score, we also utilize the sequence true positive rate to evaluate the model using Google's \textit{Diff Match and Patch} libraries to identify the mutations\footnote{For the Diff Match and Patch libraries, see \url{https://github.com/google/diff-match-patch}}. The Levenshtein distance to determine the degree of similarity between a parent and generated child sequence is not used as at most two mutations appear for a given parent genome during the evaluation phase making the Levenshtein distance neglectible. 
 
-\subsubsection{Transformer pretraining}  \label{ch:experimentsBa}
+\subsubsection{Training phase and evaluation}  \label{ch:experimentsBa}
 
-Figure \ref{pretrainingLossPlot} shows the loss plot for the Transformer pretraining. The model converges rather fast. The first meaningful results are already reached after 2 epochs. The reached BLEU score is 0.8559. From this point of view the results look very promising. That is why the details of these results are investigated. When comparing all predictions with the true values it is noticeable, that the model prediction is always the same for all 460 test instances. This could be explained by the fact, that the predicted sequence is correct in 318 of 460 cases. Therefore it can be assumed, that the model works, but the used dataset is not optimal.
+Figure \ref{pretrainingLossPlot} shows the loss plot for the transformer pretraining. The model converges rather fast. Similar is the actual \ac{GAN} training (see \ref{trainingLossPlot}). 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figures/pretrainingLossPlot.png}
-	\caption{Transformer pretraining loss plot}
-	\label{pretrainingLossPlot}
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figures/pretrainingLossPlot.png}
+		\caption{Transformer pretraining loss plot}
+		\label{pretrainingLossPlot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figures/pretrainingLossPlot.png}
+		\caption{Transformer training loss plot}
+		\label{trainingLossPlot}
+	\end{subfigure}
 \end{figure}
 
-
-\subsubsection{GAN training}  \label{ch:experimentsBb}
-
-TODO
-
+Whereas the trained model achieves a relatively high \ac{BLEU} score with 86.56\%, the sequence true positive rate only amounts to around 29\%. Thus one concludes that the model generates reasonable and close genomes from given parent sequences, but at first glance develops only partly the capability to predict the actual and correct mutations given in the ground truth data. When further analyzing the rather low sequence true positive rate, one recognizes that a lot of false predictions where made that can be traced back to cases where the parent sequence consists of a series of \textit{<UNK>} tokens that are replaced by actual codons. As these kinds of mutations are not present in the ground truth data, whose matching child pairs still contain the \textit{<UNK>} series, one can think of an additional capability of the trained transformer model as a gap filler of unknown sequence parts of parent genomes, that is even beneficial. Other mutations where captured really well, e.g. from codon \textit{TTG} to \textit{CTG} at strang location 45 or from codon \textit{G} to \textit{A} at strang location x. During evaluation at most two mutations on the same parent in one prediction appeared, matching to the actual ground truth. Some mutations in the ground truth data were also missed, especially in case they were not too frequent. During evaluation only 25 unique parent sequences were considered in the test dataset further reducing a diverse prediction capability of the model. But as data selection and preprocessing is very time and especially resource extensive\footnote{Phylogenetic tree reconstruction might take several days until completion.}, the scope of the project and its data used is intenionally kept minimal to provide a proof of concept. In this sense, on can conclude that the model first not only generates reasonable genome strang offsprings, but also embodies noticable codon mutations of the ground truth data. When up-scaling the amount of genome sequences to use and doing more strict filtering of genome sequences to increase the data quality, predicting virus mutations using transformers is very well feasible. As a comparison MutaGAN achieves a \ac{BLEU} score of 97.46\% and an unweighted sequence true positive rate of just 21\% \cite{Berman2020}. 
+ 
 \newpage
