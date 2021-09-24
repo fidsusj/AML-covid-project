@@ -110,7 +110,7 @@ def evaluate(pretraining):
         print("Parent sequence: {}".format(parents[i]))
         print("Expected sequence: {}".format(targets[i][0]))
         print("Model generated: {}".format(output))
-        if targets[i][0] == parents[i]:
+        if output == parents[i]:
             prediction_equal += prediction_equal
 
         diff_true_child = dmp.diff_main(" ".join(parents[i]), " ".join(targets[i][0]))
