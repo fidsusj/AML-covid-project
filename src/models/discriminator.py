@@ -15,10 +15,12 @@ class TransformerEncoder(nn.Module):
         # We decided for the first choice (aligned with the MutaGAN paper)
 
         # Embeddings from input
-        self.linear = nn.Linear(trg_vocab_size, embedding_size)
-        # self.linear.load_state_dict(word_embedding_weights)  # Does not work yet
+        self.linear = nn.Linear(trg_vocab_size, embedding_size, bias=False)
+        word_embedding_weights["weight"] = word_embedding_weights["weight"].t()
+        self.linear.load_state_dict(word_embedding_weights)
 
         self.embedding = nn.Embedding(trg_vocab_size, embedding_size)
+        word_embedding_weights["weight"] = word_embedding_weights["weight"].t()
         self.embedding.load_state_dict(word_embedding_weights)
 
         self.position_embedding = nn.Embedding(max_sequence_length, embedding_size)

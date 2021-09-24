@@ -27,50 +27,51 @@ def evaluate(pretraining):
     print("Initialize model...")
     model = Transformer(embedding_size, dim_feed_forward, num_heads, num_encoder_layers, num_decoder_layers, dropout,
                         src_vocab_size, trg_vocab_size, src_pad_idx, max_len, device).to(device)
-    path = "pretraining" if pretraining else "training"
+    path = "pretraining" if pretraining else "training/generator"
     checkpoint = torch.load(f"training/checkpoints/{path}/{evaluation_model}")
     model.load_state_dict(checkpoint["state_dict"])
+    parents = []
     targets = []
     outputs = []
 
     # Evaluation loop
     print("Starting evaluation...")
     model.eval()  # Set model to evaluation mode (e.g. deactivate dropout)
-    parents = []
     for instance_number, instance in enumerate(data_loader):
         print(f"[Instance {instance_number+1} / {len(test_dataset)}]")
 
         parent_sequence = instance[0].to(device)
         child_sequence = instance[1].to(device)
-        parents.append(parent_sequence)
 
         predicted_sequence = torch.LongTensor([test_dataset.child_vocab.stoi["<SOS>"]]).unsqueeze(1).to(device)
-        for i in range(child_sequence.shape[1]):  # Loop over each word in the sequence, sequences are always of the same length!
+        for i in range(child_sequence.shape[1] - 1):  # Loop over each word in the sequence, sequences are always of the same length!
             with torch.no_grad():
                 codon = model(parent_sequence, predicted_sequence)
 
             best_guess = codon.argmax(2)[:, -1].item()
             predicted_sequence = torch.cat((predicted_sequence, torch.LongTensor([best_guess]).unsqueeze(1).to(device)), dim=1)
 
-        predicted_sequence = [test_dataset.child_vocab.itos[idx] for idx in predicted_sequence.flatten().tolist()]
-        predicted_sequence = predicted_sequence[1:-1]  # Remove <SOS> and <EOS> token
+        parent_sequence = [test_dataset.parent_vocab.itos[idx] for idx in parent_sequence.flatten().tolist()]
+        parent_sequence = parent_sequence[1:-1]  # Remove <SOS> and <EOS> token
 
         child_sequence = [test_dataset.child_vocab.itos[idx] for idx in child_sequence.flatten().tolist()]
         child_sequence = child_sequence[1:-1]  # Remove <SOS> and <EOS> token
 
+        predicted_sequence = [test_dataset.child_vocab.itos[idx] for idx in predicted_sequence.flatten().tolist()]
+        predicted_sequence = predicted_sequence[1:-1]  # Remove <SOS> and <EOS> token
+
+        parents.append(parent_sequence)
         targets.append([child_sequence])
         outputs.append(predicted_sequence)
 
     prediction_equal = 0
     for i, output in enumerate(outputs):
-        output = [test_dataset.child_vocab.stoi[idx] for idx in output]
-        print("Parent sequence: {}".format(parents[i].tolist()[0]))
-        print("model generated: {}".format(output))
-        print("expected sequen: {}".format([test_dataset.child_vocab.stoi[idx] for idx in targets[i][0]]))
-        if output == parents[i].tolist()[0]:
+        print("Parent sequence: {}".format(parents[i]))
+        print("Expected sequence: {}".format(targets[i][0]))
+        print("Model generated: {}".format(output))
+        if output == parents[i]:
             prediction_equal += prediction_equal
     print("Prediction equal to parent in {} cases".format(prediction_equal))
 
     score = bleu_score(outputs, targets)
     print(f"Bleu score {score * 100:.2f}")
-    print(score)

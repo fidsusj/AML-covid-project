@@ -22,8 +22,6 @@ Training:
 ## Work to do - Coding
 
 Training: 
-- Linear layer should use the same weight as the embedding layer of the generator
-- Reverse sequences
 - Increase patience for LR schedule
 - GAN training
 
@@ -62,6 +60,7 @@ Handover:
 - Upload the models
 - Add [PyTorch Tutorial](https://github.com/aladdinpersson/Machine-Learning-Collection) to references
 - Delete legacy and template code
+- Code comments
 - Upload code to Mampf?
 
 ## Notes
