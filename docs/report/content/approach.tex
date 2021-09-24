@@ -11,14 +11,13 @@ Figure \ref{pipeline} visualizes the steps of our approach, which are described 
 \end{figure}
 
 
-\subsection{Dataset Creation}  \label{ch:approachA}
+\subsection{Dataset Creation} \label{approachA}
 % Levenshtein distance
 % Biopython packages?
 
 As described in chapter \ref{fundamentalsC} a dataset consisting of parent-child pairs is needed to learn a \ac{ML} model for mutation prediction. The steps to create this dataset are described in the following chapters.
 
-\subsubsection{Raw data selection from \ac{GISAID}}
-\label{ch:approachAa}
+\subsubsection{Raw Data Selection from \ac{GISAID}} \label{approachAa}
 
 In the first step of the dataset creation the raw genomes and their metadata are downloaded from \ac{GISAID}. Therefore a selection of a suitable subpart of the data is necessary. The \ac{GISAID} platform only allows the download of 5000 genomes at once. That is why we decided to focus our analysis on Germany (for one country the selection of < 5000 genomes is rather simple compared to the selection of data from multiple countries). By looking at the latest "Report on virus variants of SARS-CoV-2 in Germany" from the \ac{RKI} we decided for a time period. Figure \ref{rkiVariantDistribution} shows the distribution of different variants over time. Starting from calendar week 18 the Delta variant gradually displaces the previously widespread Alpha variant.
 
@@ -35,8 +34,7 @@ Each genome consists of a FASTA file containing the genomes sequence and a recor
 %TODO: beispiel record: genome sequence and metadata
 
 
-\subsubsection{Generation of a phylogenetic tree}
-\label{ch:approachAb}
+\subsubsection{Generation of a Phylogenetic Tree} \label{approachAb}
 
 As described above we need parent-child genome sequence pairs to be able to train a \ac{ML} model. Therefore we need to evaluate the ancestral relationships between the genome sequences.
 As described in chapter \ref{fundamentalsA0d} this is done in biology through phylogenetic trees.
@@ -55,8 +53,7 @@ The generated phylogenetic tree can be seen in figure \ref{phylogeneticTree}.
 	\label{phylogeneticTree}
 \end{figure}
 
-\subsubsection{Phylogenetic tree to dataset}
-\label{ch:approachAc}
+\subsubsection{Phylogenetic Tree to Dataset} \label{approachAc}
 
 Based on the calculated phylogenetic tree the final dataset is generated. Therefore the patristic distances between all leaf nodes are calculated. From the resulting patristic distance matrix for each leaf node the most related next leaf node can be evaluated. The two leaf nodes with the smallest distance are the closest relatives to each other and therefore represent a parent-child pair. After the evaluation which leaf nodes are one parent-child pair, the question which node is the parent and which node is the child is clarified. Therefore the two nodes are sorted by their date, which is stored in the metadata file. The older genome sequence is the parent and the younger genome sequence is the child.
 
@@ -64,17 +61,15 @@ For calculating the patristic distance matrix we first used Dendropy (version: 4
 
 Finally we received a dataset containing parent-child genome sequences.
 
-\subsection{Data Preprocessing}  \label{ch:approachB}
+\subsection{Data Preprocessing} \label{approachB}
 % TODO: Pipeline image
 % Word size 3 is just a hyperparameter (see discussion of the corresponding paper)!  But maybe biologically valid because auf amino acids.
 
-\subsubsection{Dimensionality reduction by selecting subpart of the genome}
-\label{ch:approachBa}
+\subsubsection{Dimensionality Reduction by selecting Subpart of the Genome} \label{approachBa}
 
 The full \ac{SARS-CoV-2} genome consists of 29.904 nucleotides. Due to the limited computing capacity on our local computers we need to reduce the dimensionality of the dataset. This is done by selecting a subpart based on the gained data insights from chapter \ref{ch:experimentsA}. In figure \ref{mutatedGeneticLoci} parts of the genome with lots of mutations are visible. Based upon this we selected 99 nucleotides (33 codons) in the range between position 21.800 and 21.899.
 
-\subsubsection{Transform genome sequence to numeric model input}
-\label{ch:approachBb}
+\subsubsection{Transformation of Genome Sequence to Numeric Model Input} \label{approachBb}
 
 Input to the model are numericalized codon sequences with each codon being composed of three nucleotides. Therefore one needs to build a vocabulary with all codons existing in the dataset that assigns each codon a unique number. Each genome string is therefore tokenized to codons and so far unseen codons are added to the vocabulary. The vocabulary also contains special tokens like:
 
@@ -89,7 +84,7 @@ A codon is encoded as unknown in case at least one nulceotide is unknown or at l
 
 To integrate the dataset into the training routine, PyTorchs \textit{DataLoader} is used (see \autoref{ch:approachD}). Therefore a \textit{CustomGISAIDDataset} class is derived from PyTorchs Dataset class that can be utilized by the \textit{DataLoader}. It can be configured to return the training or test dataset instances. Each instance is already numericalized by vocabulary index lookups for each codon, padded with the numericalized \textit{<SOS>} and \textit{<EOS>} token and transformed to a PyTorch tensor. 
 
-\subsection{Model Architecture}  \label{ch:approachC}
+\subsection{Model Architecture} \label{approachC}
 
 The connection of modeling evolution theory of virus mutations to probabilistic language modeling has already been explained in \autoref{fundamentalsA}. To create such a probabilistic language model an approach closely related to the one introduced by the MutaGAN paper \cite{Berman2020} as explained in \autoref{fundamentalsF} is chosen with the novelty that attention-based transformers are used instead of \acp{LSTM}\footnote{This improvement was also named in the conclusion of the MutaGAN paper \cite{Berman2020}.}. To implement the \ac{GAN} framework, PyTorch version 1.9.0 is used as it provides full-featured classes for transformers, embedding layers and other architectural components needed compared to other frameworks like Keras. This way one can specialize on the training routine instead of implementing a custom transformer architecture, which might be too error-prone\footnote{In case one is interested in how to implement a custom transformer architecture, see \url{http://nlp.seas.harvard.edu/2018/04/03/attention.html}.}. 
 
@@ -97,7 +92,7 @@ The architecture of the generator was shown in \autoref{transformer}. The numeri
 
 The architecture of the discriminator is kept similar to \autoref{mutagan} using PyTorch's \textit{TransformerEncoders} instead of \acp{LSTM}. Again one transforms the numericalized parent and either true or generated child sequence to embeddings of size 32 of each codon and adds the positional embeddings before applying dropout. Instead of using an embedding layer for the true or generated child sequence one uses a dense layer instead in order to directly feed in the probability distribution of generated child sequences. The true child sequence therefore needs to be one-hot encoded before being provided to the discriminator in order to match the shape. The transformer encoder then produces an encoding of dimensionality 64 for each codon. During the training phase dropout is once again used with a rate of 10\%. Note that until this step the same weights are used as in the generator. In the following step the two hidden representations of the parent and true or generated child sequence are concatenated along the embedding dimension. The subsequent feed-forward network uses three blocks of dropout, batch normalization and a linear layer with \ac{ReLU} activation. The \ac{ReLU} layer in the last block is replaced with a sigmoid layer that makes sure each codon receives a score between zero and one that states how likely its a true or generated codon. Once again padding tokens are masked away during the training phase.
 
-\subsection{Training Process} \label{ch:approachD}
+\subsection{Training Process} \label{approachD}
 
 The training phase is two-fold and is performed on a single GeForce GTX 1080 \ac{GPU}. First a pre-training phase for the generator needs to be performed in order to produce first reasonable child sequences. Also the weights of the embedding layers and the encoder part of the generator will be reused for the discriminator in the second training phase. For the pre-training phase the cross-entropy loss function typical for language modeling is used, the learning rate is set to 0.005. Teacher forcing is used in the initial pre-training phase to accelerate the training process by leading the generator into a right direction towards reasonable child sequences. In the main training phase the generator and discriminator compete against each other. When training the discriminator, the generator first generates a child sequence given a parent sequence. The true and generated child sequence is then given to the discriminator. Here the binary cross entropy loss is used to model the two parts of the classical \ac{GAN} loss function: 
 

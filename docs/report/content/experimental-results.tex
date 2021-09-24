@@ -1,10 +1,10 @@
-\section{Experimental results} \label{experiments}
+\section{Experimental Results} \label{experiments}
 
-\subsection{Dataset insights}  \label{ch:experimentsA}
+\subsection{Dataset Insights} \label{experimentsA}
 
 This chapter presents the dataset insights of the complete dataset with full genome sequences and the dataset insights of the preprocessed dataset.
 
-\subsubsection{Complete dataset}  \label{ch:experimentsAa}
+\subsubsection{Complete Dataset} \label{experimentsAa}
 
 \begin{wrapfigure}{R}{8cm}
 	\centering
@@ -27,7 +27,7 @@ Figure \ref{mutatedGeneticLoci} visualizes the distribution of mutations over th
 \end{figure}
 
 \newpage
-\subsubsection{Preprocessed dataset}  \label{ch:experimentsAb}
+\subsubsection{Preprocessed Dataset} \label{experimentsAb}
 
 The complete dataset is preprocessed as described in chapter \ref{ch:approachB}. The distribution how the parent and child amino acids differ in the selected subpart can be seen in figure \ref{preprocessedDistributionDifferencesParentChild}. The majority (6946) of parent-child pairs are equal. This is not optimal for training the \ac{ML} model and is further discussed in chapter \ref{ch:experimentsB}. 
 
@@ -48,9 +48,9 @@ Figure \ref{preprocessedMutatedGeneticLoci} visualizes the differing amino acids
 \end{figure}
 
 \newpage
-\subsection{Evaluation}  \label{ch:experimentsB}
+\subsection{Evaluation} \label{experimentsB}
 
-\subsubsection{Evaluation criteria}
+\subsubsection{Evaluation Criteria} \label{experimentsBa}
 
 To measure the success of the transformer model different evaluation criteria need to be introduced that capture how well the mutations observed in the data can be reproduced by the generator. A mutation prediction is considered correct in case the prediction matches in codons and locations. Further to distinguish are partially correct mutation predictions in case mutations are observed at the right locations but in different codons. Mutation predictions can further be considered as wrong in case they were not observed in the true child sequences or missed in case they could not be observed in the generated sequences. 
 
@@ -62,7 +62,7 @@ Therefore the MutaGAN paper \cite{Berman2020} introduced several other metrics b
 
 Besides the \ac{BLEU} score, we also utilize the sequence true positive rate to evaluate the model using Google's \textit{Diff Match and Patch} libraries to identify the mutations\footnote{For the Diff Match and Patch libraries, see \url{https://github.com/google/diff-match-patch}}. The Levenshtein distance to determine the degree of similarity between a parent and generated child sequence is not used as at most two mutations appear for a given parent genome during the evaluation phase making the Levenshtein distance neglectible. 
 
-\subsubsection{Training phase and evaluation}  \label{ch:experimentsBa}
+\subsubsection{Training Phase and Evaluation} \label{ch:experimentsBb}
 
 Figure \ref{pretrainingLossPlot} shows the loss plot for the transformer pretraining. The model converges rather fast. Similar is the actual \ac{GAN} training (see \ref{trainingLossPlot}). 
 

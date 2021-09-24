@@ -1,18 +1,18 @@
-\section{Introduction}  \label{introduction}
+\section{Introduction} \label{introduction}
 
-% Motivation: See MutaGAN paper
+During the genome replication, random mutations can appear. As a con\-se\-quence the encoded protein sequence could be changed, which can lead to different behavior. If this change increases fitness, it is probably passed on to the next generation. \cite{Berman2020}
 
-During the genome replication random mutations can appear. As a con\-se\-quence the encoded protein sequence could be changed, which can lead to different behavior. If this change increases the fitness, it is probably passed on to the next generation. \cite{Berman2020}
+A currently well-known example of a mutating virus is \ac{SARS-CoV-2}. Due to the developed vaccines, the hope for an end of the pandemic arises. Nevertheless, this is only true, if the vaccines, which are developed against the wild type of \ac{SARS-CoV-2}, also remain effective against new mutations. To enable fast responses to new arising mutations it would be helpful to know the possible next mutations in advance. This can influence the treatment and prevention of diseases, by enabling the development of countermeasures and preventive measures in advance. \cite{Berman2020}
 
-A currently well known example for a mutating virus is \ac{SARS-CoV-2}. Due to the developed vaccines the hope for an end of the pandemic arises. Nevertheless this is only true, if the vaccines, which are developed against the wild type of \ac{SARS-CoV-2}, also remain effective against new mutations. To enable fast responses to new arising mutations it would be helpful to know the possible next mutations in advance. This can influence the treatment and prevention of diseases, by enabling the development of countermeasures and preventive measures in advance. \cite{Berman2020}
+Machine Learning, especially Deep Learning enabled improvements in lots of different domains. This work applies Deep Learning to the area of virus genome mutation prediction. Due to the fact, that genome sequences can be represented as text data using the FASTA format, methods from the \ac{NLP} area can be applied. The success of Deep Learning for \ac{NLP} tasks has already been shown in various areas such as text generation, text sum\-ma\-riza\-t\-ion or translation. \cite{Berman2020}
 
-\ac{ML}, especially Deep Learning enabled improvements in lots of different domains. This work applies Deep Learning to the area of virus genome mutation prediction. Due to the fact, that genome sequences could be treated as text data, methods from the \ac{NLP} area can be applied. The success of Deep Learning for \ac{NLP} tasks has already been shown in various areas such as text generation, text sum\-ma\-riza\-t\-ion or translation. \cite{Berman2020}
+The central research question in this paper is whether a machine learning model can be trained to predict the next possible \ac{SARS-CoV-2} mutations. In this paper, we propose three novelties:
 
-Our research question is whether a \ac{ML} model can be trained to predict the next possible \ac{SARS-CoV-2} mutations. In this paper, we propose three novelties:
 \begin{itemize}
-	\item \textbf{Model architecture}: A new \ac{GAN} based architecture influenced by \cite{Berman2020}. Our novelty is the usage of trans\-for\-mers instead of \ac{LSTM} in the seq2seq model.
-	\item \textbf{Dataset}: Generation of a dataset for \ac{SARS-CoV-2}, consisting of 9199 parent-child data instances. %This is larger then the datasets from \cite{Berman2020} (17.218 parent child instances), \cite{Mohamed2021} (first dataset: 83 parent child instances, second dataset: 4609 parent child instances) and \cite{Salama2016} (22 instances).
-	\item \textbf{Application domain}: The training of the network for \ac{SARS-CoV-2}.
+	\item \textbf{Model architecture}: A new \ac{GAN} based architecture influenced by \cite{Berman2020}. Central novelty is the usage of trans\-for\-mers instead of an \ac{LSTM} in the \ac{Seq2Seq} model.
+	\item \textbf{Dataset}: Generation of a dataset for \ac{SARS-CoV-2}, consisting of 9199 parent-child data instances. 
+	%This is larger then the datasets from \cite{Berman2020} (17.218 parent child instances), \cite{Mohamed2021} (first dataset: 83 parent child instances, second dataset: 4609 parent child instances) and \cite{Salama2016} (22 instances).
+	\item \textbf{Application domain}: The adaption of the model to \ac{SARS-CoV-2}.
 \end{itemize}
 
 \newpage

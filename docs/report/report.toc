@@ -7,62 +7,62 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Fundamentals and Related Work}{2}{section.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Basics from molecular biology}{2}{subsection.16}%
+\contentsline {subsection}{\numberline {2.1}Basics from Molecular Biology}{2}{subsection.16}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.1}Genome sequences}{2}{subsubsection.17}%
+\contentsline {subsubsection}{\numberline {2.1.1}Genome Sequences}{2}{subsubsection.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.2}Protein biosynthesis}{2}{subsubsection.20}%
+\contentsline {subsubsection}{\numberline {2.1.2}Protein Biosynthesis}{2}{subsubsection.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.3}Structure of \ac {SARS-CoV-2}}{3}{subsubsection.27}%
+\contentsline {subsubsection}{\numberline {2.1.3}Structure of \ac {SARS-CoV-2}}{4}{subsubsection.27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.1.4}Relationships between biological objects}{5}{subsubsection.32}%
+\contentsline {subsubsection}{\numberline {2.1.4}Relationships between Biological Objects}{5}{subsubsection.32}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}From Probabilistic Language Models to modeling Evolution Theory}{6}{subsection.34}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}GISAID EpiFlu Data Platform}{8}{subsection.43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evo\-lu\-tio\-na\-ry Datasets for Mutation Prediction}{9}{subsection.45}%
+\contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evo\-lu\-tio\-na\-ry Datasets for Mutation Prediction}{8}{subsection.45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Previous Work on Mutation Prediction}{10}{subsection.46}%
+\contentsline {subsection}{\numberline {2.5}Previous Work on Mutation Prediction}{10}{subsection.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}Sequence to Sequence Models based on Long Short-Term Memory}{11}{subsection.47}%
+\contentsline {subsection}{\numberline {2.6}Sequence-to-Sequence Models based on Long Short-Term Memory}{10}{subsection.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7}Applying Generative Adversarial Networks}{12}{subsection.52}%
+\contentsline {subsection}{\numberline {2.7}Applying Generative Adversarial Networks}{12}{subsection.54}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Transformer and Attention Mechanism}{14}{subsection.54}%
+\contentsline {subsection}{\numberline {2.8}Transformer and Attention Mechanism}{14}{subsection.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Approach}{18}{section.60}%
+\contentsline {section}{\numberline {3}Approach}{18}{section.62}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Dataset Creation}{18}{subsection.62}%
+\contentsline {subsection}{\numberline {3.1}Dataset Creation}{18}{subsection.64}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Raw data selection from \ac {GISAID}}{18}{subsubsection.63}%
+\contentsline {subsubsection}{\numberline {3.1.1}Raw Data Selection from \ac {GISAID}}{18}{subsubsection.65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Generation of a phylogenetic tree}{18}{subsubsection.66}%
+\contentsline {subsubsection}{\numberline {3.1.2}Generation of a Phylogenetic Tree}{18}{subsubsection.68}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}Phylogenetic tree to dataset}{19}{subsubsection.68}%
+\contentsline {subsubsection}{\numberline {3.1.3}Phylogenetic Tree to Dataset}{19}{subsubsection.70}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{20}{subsection.69}%
+\contentsline {subsection}{\numberline {3.2}Data Preprocessing}{20}{subsection.71}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}Dimensionality reduction by selecting subpart of the genome}{20}{subsubsection.70}%
+\contentsline {subsubsection}{\numberline {3.2.1}Dimensionality Reduction by selecting Subpart of the Genome}{20}{subsubsection.72}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}Transform genome sequence to numeric model input}{20}{subsubsection.71}%
+\contentsline {subsubsection}{\numberline {3.2.2}Transformation of Genome Sequence to Numeric Model Input}{20}{subsubsection.73}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Model Architecture}{21}{subsection.72}%
+\contentsline {subsection}{\numberline {3.3}Model Architecture}{21}{subsection.74}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Training Process}{22}{subsection.75}%
+\contentsline {subsection}{\numberline {3.4}Training Process}{22}{subsection.77}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Experimental results}{25}{section.78}%
+\contentsline {section}{\numberline {4}Experimental Results}{25}{section.80}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Dataset insights}{25}{subsection.79}%
+\contentsline {subsection}{\numberline {4.1}Dataset Insights}{25}{subsection.81}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Complete dataset}{25}{subsubsection.80}%
+\contentsline {subsubsection}{\numberline {4.1.1}Complete Dataset}{25}{subsubsection.82}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed dataset}{26}{subsubsection.83}%
+\contentsline {subsubsection}{\numberline {4.1.2}Preprocessed Dataset}{26}{subsubsection.85}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Evaluation}{27}{subsection.86}%
+\contentsline {subsection}{\numberline {4.2}Evaluation}{27}{subsection.88}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Evaluation criteria}{27}{subsubsection.87}%
+\contentsline {subsubsection}{\numberline {4.2.1}Evaluation Criteria}{27}{subsubsection.89}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Training phase and evaluation}{28}{subsubsection.90}%
+\contentsline {subsubsection}{\numberline {4.2.2}Training Phase and Evaluation}{28}{subsubsection.91}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Conclusion}{30}{section.93}%
+\contentsline {section}{\numberline {5}Conclusion}{30}{section.94}%
