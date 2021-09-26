@@ -59,7 +59,7 @@ Open tensorboard with:
 Due to the regulations of the GISAID platform the raw datasources and the dataset are not part of this repository. 
 The structure of the data folder, where the raw data can be inserted can be seen in the following image.
 
-![data folder]("./data_folder_structure.png")
+![data folder](/data_folder_structure.png)
 
 
 
