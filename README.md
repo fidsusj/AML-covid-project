@@ -50,18 +50,24 @@ Run isort from project root:
 
 Open tensorboard with:
 
-        tensorboard --logdir .\src\training\tensorboard\pretraining\
-        tensorboard --logdir .\src\training\tensorboard\training\discriminator\
-        tensorboard --logdir .\src\training\tensorboard\training\generator\
+        tensorboard --logdir ./src/training/tensorboard/pretraining/
+        tensorboard --logdir ./src/training/tensorboard/training/discriminator/
+        tensorboard --logdir ./src/training/tensorboard/training/generator/
 
-## Data sources
+## Structure of git ignored folders
+
+### Data sources
 
 Due to the regulations of the GISAID platform the raw datasources and the dataset are not part of this repository. 
 The structure of the data folder, where the raw data can be inserted can be seen in the following image.
 
 ![data folder](/data_folder_structure.png)
 
+### Dataset generation and ncov repository
 
+As part of the dataset generation [ncov](https://github.com/nextstrain/ncov/) is used for preprocessing. The repo is automatically cloned for usage and deleted after usage. For documentation purposes the structure of the repo with input and output files can be seen in the following image.
+
+![ncov folder](/ncov_structure.png)
 
 ## Project details
 

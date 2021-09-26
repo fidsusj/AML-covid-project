@@ -22,8 +22,6 @@ Training:
 ## Work to do - Report
 
 General:
-- Shorten, e.g. related work, figures into appendix?
-- Delete "own representation"?
 - Harmonize bibliography
 
 Related Work:
@@ -31,10 +29,8 @@ Related Work:
 
 Nils:
 - Example record: genome sequence and metadata
-- Better phylogenetic tree image + explanation (maybe explain in footnote why this happened)
 - Read over Felix's chapters regarding domain specific terminology
 - Why not prefilter completely equal parent-child genome pairs?
-- Compile references
 
 Handover:
 - Upload the models
