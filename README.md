@@ -54,6 +54,15 @@ Open tensorboard with:
         tensorboard --logdir .\src\training\tensorboard\training\discriminator\
         tensorboard --logdir .\src\training\tensorboard\training\generator\
 
+## Data sources
+
+Due to the regulations of the GISAID platform the raw datasources and the dataset are not part of this repository. 
+The structure of the data folder, where the raw data can be inserted can be seen in the following image.
+
+![data folder]("./data_folder_structure.png")
+
+
+
 ## Project details
 
 For details about the project (e.g. used dataset, choosen Machine Learning approach, results) see the [report](https://github.com/nilskre/AML-covid-project/blob/main/docs/report/report.pdf).

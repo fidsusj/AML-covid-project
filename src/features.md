@@ -37,7 +37,6 @@ Nils:
 - Compile references
 
 Handover:
-- Picture of project structure showing the git ignored folders
 - Upload the models
 - Add [PyTorch Tutorial](https://github.com/aladdinpersson/Machine-Learning-Collection) to references
 - Delete legacy and template code
