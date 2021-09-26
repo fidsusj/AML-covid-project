@@ -1,5 +1,4 @@
 """ Helper function for getting path to project root """
-
 from pathlib import Path
 
 

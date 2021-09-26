@@ -135,9 +135,6 @@ dmypy.json
 src/data/*
 src/training/tensorboard/*
 src/training/checkpoints/*
-src/template/runs/*
-src/template/data/*
-src/template/my_checkpoint.pth.tar
 
 # external ncov repo
 src/create_dataset/ncov/*

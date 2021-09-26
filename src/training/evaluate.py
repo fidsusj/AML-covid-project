@@ -1,7 +1,7 @@
 """ Module for model evaluation """
+import diff_match_patch as dmp_module
 import torch
 import torch.utils.data
-import diff_match_patch as dmp_module
 from torchtext.data.metrics import bleu_score
 
 from models.generator import Transformer
