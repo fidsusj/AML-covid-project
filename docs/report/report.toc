@@ -21,7 +21,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}GISAID EpiFlu Data Platform}{8}{subsection.43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evo\-lu\-tio\-na\-ry Datasets for Mutation Prediction}{8}{subsection.45}%
+\contentsline {subsection}{\numberline {2.4}Domain-Specific Methodologies to create Evo\-lu\-tio\-na\-ry Datasets for Mutation Prediction}{9}{subsection.45}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5}Previous Work on Mutation Prediction}{10}{subsection.46}%
 \defcounter {refsection}{0}\relax 
@@ -29,7 +29,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7}Applying Generative Adversarial Networks}{12}{subsection.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8}Transformer and Attention Mechanism}{14}{subsection.55}%
+\contentsline {subsection}{\numberline {2.8}Transformer and Attention Mechanism}{13}{subsection.55}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Approach}{18}{section.61}%
 \defcounter {refsection}{0}\relax 

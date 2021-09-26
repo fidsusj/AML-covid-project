@@ -19,12 +19,12 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{Gisaid2021}{online}{}
+    \entry{gisaideditorGISAID2021}{online}{}
       \name{author}{1}{}{%
         {{hash=cfae96e1d0349eab172c1f715c70d26d}{%
            family={(editor)},
            familyi={(\bibinitperiod},
-           given={{GISAID}},
+           given={GISAID},
            giveni={G\bibinitperiod}}}%
       }
       \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
@@ -33,12 +33,50 @@
       \strng{authorbibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
       \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
       \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \field{extraname}{1}
       \field{sortinit}{e}
-      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{{GISAID} - Mission}
-      \field{titleaddon}{{GISAID} - Mission}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{{{GISAID}}}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gisaid.org/
+      \endverb
+      \verb{url}
+      \verb https://www.gisaid.org/
+      \endverb
+    \endentry
+    \entry{Gisaid2021}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfae96e1d0349eab172c1f715c70d26d}{%
+           family={(editor)},
+           familyi={(\bibinitperiod},
+           given={GISAID},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GISAID - Mission}%
+      }
+      \strng{namehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{fullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{bibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorbibnamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authornamehash}{cfae96e1d0349eab172c1f715c70d26d}
+      \strng{authorfullhash}{cfae96e1d0349eab172c1f715c70d26d}
+      \field{extraname}{2}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{GISAID}} - {{Mission}}}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
@@ -46,13 +84,46 @@
       \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{file}
-      \verb GISAID - Mission:C\:\\Users\\D070497\\Zotero\\storage\\QL66KXY2\\mission.html:text/html
+      \verb /home/st/Zotero/storage/QL66KXY2/mission.html
       \endverb
       \verb{urlraw}
       \verb https://www.gisaid.org/about-us/mission/
       \endverb
       \verb{url}
       \verb https://www.gisaid.org/about-us/mission/
+      \endverb
+    \endentry
+    \entry{robertkochinstituteditorBerichtVirusvariantenSARSCoV22021}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3cca57c33175f9ac3c58995eb5c4c4fd}{%
+           family={(editor)},
+           familyi={(\bibinitperiod},
+           given={Robert\bibnamedelimb Koch\bibnamedelima Institut},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{fullhash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{bibnamehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{authorbibnamehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{authornamehash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \strng{authorfullhash}{3cca57c33175f9ac3c58995eb5c4c4fd}
+      \field{extraname}{3}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{langid}{german}
+      \field{month}{7}
+      \field{series}{Bericht zu Virusvarianten von SARS-CoV-2 in Deutschland}
+      \field{title}{Bericht zu Virusvarianten von SARS-CoV-2 in Deutschland}
+      \field{volume}{18}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{19}
+      \range{pages}{1}
+      \verb{file}
+      \verb /home/st/Zotero/storage/X63STRXD/Bericht zu Virusvarianten von SARS-CoV-2 in Deutsc.pdf
       \endverb
     \endentry
     \entry{Alammar2018}{online}{}
@@ -70,10 +141,10 @@
       \strng{authornamehash}{071e8b59bcc6de28244fea3bf962a165}
       \strng{authorfullhash}{071e8b59bcc6de28244fea3bf962a165}
       \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The Illustrated Transformer}
+      \field{title}{The {{Illustrated Transformer}}}
       \field{urlday}{18}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -112,11 +183,11 @@
       \strng{authornamehash}{ccf5ebef61998aaab5ec6eace8f4564d}
       \strng{authorfullhash}{ccf5ebef61998aaab5ec6eace8f4564d}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{arXiv}}
-      \field{title}{Neural Machine Translation by Jointly Learning to Align and Translate}
+      \field{journaltitle}{arXiv}
+      \field{title}{Neural {{Machine Translation}} by {{Jointly Learning}} to {{Align}} and {{Translate}}}
       \field{urlday}{19}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -160,11 +231,11 @@
       \strng{authornamehash}{f5fa570839e8aa4ce4f55ddf58216b09}
       \strng{authorfullhash}{fd4fe129b519938a2802385525566814}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{arXiv}}
-      \field{title}{{MutaGAN}: A Seq2seq {GAN} Framework to Predict Mutations of Evolving Protein Populations}
+      \field{journaltitle}{arXiv}
+      \field{title}{{{MutaGAN}}: {{A Seq2seq GAN Framework}} to {{Predict Mutations}} of {{Evolving Protein Populations}}}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
@@ -201,12 +272,12 @@
       \strng{authornamehash}{27f4f370c7b42fba63b64ad6c2c4cf64}
       \strng{authorfullhash}{27f4f370c7b42fba63b64ad6c2c4cf64}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-322-80043-5}
-      \field{series}{{XLeitfäden} der informatik}
-      \field{title}{Algorithmische Grundlagen der Bioinformatik: Modelle, Methoden und Komplexität}
+      \field{series}{{{XLeitfäden}} Der Informatik}
+      \field{title}{Algorithmische {{Grundlagen}} Der {{Bioinformatik}}: {{Modelle}}, {{Methoden}} Und {{Komplexität}}}
       \field{year}{2013}
       \field{dateera}{ce}
       \verb{urlraw}
@@ -216,7 +287,109 @@
       \verb https://books.google.de/books?id=2HL3BQAAQBAJ
       \endverb
     \endentry
-    \entry{10.1093/bioinformatics/btp163}{article}{}
+    \entry{cockBiopythonFreelyAvailable2009}{article}{useprefix=true}
+      \name{author}{11}{}{%
+        {{hash=961b84215f587c306ba5c9176491354a}{%
+           family={Cock},
+           familyi={C\bibinitperiod},
+           given={P.\bibnamedelimi J.\bibnamedelimi A.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=76a643b635700503967d3270673f3725}{%
+           family={Antao},
+           familyi={A\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2b56f25cf534aaed6a069154f877d15b}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=79fce4054f00e38db1167016395aeee0}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={B.\bibnamedelimi A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=372a4169dadddfc13cbb217cd4988266}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={C.\bibnamedelimi J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=283890fe7a2cfb7b4f33ce7c4dd31c94}{%
+           family={Dalke},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a97700ec514801a8ff28019dbbc5f561}{%
+           family={Friedberg},
+           familyi={F\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=507011cb085de1c9dece64a1b0639d17}{%
+           family={Hamelryck},
+           familyi={H\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f0c582515d03436b2730da6243c7601c}{%
+           family={Kauff},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=91523821ca3393e5c453165c08c2a550}{%
+           family={Wilczynski},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=12f2aad47db9b563f9f5ca9e3220e04b}{%
+           family={Hoon},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi J.\bibnamedelimi L.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{fullhash}{3699ff44caf9c526aa644e70ada987de}
+      \strng{bibnamehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{authorbibnamehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{authornamehash}{6d52ce6f535d89052fd164feb8a8c680}
+      \strng{authorfullhash}{3699ff44caf9c526aa644e70ada987de}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{1}
+      \field{issn}{1367-4803, 1460-2059}
+      \field{journaltitle}{Bioinformatics}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{11}
+      \field{shortjournal}{Bioinformatics}
+      \field{shorttitle}{Biopython}
+      \field{title}{Biopython: Freely Available {{Python}} Tools for Computational Molecular Biology and Bioinformatics}
+      \field{urlday}{20}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{volume}{25}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1422\bibrangedash 1423}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1093/bioinformatics/btp163
+      \endverb
+      \verb{file}
+      \verb /home/st/Zotero/storage/NDTSQ3RT/Cock et al. - 2009 - Biopython freely available Python tools for compu.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btp163
+      \endverb
+      \verb{url}
+      \verb https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btp163
+      \endverb
+    \endentry
+    \entry{10.1093/bioinformatics/btp163}{article}{useprefix=true}
       \name{author}{11}{}{%
         {{hash=1233053bd570a535b94aefb668da4464}{%
            family={Cock},
@@ -282,17 +455,17 @@
       \strng{authorbibnamehash}{be5d01c92697061bb7d2a0c8023cabe6}
       \strng{authornamehash}{be5d01c92697061bb7d2a0c8023cabe6}
       \strng{authorfullhash}{a87099b1898d69086317113a4820b401}
+      \field{extraname}{2}
       \field{sortinit}{C}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Summary: The Biopython project is a mature open source international collaboration of volunteer developers, providing Python libraries for a wide range of bioinformatics problems. Biopython includes modules for reading and writing different sequence file formats and multiple sequence alignments, dealing with 3D macro molecular structures, interacting with common tools such as {BLAST}, {ClustalW} and {EMBOSS}, accessing key online databases, as well as providing numerical methods for statistical learning.Availability: Biopython is freely available, with documentation and source code at www.biopython.org under the Biopython license.Contact: All queries should be directed to the Biopython mailing lists, see www.biopython.org/wiki/\_Mailing\_listspeter.cock@scri.ac.uk.}
+      \field{abstract}{Summary: The Biopython project is a mature open source international collaboration of volunteer developers, providing Python libraries for a wide range of bioinformatics problems. Biopython includes modules for reading and writing different sequence file formats and multiple sequence alignments, dealing with 3D macro molecular structures, interacting with common tools such as BLAST, ClustalW and EMBOSS, accessing key online databases, as well as providing numerical methods for statistical learning.Availability: Biopython is freely available, with documentation and source code at www.biopython.org under the Biopython license.Contact: All queries should be directed to the Biopython mailing lists, see www.biopython.org/wiki/\_Mailing\_listspeter.cock@scri.ac.uk.}
       \field{issn}{1367-4803}
       \field{journaltitle}{Bioinformatics}
       \field{month}{3}
-      \field{note}{tex.eprint: https://academic.oup.com/bioinformatics/article-pdf/25/11/1422/944180/btp163.pdf}
       \field{number}{11}
-      \field{title}{Biopython: freely available Python tools for computational molecular biology and bioinformatics}
+      \field{title}{Biopython: Freely Available {{Python}} Tools for Computational Molecular Biology and Bioinformatics}
       \field{volume}{25}
       \field{year}{2009}
       \field{dateera}{ce}
@@ -301,11 +474,33 @@
       \verb{doi}
       \verb 10.1093/bioinformatics/btp163
       \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/bioinformatics/article-pdf/25/11/1422/944180/btp163.pdf
+      \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1093/bioinformatics/btp163
       \endverb
       \verb{url}
       \verb https://doi.org/10.1093/bioinformatics/btp163
+      \endverb
+    \endentry
+    \entry{DendroPyPhylogeneticComputing}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{title}{{{DendroPy Phylogenetic Computing Library}} —{} {{DendroPy}} 4.5.2 Documentation}
+      \field{urlday}{17}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/GIXPSXNZ/dendropy.org.html
+      \endverb
+      \verb{urlraw}
+      \verb https://dendropy.org/
+      \endverb
+      \verb{url}
+      \verb https://dendropy.org/
       \endverb
     \endentry
     \entry{Gertz2020}{unpublished}{}
@@ -326,16 +521,12 @@
       \strng{authornamehash}{c0d1310e5d4d58ef6c70f697f07a01f1}
       \strng{authorfullhash}{c0d1310e5d4d58ef6c70f697f07a01f1}
       \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Text Analytics - Text Classification, lecture script}
-      \field{urlday}{15}
-      \field{urlmonth}{8}
-      \field{urlyear}{2021}
+      \field{title}{Text {{Analytics}} - {{Text Classification}}, Lecture Script}
       \field{year}{2020}
       \field{dateera}{ce}
-      \field{urldateera}{ce}
     \endentry
     \entry{10.1093/bioinformatics/bty407}{article}{}
       \name{author}{9}{}{%
@@ -392,16 +583,15 @@
       \strng{authornamehash}{3218c0aa3bc2d6db58a9847a7f3082af}
       \strng{authorfullhash}{05b0eb12c33e50330f3f03e4183ba64b}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Understanding the spread and evolution of pathogens is important for effective public health measures and surveillance. Nextstrain consists of a database of viral genomes, a bioinformatics pipeline for phylodynamics analysis, and an interactive visualization platform. Together these present a real-time view into the evolution and spread of a range of viral pathogens of high public health importance. The visualization integrates sequence data with other data types such as geographic information, serology, or host species. Nextstrain compiles our current understanding into a single accessible location, open to health professionals, epidemiologists, virologists and the public alike.All code (predominantly {JavaScript} and Python) is freely available from github.com/nextstrain and the web-application is available at nextstrain.org.}
+      \field{abstract}{Understanding the spread and evolution of pathogens is important for effective public health measures and surveillance. Nextstrain consists of a database of viral genomes, a bioinformatics pipeline for phylodynamics analysis, and an interactive visualization platform. Together these present a real-time view into the evolution and spread of a range of viral pathogens of high public health importance. The visualization integrates sequence data with other data types such as geographic information, serology, or host species. Nextstrain compiles our current understanding into a single accessible location, open to health professionals, epidemiologists, virologists and the public alike.All code (predominantly JavaScript and Python) is freely available from github.com/nextstrain and the web-application is available at nextstrain.org.}
       \field{issn}{1367-4803}
       \field{journaltitle}{Bioinformatics}
       \field{month}{5}
-      \field{note}{tex.eprint: https://academic.oup.com/bioinformatics/article-pdf/34/23/4121/26676762/bty407.pdf}
       \field{number}{23}
-      \field{title}{Nextstrain: real-time tracking of pathogen evolution}
+      \field{title}{Nextstrain: Real-Time Tracking of Pathogen Evolution}
       \field{volume}{34}
       \field{year}{2018}
       \field{dateera}{ce}
@@ -409,6 +599,9 @@
       \range{pages}{3}
       \verb{doi}
       \verb 10.1093/bioinformatics/bty407
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/bioinformatics/article-pdf/34/23/4121/26676762/bty407.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1093/bioinformatics/bty407
@@ -447,11 +640,11 @@
       \strng{authornamehash}{211c183ca82cf29ca2d563c628decc4f}
       \strng{authorfullhash}{7178f69b82932079996658689f305443}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Science}
-      \field{title}{Learning the language of viral evolution and escape}
+      \field{title}{Learning the Language of Viral Evolution and Escape}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
@@ -485,11 +678,11 @@
       \strng{authornamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
       \strng{authorfullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{ResearchGate}}
-      \field{title}{Long Short-term Memory}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Long {{Short}}-Term {{Memory}}}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -526,15 +719,97 @@
       \strng{authornamehash}{f67d6e16601d164d02827a037ade17ad}
       \strng{authorfullhash}{f67d6e16601d164d02827a037ade17ad}
       \field{sortinit}{L}
-      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This book covers the statistical models and methods that are used to understand human genetics, following the historical and recent developments of human genetics. Starting with Mendels first experiments to genome-wide association studies, the book describes how genetic information can be incorporated into statistical models to discover disease genes.All commonly used approaches in statistical genetics (e.g. aggregation analysis, segregation, linkage analysis, etc), are used, but the focus of the book is modern approaches to association analysis.Numerous examples illustrate key points throughout the text, both of Mendelian and complex genetic disorders. The intended audience is statisticians, biostatisticians, epidemiologists and quantitatively- oriented geneticists and health scientists wanting to learn about statistical methods for genetic analysis, whether to better analyze genetic data, or to pursue research in methodology.A background in intermediate level statistical methods is required.The authors include fewmathematical derivations, and the exercises provide problems for students with a broad range of skill levels.No background in genetics is assumed.}
       \field{edition}{1st}
       \field{isbn}{978-1-4419-7337-5}
-      \field{title}{The fundamentals of modern statistical genetics}
+      \field{title}{The Fundamentals of Modern Statistical Genetics}
       \field{year}{2010}
       \field{dateera}{ce}
+    \endentry
+    \entry{mallawaarachchiMolecularPhylogeneticsUsing2018}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ed043f3a591ca9b439857674faba373d}{%
+           family={Mallawaarachchi},
+           familyi={M\bibinitperiod},
+           given={Vijini},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{ed043f3a591ca9b439857674faba373d}
+      \strng{fullhash}{ed043f3a591ca9b439857674faba373d}
+      \strng{bibnamehash}{ed043f3a591ca9b439857674faba373d}
+      \strng{authorbibnamehash}{ed043f3a591ca9b439857674faba373d}
+      \strng{authornamehash}{ed043f3a591ca9b439857674faba373d}
+      \strng{authorfullhash}{ed043f3a591ca9b439857674faba373d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Have you ever wondered how life formed from the primordial soup and evolved to the different life forms which can be seen at present? How\ldots}
+      \field{day}{24}
+      \field{hour}{12}
+      \field{langid}{english}
+      \field{minute}{41}
+      \field{month}{3}
+      \field{second}{0}
+      \field{title}{Molecular {{Phylogenetics}} Using {{Bio}}.{{Phylo}}}
+      \field{urlday}{9}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/4G9XVICV/molecular-phylogenetics-using-bio-phylo-57ce27492ee9.html
+      \endverb
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/molecular-phylogenetics-using-bio-phylo-57ce27492ee9
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/molecular-phylogenetics-using-bio-phylo-57ce27492ee9
+      \endverb
+    \endentry
+    \entry{nationallibraryofmedicinencbieditorNCBISARSCoV2Resources}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f491c4bfdee35754b7bd1d21891ba5dc}{%
+           family={Medicine\bibnamedelimb (NCBI)\bibnamedelima (editor)},
+           familyi={M\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={National\bibnamedelima Library},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{fullhash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{bibnamehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{authorbibnamehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{authornamehash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \strng{authorfullhash}{f491c4bfdee35754b7bd1d21891ba5dc}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Find SARS-CoV-2 related resources at NCBI. Download and submit sequences. Explore literature, identify clinical trials, and compounds used in them.}
+      \field{langid}{english}
+      \field{title}{{{NCBI SARS}}-{{CoV}}-2 {{Resources}}}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/st/Zotero/storage/LERBY646/sars-cov-2.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncbi.nlm.nih.gov/sars-cov-2/
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/sars-cov-2/
+      \endverb
     \endentry
     \entry{Mohamed2021}{article}{}
       \name{author}{4}{}{%
@@ -566,11 +841,11 @@
       \strng{authornamehash}{f69cd45ad8b035deeaf688bd2ec5f3ba}
       \strng{authorfullhash}{cfb1a8fed6ce9cfaf923f260b955933f}
       \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Hindawi}
-      \field{title}{Long Short-Term Memory Neural Networks for {RNA} Viruses Mutations Prediction}
+      \field{title}{Long {{Short}}-{{Term Memory Neural Networks}} for {{RNA Viruses Mutations Prediction}}}
       \field{urlday}{11}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -592,7 +867,7 @@
            given={Aaron},
            giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
+      \list{organization}{1}{%
         {Zenodo}%
       }
       \strng{namehash}{968a624f530d61c1eb8d6b323ce5366a}
@@ -602,11 +877,11 @@
       \strng{authornamehash}{968a624f530d61c1eb8d6b323ce5366a}
       \strng{authorfullhash}{968a624f530d61c1eb8d6b323ce5366a}
       \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{title}{aaronmussig/{PhyloDM}: 1.3.1}
+      \field{title}{Aaronmussig/{{PhyloDM}}: 1.3.1}
       \field{version}{1.3.1}
       \field{year}{2020}
       \field{dateera}{ce}
@@ -680,21 +955,21 @@
       \strng{authornamehash}{88096c1c2e143a7c6e6b7f2d4c3c64c1}
       \strng{authorfullhash}{2d1183f14ac3d346289f9796ce1ccf33}
       \field{sortinit}{N}
-      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The sudden emergence of severe respiratory disease, caused by a novel severe acute respiratory syndrome coronavirus 2 ({SARS}-{CoV}-2), has recently become a public health emergency. Genome sequence analysis of {SARS}-{CoV}-2 revealed its close resemblance to the earlier reported {SARS}-{CoV} and Middle East respiratory syndrome coronavirus ({MERS}-{CoV}). However, initial testing of the drugs used against {SARS}-{CoV} and {MERS}-{CoV} has been ineffective in controlling {SARS}-{CoV}-2. The present study highlights the genomic, proteomic, pathogenesis, and therapeutic strategies in {SARS}-{CoV}-2 infection. We have carried out sequence analysis of potential drug target proteins in {SARS}-{CoV}-2 and, compared them with {SARS}-{CoV} and {MERS} viruses. Analysis of mutations in the coding and non-coding regions, genetic diversity, and pathogenicity of {SARS}-{CoV}-2 has also been done. A detailed structural analysis of drug target proteins has been performed to gain insights into the mechanism of pathogenesis, structure-function relationships, and the development of structure-guided therapeutic approaches. The cytokine profiling and inflammatory signalling are different in the case of {SARS}-{CoV}-2 infection. We also highlighted possible therapies and their mechanism of action followed by clinical manifestation. Our analysis suggests a minimal variation in the genome sequence of {SARS}-{CoV}-2, may be responsible for a drastic change in the structures of target proteins, which makes available drugs ineffective.}
+      \field{abstract}{The sudden emergence of severe respiratory disease, caused by a novel severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), has recently become a public health emergency. Genome sequence analysis of SARS-CoV-2 revealed its close resemblance to the earlier reported SARS-CoV and Middle East respiratory syndrome coronavirus (MERS-CoV). However, initial testing of the drugs used against SARS-CoV and MERS-CoV has been ineffective in controlling SARS-CoV-2. The present study highlights the genomic, proteomic, pathogenesis, and therapeutic strategies in SARS-CoV-2 infection. We have carried out sequence analysis of potential drug target proteins in SARS-CoV-2 and, compared them with SARS-CoV and MERS viruses. Analysis of mutations in the coding and non-coding regions, genetic diversity, and pathogenicity of SARS-CoV-2 has also been done. A detailed structural analysis of drug target proteins has been performed to gain insights into the mechanism of pathogenesis, structure-function relationships, and the development of structure-guided therapeutic approaches. The cytokine profiling and inflammatory signalling are different in the case of SARS-CoV-2 infection. We also highlighted possible therapies and their mechanism of action followed by clinical manifestation. Our analysis suggests a minimal variation in the genome sequence of SARS-CoV-2, may be responsible for a drastic change in the structures of target proteins, which makes available drugs ineffective.}
       \field{issn}{0925-4439}
-      \field{journaltitle}{Biochimica et Biophysica Acta ({BBA}) - Molecular Basis of Disease}
+      \field{journaltitle}{Biochimica et Biophysica Acta (BBA) - Molecular Basis of Disease}
       \field{number}{10}
-      \field{title}{Insights into {SARS}-{CoV}-2 genome, structure, evolution, pathogenesis and therapies: Structural genomics approach}
+      \field{title}{Insights into {{SARS}}-{{CoV}}-2 Genome, Structure, Evolution, Pathogenesis and Therapies: {{Structural}} Genomics Approach}
       \field{volume}{1866}
       \field{year}{2020}
       \field{dateera}{ce}
       \field{pages}{165878}
       \range{pages}{1}
       \verb{doi}
-      \verb https://doi.org/10.1016/j.bbadis.2020.165878
+      \verb 10.1016/j.bbadis.2020.165878
       \endverb
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/pii/S092544392030226X
@@ -702,7 +977,84 @@
       \verb{url}
       \verb https://www.sciencedirect.com/science/article/pii/S092544392030226X
       \endverb
-      \keyw{Comparative genomics,{COVID}-19,Drug target,Molecular basis of pathogenesis,Molecular evolution,{SARS}-{CoV}-2}
+      \keyw{Comparative genomics,COVID-19,Drug target,Molecular basis of pathogenesis,Molecular evolution,SARS-CoV-2}
+    \endentry
+    \entry{ogaliMolecularCharacterizationNewcastle2018}{article}{}
+      \name{author}{6}{}{%
+        {{hash=626591176fa7c9cea47f699c28b30e3c}{%
+           family={Ogali},
+           familyi={O\bibinitperiod},
+           given={Irene\bibnamedelima N.},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=1449669ab49e187055222095963e566c}{%
+           family={Wamuyu},
+           familyi={W\bibinitperiod},
+           given={Lucy\bibnamedelima W.},
+           giveni={L\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=1802675e8d921606e8b87cb7eacdeed1}{%
+           family={Lichoti},
+           familyi={L\bibinitperiod},
+           given={Jacqueline\bibnamedelima K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=580057c73a8618ce99c6789cbb1749f4}{%
+           family={Mungube},
+           familyi={M\bibinitperiod},
+           given={Erick\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=bdc6eb45cdc3c415fb068b6e4214e2c6}{%
+           family={Agwanda},
+           familyi={A\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=03e0cdde5a3071a88ce6815e192cf0bc}{%
+           family={Ommeh},
+           familyi={O\bibinitperiod},
+           given={Sheila\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=ecabadff593098ff0b1834d90cbc3102}{%
+           family={Nardoni},
+           familyi={N\bibinitperiod},
+           given={Simona},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Hindawi}%
+      }
+      \strng{namehash}{e9f0c142db9cbf8182d7820522fa6313}
+      \strng{fullhash}{bb028d4d21938f9d46da4c54bb41bf18}
+      \strng{bibnamehash}{e9f0c142db9cbf8182d7820522fa6313}
+      \strng{authorbibnamehash}{e9f0c142db9cbf8182d7820522fa6313}
+      \strng{authornamehash}{e9f0c142db9cbf8182d7820522fa6313}
+      \strng{authorfullhash}{bb028d4d21938f9d46da4c54bb41bf18}
+      \strng{editorbibnamehash}{ecabadff593098ff0b1834d90cbc3102}
+      \strng{editornamehash}{ecabadff593098ff0b1834d90cbc3102}
+      \strng{editorfullhash}{ecabadff593098ff0b1834d90cbc3102}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Newcastle disease (ND) is a serious disease of poultry that causes significant economic losses. Despite rampant ND outbreaks that occur annually in Kenya, the information about the NDV circulating in Kenya is still scarce. We report the first countrywide study of NDV in Kenya. Our study is aimed at evaluating the genetic characteristics of Newcastle disease viruses obtained from backyard poultry in farms and live bird markets in different regions of Kenya. We sequenced and analyzed fusion (F) protein gene, including the cleavage site, of the obtained viruses. We aligned and compared study sequences with representative NDV of different genotypes from GenBank. The fusion protein cleavage site of all the study sequences had the motif 112RRQKRFV118 indicating their velogenic nature. Phylogenetic analysis revealed that the NDV from various sites in Kenya was highly similar genetically and that it clustered together with NDV of genotype V. The study samples were 96\&\#x0025; similar to previous Ugandan and Kenyan viruses grouped in subgenotype Vd This study points to possible circulation of NDV of similar genetic characteristics between backyard poultry farms and live bird markets in Kenya. The study also suggests the possible spread of velogenic NDV between Kenya and Uganda possibly through cross-border live bird trade. Our study provides baseline information on the genetic characteristics of NDV circulating in the Kenyan poultry population. This highlights the need for the ND control programmes to place more stringent measures on cross-border trade of live bird markets and poultry products to prevent the introduction of new strains of NDV that would otherwise be more difficult to control.}
+      \field{day}{5}
+      \field{issn}{1687-918X}
+      \field{journaltitle}{International Journal of Microbiology}
+      \field{month}{8}
+      \field{title}{Molecular {{Characterization}} of {{Newcastle Disease Virus}} from {{Backyard Poultry Farms}} and {{Live Bird Markets}} in {{Kenya}}}
+      \field{volume}{2018}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{2368597}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1155/2018/2368597
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1155/2018/2368597
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1155/2018/2368597
+      \endverb
     \endentry
     \entry{Papineni2002}{article}{}
       \name{author}{4}{}{%
@@ -734,11 +1086,11 @@
       \strng{authornamehash}{d4eb40956a6de2c2fe50bfef6a72df63}
       \strng{authorfullhash}{0a6e6b36539eaebe00a3fef93d4cd32a}
       \field{sortinit}{P}
-      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{ACM}}
-      \field{title}{{BLEU}: a method for automatic evaluation of machine translation}
+      \field{journaltitle}{ACM}
+      \field{title}{{{BLEU}}: A Method for Automatic Evaluation of Machine Translation}
       \field{urlday}{23}
       \field{urlmonth}{9}
       \field{urlyear}{2021}
@@ -777,11 +1129,11 @@
       \strng{authornamehash}{6d38756640e6ef959432e8f83f1ef2a1}
       \strng{authorfullhash}{6d38756640e6ef959432e8f83f1ef2a1}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{EURASIP} Journal on Bioinformatics and Systems Biology}
-      \field{title}{The prediction of virus mutation using neural networks and rough set techniques}
+      \field{journaltitle}{EURASIP Journal on Bioinformatics and Systems Biology}
+      \field{title}{The Prediction of Virus Mutation Using Neural Networks and Rough Set Techniques}
       \field{urlday}{5}
       \field{urlmonth}{7}
       \field{urlyear}{2021}
@@ -793,6 +1145,89 @@
       \endverb
       \verb{url}
       \verb https://bsb-eurasipjournals.springeropen.com/articles/10.1186/s13637-016-0042-0
+      \endverb
+    \endentry
+    \entry{schererStatisticalGeneticsGenetic2021}{unpublished}{}
+      \name{author}{2}{}{%
+        {{hash=bfa0c2066e1f2f5927f2ea2d6f7feefb}{%
+           family={Scherer},
+           familyi={S\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1eeeb8dda5a6d7f92a8443244d50b55a}{%
+           family={Lorenzo\bibnamedelima Bermejo},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Justo},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {University Heidelberg}%
+      }
+      \strng{namehash}{750888b2a8e47248011389c71f813397}
+      \strng{fullhash}{750888b2a8e47248011389c71f813397}
+      \strng{bibnamehash}{750888b2a8e47248011389c71f813397}
+      \strng{authorbibnamehash}{750888b2a8e47248011389c71f813397}
+      \strng{authornamehash}{750888b2a8e47248011389c71f813397}
+      \strng{authorfullhash}{750888b2a8e47248011389c71f813397}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{lecture manuscript}
+      \field{title}{Statistical {{Genetics}} and Genetic Epidemiology - {{SNPs}} and Other Common Variants}
+      \field{type}{lecture manuscript}
+      \field{year}{2021}
+      \field{dateera}{ce}
+    \endentry
+    \entry{shuGISAIDGlobalInitiative2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=85b49983cceabed0131076d320f12944}{%
+           family={Shu},
+           familyi={S\bibinitperiod},
+           given={Yuelong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=53630f3477daa83b0d1080df88251f9d}{%
+           family={McCauley},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{fullhash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{bibnamehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{authorbibnamehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{authornamehash}{5315805d9f126bc6589ecb5849c779b5}
+      \strng{authorfullhash}{5315805d9f126bc6589ecb5849c779b5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{30}
+      \field{issn}{1560-7917}
+      \field{journaltitle}{Eurosurveillance}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{13}
+      \field{shorttitle}{{{GISAID}}}
+      \field{title}{{{GISAID}}: {{Global}} Initiative on Sharing All Influenza Data –{} from Vision to Reality}
+      \field{urlday}{8}
+      \field{urlmonth}{9}
+      \field{urlyear}{2021}
+      \field{volume}{22}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2807/1560-7917.ES.2017.22.13.30494
+      \endverb
+      \verb{file}
+      \verb /home/st/Zotero/storage/R4GNKD2Q/Shu and McCauley - 2017 - GISAID Global initiative on sharing all influenza.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2017.22.13.30494
+      \endverb
+      \verb{url}
+      \verb https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2017.22.13.30494
       \endverb
     \endentry
     \entry{Sundermeyer2012}{article}{}
@@ -820,11 +1255,11 @@
       \strng{authornamehash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
       \strng{authorfullhash}{3e4339e0ff62faf01ddc2f4d6d65b5e4}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{ISCA} Archive}
-      \field{title}{{LSTM} Neural Networks for Language Modeling}
+      \field{journaltitle}{ISCA Archive}
+      \field{title}{{{LSTM Neural Networks}} for {{Language Modeling}}}
       \field{urlday}{12}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -863,11 +1298,11 @@
       \strng{authornamehash}{d60494862bf48faf76d925f3780a6aee}
       \strng{authorfullhash}{d60494862bf48faf76d925f3780a6aee}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{arXiv}}
-      \field{title}{Sequence to Sequence Learning with Neural Networks}
+      \field{journaltitle}{arXiv}
+      \field{title}{Sequence to {{Sequence Learning}} with {{Neural Networks}}}
       \field{urlday}{15}
       \field{urlmonth}{5}
       \field{urlyear}{2021}
@@ -931,11 +1366,11 @@
       \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{authorfullhash}{f82970bbd2bdd7a002d2af62b743d5cc}
       \field{sortinit}{V}
-      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{arXiv}}
-      \field{title}{Attention Is All You Need}
+      \field{journaltitle}{arXiv}
+      \field{title}{Attention {{Is All You Need}}}
       \field{urlday}{17}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -970,11 +1405,11 @@
       \strng{authorfullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
       \field{extraname}{1}
       \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{SpringerLink}}
-      \field{title}{Prediction of mutations engineered by randomness in H5N1 hemagglutinins of influenza A virus}
+      \field{journaltitle}{SpringerLink}
+      \field{title}{Prediction of Mutations Engineered by Randomness in {{H5N1}} Hemagglutinins of Influenza {{A}} Virus}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -1009,11 +1444,11 @@
       \strng{authorfullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
       \field{extraname}{2}
       \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{{SpringerLink}}
-      \field{title}{Prediction of mutations engineered by randomness in H5N1 neuraminidases from influenza A virus}
+      \field{journaltitle}{SpringerLink}
+      \field{title}{Prediction of Mutations Engineered by Randomness in {{H5N1}} Neuraminidases from Influenza {{A}} Virus}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -1048,10 +1483,10 @@
       \strng{authorfullhash}{e1a1ca7e2f8f31e7bf32474a3a1d91da}
       \field{extraname}{3}
       \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Prediction of mutations in H1 neuraminidases from North America influenza A virus engineered by internal randomness}
+      \field{title}{Prediction of Mutations in {{H1}} Neuraminidases from {{North America}} Influenza {{A}} Virus Engineered by Internal Randomness}
       \field{urlday}{13}
       \field{urlmonth}{8}
       \field{urlyear}{2021}
@@ -1066,17 +1501,8 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{DendroPyPhylogeneticComputing}
-  \missing{cockBiopythonFreelyAvailable2009}
-  \missing{gisaideditorGISAID2021}
-  \missing{mallawaarachchiMolecularPhylogeneticsUsing2018}
-  \missing{nationallibraryofmedicinencbieditorNCBISARSCoV2Resources}
-  \missing{ogaliMolecularCharacterizationNewcastle2018}
   \missing{own representation}
   \missing{own screenshot}
-  \missing{robertkochinstituteditorBerichtVirusvariantenSARSCoV22021}
-  \missing{schererStatisticalGeneticsGenetic2021}
-  \missing{shuGISAIDGlobalInitiative2017}
 \endrefsection
 \endinput
 
