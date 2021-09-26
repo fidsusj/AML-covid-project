@@ -1,18 +1,18 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'report.blg'
-[64] biber:340> INFO - === So Sep 26, 2021, 13:23:25
+[64] biber:340> INFO - === So Sep 26, 2021, 13:41:53
 [77] Biber.pm:415> INFO - Reading 'report.bcf'
-[145] Biber.pm:952> INFO - Found 33 citekeys in bib section 0
-[157] Biber.pm:4340> INFO - Processing section 0
-[166] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[168] bibtex.pm:1689> INFO - LaTeX decoding ...
-[202] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[420] Utils.pm:395> WARN - I didn't find a database entry for 'own screenshot' (section 0)
-[420] Utils.pm:395> WARN - I didn't find a database entry for 'own representation' (section 0)
-[455] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[455] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[455] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[455] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[484] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[505] bbl.pm:757> INFO - Output to report.bbl
-[506] Biber.pm:128> INFO - WARNINGS: 2
+[147] Biber.pm:952> INFO - Found 33 citekeys in bib section 0
+[161] Biber.pm:4340> INFO - Processing section 0
+[170] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[172] bibtex.pm:1689> INFO - LaTeX decoding ...
+[206] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[433] Utils.pm:395> WARN - I didn't find a database entry for 'own screenshot' (section 0)
+[433] Utils.pm:395> WARN - I didn't find a database entry for 'own representation' (section 0)
+[468] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[468] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[468] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[468] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[497] bbl.pm:654> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[518] bbl.pm:757> INFO - Output to report.bbl
+[518] Biber.pm:128> INFO - WARNINGS: 2
